@@ -16,6 +16,12 @@ Mở **http://127.0.0.1:3000**; quản trị **http://127.0.0.1:3000/admin/login
 
 Chạy bản tối ưu: dừng cả web và worker bằng Ctrl+C trước `npm.cmd run build` (Windows khóa DLL Prisma khi các tiến trình đang dùng); chạy `npm.cmd start`, mở terminal khác chạy `npm.cmd run worker`. PostgreSQL vẫn cần hoạt động. Chi tiết và cách dừng PostgreSQL ở [runbook](docs/runbook.md).
 
+## PostgreSQL cloud và Vercel
+
+Đặt `DATABASE_URL` pooled và `DIRECT_URL` direct/session từ cùng PostgreSQL cloud, có TLS. Local vẫn chạy như trước, không phải đổi `.env` demo. Repository có `vercel.json`, Build Command `npm run build:vercel` và Node.js 24.x. Migration chạy riêng bằng `npm run db:migrate`; build không seed/migrate hoặc khởi động PostgreSQL embedded.
+
+Xem [hướng dẫn Vercel](docs/vercel.md) cho biến môi trường, migration, nhập nội dung, tạo admin và worker. Production giữ guard SMTP/R2/scanner/CAPTCHA thật; cấu hình DB không thay các tích hợp hoặc nghiệm thu còn thiếu.
+
 ## Nội dung và tích hợp demo
 
 Thư viện sử dụng 9 ảnh trong `sourceImage`; ảnh khu trưng bày và 4 panorama lấy từ `sourceVR`. Ảnh được chuyển định dạng, bỏ metadata và giữ nguyên bản nguồn. Tranh có mô tả VI/EN trong CMS, chi tiết/zoom và liên hệ đúng tranh. Hover/focus hiển thị tóm tắt; mobile đọc tóm tắt ngay dưới ảnh. Các thẻ tranh/video/hồ sơ giả lập trước đây được ẩn, không xóa lịch sử hay dữ liệu người dùng. Chưa có video thực tế được cung cấp; admin có thể thêm nguồn được phép.

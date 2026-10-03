@@ -1,5 +1,14 @@
 # Quyết định và điểm cần chốt
 
+## ADR — DB cloud/Vercel, 04/10/2026
+
+- RESOLVED theo yêu cầu chủ dự án: chuẩn bị PostgreSQL cloud và build Vercel, giữ Prisma 6.19.3, schema và toàn bộ invariant workshop. Không thêm nhà cung cấp hoặc dịch vụ phí.
+- RESOLVED: DATABASE_URL pooled cho runtime; DIRECT_URL direct/session cho CLI. Nhận alias integration Vercel cũ, ưu tiên tên mới. CLI local fallback DATABASE_URL; cloud yêu cầu TLS và direct URL riêng. Prisma config engine classic, không đổi sang adapter/major mới.
+- RESOLVED: build Vercel kiểm config và generate Client; không tự migrate/seed. Migration deploy riêng sau backup. Setup demo từ chối URL cloud; test override cả URL runtime/direct sang dongho_test.
+- RESOLVED: Vercel không dùng APP_MODE prototype với các adapter ghi file local; giữ production guard, không giả email/scan hoặc bỏ CAPTCHA. Pool default 1 trên Vercel, giữ giá trị explicit để điều chỉnh theo tải.
+- OPEN: chưa có provider/credential DB cloud hoặc tài khoản Vercel để kiểm kết nối/deploy thật. Không tự copy DB local, tạo DB ngoài hoặc đưa credential vào Git.
+- BLOCKED release toàn hệ thống: các integration/worker/scanner, backup/restore, nội dung/chính sách và audit đã ghi trước vẫn cần xác minh. Xem hướng dẫn [Vercel](vercel.md) và bằng chứng QA DB.
+
 ## RESOLVED
 
 - Giữ Next.js 15/React 19, Tailwind 4 và Prisma/PostgreSQL theo plan; lock phiên bản tương thích. Không dùng major upgrade do thông báo công cụ gợi ý.

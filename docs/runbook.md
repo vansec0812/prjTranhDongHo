@@ -1,5 +1,7 @@
 # Runbook local prototype
 
+Phần PostgreSQL cloud/Vercel, migration và worker ngoài Function: [docs/vercel.md](vercel.md). Local và cloud dùng environment riêng; không chạy setup demo để chuẩn bị DB cloud.
+
 ## Setup và chạy
 
 `npm ci`, `npm run setup:demo`, `npm run demo`. Setup sinh secret, khởi động PostgreSQL local nếu chưa nghe 54329, `prisma generate`, `prisma migrate deploy`, seed idempotent và admin mật khẩu ngẫu nhiên. Xem `.local/database.log` nếu DB không khởi động; không xóa `.local/postgres` để chữa lỗi.

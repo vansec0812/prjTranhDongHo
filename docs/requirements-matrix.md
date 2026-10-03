@@ -2,6 +2,8 @@
 
 Nguồn SRS 29 trang tại root, AGENTS.md v1.0 (đã đọc toàn bộ), plan và prompt. Không thay đổi hợp đồng. PASS chỉ áp dụng nội dung đã có kiểm thử/bằng chứng nêu trong hàng; IN_PROGRESS không phải nghiệm thu. Source page tự đối chiếu văn bản PDF, UI/ENG/SEC/OPS/QA/GOV là quy tắc bổ sung AGENTS, không gán mã SRS.
 
+Cập nhật DB/Vercel 04/10/2026: ENG-01, ENG-23, OPS-01/02/03 và QA-07 được truy vết riêng tại [QA DB/Vercel](qa/vercel-database-2026-10-04.md), [hướng dẫn deploy](vercel.md), `src/lib/database-config.ts`, `prisma.config.ts` và test DB config/integration. Các trạng thái toàn điều khoản bên dưới giữ nguyên vì chưa có DB cloud/deploy/backup/worker production đã kiểm chứng.
+
 | Mã | Nguồn/trang | Module/route | Trạng thái | Bằng chứng / phần còn thiếu |
 |---|---|---|---|---|
 | GOV-01 | AGENTS GOV | lib/services/API/config · tests/docs | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |
