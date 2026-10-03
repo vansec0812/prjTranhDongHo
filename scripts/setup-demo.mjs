@@ -2,6 +2,32 @@ import fs from "node:fs";
 import { randomBytes } from "node:crypto";
 import { spawn, spawnSync } from "node:child_process";
 import net from "node:net";
+import { config as loadEnv } from "dotenv";
+loadEnv({ quiet: true });
+const databaseKeys = [
+  "DATABASE_URL",
+  "DIRECT_URL",
+  "POSTGRES_PRISMA_URL",
+  "POSTGRES_URL",
+  "POSTGRES_URL_NON_POOLING",
+];
+const hasCloudDatabase = databaseKeys.some((key) => {
+  const raw = process.env[key]?.trim();
+  if (!raw) return false;
+  try {
+    return new URL(raw).hostname !== "127.0.0.1";
+  } catch {
+    throw new Error(`Invalid database config: ${key}`);
+  }
+});
+if (
+  process.env.VERCEL === "1" ||
+  (process.env.APP_MODE && process.env.APP_MODE !== "prototype") ||
+  hasCloudDatabase
+)
+  throw new Error(
+    "setup:demo only supports local prototype PostgreSQL; use db:migrate for cloud databases",
+  );
 fs.mkdirSync(".local", { recursive: true });
 if (!fs.existsSync(".env")) {
   const secret = () => randomBytes(32).toString("hex");

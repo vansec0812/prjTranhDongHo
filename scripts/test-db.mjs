@@ -27,7 +27,12 @@ const result = spawnSync(
   {
     stdio: "inherit",
     windowsHide: true,
-    env: { ...process.env, DATABASE_URL: url.toString() },
+    // Both CLI and runtime must target the test DB, even if .env has DIRECT_URL.
+    env: {
+      ...process.env,
+      DATABASE_URL: url.toString(),
+      DIRECT_URL: url.toString(),
+    },
   },
 );
 if (result.status !== 0) process.exit(result.status ?? 1);

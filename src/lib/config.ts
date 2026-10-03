@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { runtimeDatabaseUrl } from "./database-config";
 export const settingsSchema = z.object({
   studioVi: z.string().max(100).default("Xưởng tranh dân gian"),
   studioEn: z.string().max(100).default("Folk painting studio"),
@@ -50,7 +51,12 @@ export const settingsSchema = z.object({
 });
 export type SiteSettings = z.infer<typeof settingsSchema>;
 export function productionGuard() {
+  if (process.env.VERCEL === "1" && process.env.APP_MODE !== "production")
+    throw new Error(
+      "Vercel requires APP_MODE=production and durable production integrations",
+    );
   if (process.env.APP_MODE === "production") {
+    runtimeDatabaseUrl();
     for (const key of [
       "AUTH_SECRET",
       "PII_ENCRYPTION_KEY",
