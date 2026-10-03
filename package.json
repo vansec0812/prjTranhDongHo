@@ -2,9 +2,14 @@
   "name": "van-hoa-tranh-dong-ho",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1",
     "build": "prisma generate && next build",
+    "build:vercel": "npm run deploy:check && npm run build",
+    "deploy:check": "tsx scripts/check-deployment.ts",
     "start": "next start --hostname 127.0.0.1",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
