@@ -1,0 +1,480 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ContentKind {
+  PAGE
+  MILESTONE
+  PAINTING
+  VIDEO
+  WORKSHOP
+  ARTISAN
+  POST
+  PRODUCT
+  FAQ
+  HERO
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  SCHEDULED
+}
+
+enum SessionStatus {
+  OPEN
+  CLOSED
+  CANCELLED
+}
+
+enum RegStatus {
+  WAITLIST
+  NEW
+  CONFIRMED
+  ATTENDED
+  NO_SHOW
+  CANCELLED
+}
+
+enum ContactStatus {
+  NEW
+  PROCESSING
+  REPLIED
+  ARCHIVED
+}
+
+enum VideoSource {
+  UPLOAD
+  YOUTUBE
+  VIMEO
+}
+
+model AdminUser {
+  id             String         @id @default(cuid())
+  email          String         @unique
+  name           String
+  passwordHash   String
+  totpSecret     String?
+  isActive       Boolean        @default(true)
+  authVersion    Int            @default(0)
+  failedAttempts Int            @default(0)
+  lockedUntil    DateTime?
+  lastLoginAt    DateTime?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+  audits         AuditLog[]
+  sessions       AdminSession[]
+}
+
+model AdminSession {
+  id         String    @id
+  adminId    String
+  admin      AdminUser @relation(fields: [adminId], references: [id], onDelete: Restrict)
+  version    Int
+  lastSeenAt DateTime  @default(now())
+  revokedAt  DateTime?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+// Bilingual publication/media fields are normalized here and shared by the SRS entities.
+model Content {
+  id          String            @id @default(cuid())
+  kind        ContentKind
+  slug        String
+  titleVi     String
+  titleEn     String            @default("")
+  summaryVi   String            @default("")
+  summaryEn   String            @default("")
+  bodyVi      String            @default("")
+  bodyEn      String            @default("")
+  status      ContentStatus     @default(DRAFT)
+  publishedAt DateTime?
+  scheduledAt DateTime?
+  featured    Boolean           @default(false)
+  sortOrder   Int               @default(0)
+  categoryId  String?
+  category    Category?         @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  mediaId     String?
+  media       Media?            @relation(fields: [mediaId], references: [id], onDelete: Restrict)
+  isDemo      Boolean           @default(false)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  page        Page?
+  milestone   HistoryMilestone?
+  painting    Painting?
+  video       Video?
+  workshop    Workshop?
+  artisan     Artisan?
+  post        Post?
+  product     Product?
+  faq         Faq?
+  hero        HeroSlide?
+
+  @@unique([kind, slug])
+  @@index([kind, status, publishedAt])
+}
+
+model Category {
+  id               String            @id @default(cuid())
+  kind             ContentKind
+  slug             String
+  titleVi          String
+  titleEn          String
+  sortOrder        Int               @default(0)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  contents         Content[]
+  paintingCategory PaintingCategory?
+  videoCategory    VideoCategory?
+
+  @@unique([kind, slug])
+}
+
+model PaintingCategory {
+  id         String   @id @default(cuid())
+  categoryId String   @unique
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model VideoCategory {
+  id         String   @id @default(cuid())
+  categoryId String   @unique
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Page {
+  id        String   @id @default(cuid())
+  contentId String   @unique
+  content   Content  @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model HistoryMilestone {
+  id        String   @id @default(cuid())
+  contentId String   @unique
+  content   Content  @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  eraVi     String
+  eraEn     String
+  yearFrom  Int?
+  yearTo    Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Painting {
+  id              String           @id @default(cuid())
+  contentId       String           @unique
+  content         Content          @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  inscription     String           @default("")
+  transliteration String           @default("")
+  translationVi   String           @default("")
+  translationEn   String           @default("")
+  materialVi      String           @default("")
+  materialEn      String           @default("")
+  widthCm         Int?
+  heightCm        Int?
+  color           String           @default("vermilion")
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  products        Product[]
+  contacts        ContactMessage[]
+}
+
+model Video {
+  id          String      @id @default(cuid())
+  contentId   String      @unique
+  content     Content     @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  sourceType  VideoSource @default(YOUTUBE)
+  sourceUrl   String      @default("")
+  durationSec Int         @default(0)
+  subtitleKey String?
+  tags        String[]
+  viewCount   Int         @default(0)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  views       VideoView[]
+}
+
+model VideoView {
+  id            String   @id @default(cuid())
+  videoId       String
+  video         Video    @relation(fields: [videoId], references: [id], onDelete: Restrict)
+  browserHash   String
+  playedSeconds Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([videoId, browserHash, createdAt])
+}
+
+model Workshop {
+  id          String            @id @default(cuid())
+  contentId   String            @unique
+  content     Content           @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  priceAdult  Int
+  priceChild  Int
+  durationMin Int
+  minAge      Int
+  locationVi  String
+  locationEn  String
+  includesVi  String
+  includesEn  String
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  sessions    WorkshopSession[]
+}
+
+model WorkshopSession {
+  id               String         @id @default(cuid())
+  workshopId       String
+  workshop         Workshop       @relation(fields: [workshopId], references: [id], onDelete: Restrict)
+  startsAt         DateTime
+  endsAt           DateTime
+  capacity         Int
+  registerDeadline DateTime
+  language         String         @default("vi")
+  status           SessionStatus  @default(OPEN)
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  registrations    Registration[]
+  holds            Hold[]
+
+  @@index([status, startsAt])
+}
+
+model Registration {
+  id             String          @id @default(cuid())
+  code           String          @unique
+  idempotencyKey String          @unique
+  requestHash    String
+  sessionId      String
+  session        WorkshopSession @relation(fields: [sessionId], references: [id], onDelete: Restrict)
+  fullName       String
+  phone          String
+  email          String
+  adults         Int
+  children       Int
+  language       String
+  note           String          @default("")
+  priceAdult     Int
+  priceChild     Int
+  totalAmount    Int
+  status         RegStatus
+  consentAt      DateTime
+  policyVersion  String
+  internalNote   String          @default("")
+  cancelledAt    DateTime?
+  remindedAt     DateTime?
+  anonymizedAt   DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  hold           Hold?
+
+  @@index([sessionId, status])
+  @@index([sessionId, phone])
+}
+
+model Hold {
+  id             String          @id @default(cuid())
+  registrationId String          @unique
+  registration   Registration    @relation(fields: [registrationId], references: [id], onDelete: Restrict)
+  sessionId      String
+  session        WorkshopSession @relation(fields: [sessionId], references: [id], onDelete: Restrict)
+  tokenHash      String          @unique
+  expiresAt      DateTime
+  consumedAt     DateTime?
+  releasedAt     DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  @@index([sessionId, expiresAt])
+}
+
+model Artisan {
+  id        String           @id @default(cuid())
+  contentId String           @unique
+  content   Content          @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  honorVi   String           @default("")
+  honorEn   String           @default("")
+  createdAt DateTime         @default(now())
+  updatedAt DateTime         @updatedAt
+  contacts  ContactMessage[]
+}
+
+model ContactMessage {
+  id            String        @id @default(cuid())
+  artisanId     String?
+  artisan       Artisan?      @relation(fields: [artisanId], references: [id], onDelete: Restrict)
+  paintingId    String?
+  painting      Painting?     @relation(fields: [paintingId], references: [id], onDelete: Restrict)
+  topic         String
+  fullName      String
+  email         String
+  phone         String
+  message       String
+  language      String
+  status        ContactStatus @default(NEW)
+  internalNote  String        @default("")
+  consentAt     DateTime
+  policyVersion String
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  attachments   Media[]
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  contentId String   @unique
+  content   Content  @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id         String    @id @default(cuid())
+  contentId  String    @unique
+  content    Content   @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  paintingId String?
+  painting   Painting? @relation(fields: [paintingId], references: [id], onDelete: Restrict)
+  size       String
+  priceRef   Int?
+  inStock    Boolean   @default(true)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Media {
+  id               String          @id @default(cuid())
+  key              String          @unique
+  mime             String
+  size             Int
+  width            Int?
+  height           Int?
+  altVi            String
+  altEn            String          @default("")
+  variants         Json            @default("{}")
+  isPrivate        Boolean         @default(false)
+  isDemo           Boolean         @default(false)
+  scanStatus       String          @default("PENDING")
+  contactMessageId String?
+  contactMessage   ContactMessage? @relation(fields: [contactMessageId], references: [id], onDelete: Restrict)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  contents         Content[]
+}
+
+model Faq {
+  id        String   @id @default(cuid())
+  contentId String   @unique
+  content   Content  @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  group     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model HeroSlide {
+  id         String   @id @default(cuid())
+  contentId  String   @unique
+  content    Content  @relation(fields: [contentId], references: [id], onDelete: Restrict)
+  ctaUrl     String   @default("/workshop")
+  ctaLabelVi String   @default("Giữ chỗ workshop")
+  ctaLabelEn String   @default("Book a workshop")
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Subscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  language       String
+  consentAt      DateTime
+  policyVersion  String
+  confirmedAt    DateTime?
+  unsubscribedAt DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model SiteSetting {
+  key       String   @id
+  value     Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AuditLog {
+  id        String    @id @default(cuid())
+  adminId   String
+  admin     AdminUser @relation(fields: [adminId], references: [id], onDelete: Restrict)
+  action    String
+  entity    String
+  entityId  String
+  diff      Json
+  createdAt DateTime  @default(now())
+
+  @@index([adminId, createdAt])
+}
+
+model Outbox {
+  id             String     @id @default(cuid())
+  dedupeKey      String     @unique
+  recipient      String
+  subject        String
+  body           String
+  ics            String?
+  registrationId String?
+  expectedStatus RegStatus?
+  contactId      String?
+  isReply        Boolean    @default(false)
+  status         String     @default("PENDING")
+  attempts       Int        @default(0)
+  availableAt    DateTime   @default(now())
+  claimedAt      DateTime?
+  sentAt         DateTime?
+  lastError      String?
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+
+  @@index([status, availableAt])
+}
+
+model Token {
+  id        String    @id @default(cuid())
+  hash      String    @unique
+  purpose   String
+  subjectId String
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model RateLimit {
+  key       String   @id
+  count     Int
+  resetAt   DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Redirect {
+  id        String      @id @default(cuid())
+  kind      ContentKind
+  oldSlug   String
+  newSlug   String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+
+  @@unique([kind, oldSlug])
+}
