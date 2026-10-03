@@ -1,0 +1,915 @@
+{
+  "capturedAt": "2026-10-03T14:53:47.641Z",
+  "commit": null,
+  "sourceManifest": "../source-manifest.json",
+  "beforeSourceManifest": "before-source-manifest.json",
+  "before": [
+    "../vi-home-375.png",
+    "../vi-home-1440.png",
+    "../vi-thu-vien-tranh-375.png",
+    "../vi-thu-vien-tranh-1440.png"
+  ],
+  "engine": "Chromium desktop emulation",
+  "results": [
+    {
+      "route": "/",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/lich-su",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/san-pham/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/workshop/in-tranh-co-ban",
+      "locale": "vi",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/tham-quan-360?diem=phong-tranh",
+      "locale": "vi",
+      "width": 360,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "locale": "en",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "locale": "en",
+      "width": 360,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/virtual-tour?diem=mau-va-giay",
+      "locale": "en",
+      "width": 360,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/tranh",
+      "locale": "vi",
+      "width": 360,
+      "state": "authenticated",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/lich-su",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/san-pham/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/workshop/in-tranh-co-ban",
+      "locale": "vi",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/tham-quan-360?diem=phong-tranh",
+      "locale": "vi",
+      "width": 375,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "locale": "en",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "locale": "en",
+      "width": 375,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/virtual-tour?diem=mau-va-giay",
+      "locale": "en",
+      "width": 375,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/tranh",
+      "locale": "vi",
+      "width": 375,
+      "state": "authenticated",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/lich-su",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/san-pham/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/workshop/in-tranh-co-ban",
+      "locale": "vi",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/tham-quan-360?diem=phong-tranh",
+      "locale": "vi",
+      "width": 768,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "locale": "en",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "locale": "en",
+      "width": 768,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/virtual-tour?diem=mau-va-giay",
+      "locale": "en",
+      "width": 768,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/tranh",
+      "locale": "vi",
+      "width": 768,
+      "state": "authenticated",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/lich-su",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/san-pham/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/workshop/in-tranh-co-ban",
+      "locale": "vi",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/tham-quan-360?diem=phong-tranh",
+      "locale": "vi",
+      "width": 1200,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "locale": "en",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "locale": "en",
+      "width": 1200,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/virtual-tour?diem=mau-va-giay",
+      "locale": "en",
+      "width": 1200,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/tranh",
+      "locale": "vi",
+      "width": 1200,
+      "state": "authenticated",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/thu-vien-tranh/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/lich-su",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/san-pham/dam-cuoi-chuot",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/workshop/in-tranh-co-ban",
+      "locale": "vi",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/tham-quan-360?diem=phong-tranh",
+      "locale": "vi",
+      "width": 1440,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en",
+      "locale": "en",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "locale": "en",
+      "width": 1440,
+      "state": "default",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/en/virtual-tour?diem=mau-va-giay",
+      "locale": "en",
+      "width": 1440,
+      "state": "ready",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    },
+    {
+      "route": "/admin/tranh",
+      "locale": "vi",
+      "width": 1440,
+      "state": "authenticated",
+      "httpStatus": 200,
+      "size": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "controlOverlap": false,
+      "errors": [],
+      "violations": []
+    }
+  ]
+}

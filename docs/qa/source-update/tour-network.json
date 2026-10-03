@@ -1,0 +1,293 @@
+{
+  "capturedAt": "2026-10-03T14:44:50.179Z",
+  "profile": {
+    "viewport": 375,
+    "downloadKbps": 1600,
+    "uploadKbps": 750,
+    "latencyMs": 150,
+    "cpuSlowdown": 4,
+    "browser": "Chromium emulated; not physical mobile",
+    "cacheInitiallyEmpty": true,
+    "tourCacheClearedAfterHomeCheck": true
+  },
+  "engineOnHome": [],
+  "previewPaintUpperBoundMs": 1329.5,
+  "sharpReadyUpperBoundMs": 8076.800000011921,
+  "preloadedTransitionUpperBoundMs": 1685.6000000238419,
+  "resources": [
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-preview.jpg",
+      "start": 262.9000000357628,
+      "end": 1061.300000011921,
+      "bytes": 10566
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-mobile.jpg",
+      "start": 263.7000000476837,
+      "end": 7223.100000023842,
+      "bytes": 685259
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-preview.jpg",
+      "start": 5993.800000011921,
+      "end": 6168.5,
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-mobile.jpg",
+      "start": 6452.400000035763,
+      "end": 7223.400000035763,
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-mobile.jpg",
+      "start": 8071,
+      "end": 12024.5,
+      "bytes": 762372
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-preview.jpg",
+      "start": 12291.600000023842,
+      "end": 12523.400000035763,
+      "bytes": 12021
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-preview.jpg",
+      "start": 12353.200000047684,
+      "end": 12632.300000011921,
+      "bytes": 300
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-mobile.jpg",
+      "start": 12707.600000023842,
+      "end": 12878.600000023842,
+      "bytes": 300
+    }
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:3000/tham-quan-360",
+      "type": "document"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/css/301ce1cc2d7f36cd.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/webpack-7375fd9796ae97c4.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/4bd1b696-f785427dddbba9fb.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/1255-5cd2fe06309409a0.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/main-app-5b66dc0543c7d7a6.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/2619-3c9e02e22d10480a.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/1356-853f784b705afa15.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/373-38a712cfa949ecb0.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/app/%5Blocale%5D/page-f7929393b8221ca8.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/7822-26c3cf95639155b0.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/9930-da8c75e411370133.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/app/%5Blocale%5D/layout-8801705d3306f31e.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/app/%5Blocale%5D/error-9852238117ea112a.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-400-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-vietnamese-400-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/playfair-display-latin-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/playfair-display-vietnamese-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/playfair-display-latin-400-italic.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/playfair-display-vietnamese-400-italic.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/2207-e4e3c76e3b3f166d.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/368-545535f25796bea3.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/9619-e796fb0754ab3a73.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/app/%5Blocale%5D/%5B...path%5D/page-68406eebb1e941bf.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-preview.jpg",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-mobile.jpg",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/textures/paper.svg",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-ext-400-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/playfair-display-latin-ext-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-500-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-ext-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-vietnamese-600-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-latin-ext-500-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/fonts/be-vietnam-pro-vietnamese-500-normal.woff2",
+      "type": "font"
+    },
+    {
+      "url": "http://127.0.0.1:3000/?_rsc=4QFlkazx4xwZHGsF",
+      "type": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:3000/workshop/in-tranh-co-ban?buoi=demo-in-tranh-co-ban-0&_rsc=4QFlkazx4xwZHGsF",
+      "type": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/b536a0f1.f15e21d49ec4769c.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/bd904a5c.ae732461958079e2.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/551e181c.392a12db20b794f6.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/9631.aa024a80153f650d.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/chunks/5910.b061c746869f7fd0.js",
+      "type": "script"
+    },
+    {
+      "url": "http://127.0.0.1:3000/_next/static/css/8ec5a8cb1da4c0db.css",
+      "type": "stylesheet"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-preview.jpg",
+      "type": "fetch"
+    },
+    {
+      "url": "blob:http://127.0.0.1:3000/9d2d6ad2-0c61-4785-b5f6-175cd12ed38b",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-1-mobile.jpg",
+      "type": "fetch"
+    },
+    {
+      "url": "blob:http://127.0.0.1:3000/8bbd46b6-7193-41d1-92f8-7d9ac6a5f8b7",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-mobile.jpg",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/chinh-sach-bao-mat?_rsc=4QFlkazx4xwZHGsF",
+      "type": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tham-quan?_rsc=4QFlkazx4xwZHGsF",
+      "type": "fetch"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-preview.jpg",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-preview.jpg",
+      "type": "fetch"
+    },
+    {
+      "url": "blob:http://127.0.0.1:3000/4b9a767a-9908-42ca-a976-181a8b2df21a",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-2-mobile.jpg",
+      "type": "fetch"
+    },
+    {
+      "url": "blob:http://127.0.0.1:3000/7f049719-dba0-44d9-9d0b-c7b9c0bab6ed",
+      "type": "image"
+    },
+    {
+      "url": "http://127.0.0.1:3000/tour/scene-3-mobile.jpg",
+      "type": "image"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+name: Prototype checks
+on: [push, pull_request]
+jobs:
+  local-prototype:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run setup:demo
+      - run: npm run test:prepare
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npx prisma validate
+      - run: node scripts/check-rules.mjs
+      - run: npm audit --audit-level=moderate
+      - run: npm test
+      - run: npm run build
+      - run: npx playwright install chromium
+      - name: Start local web and worker
+        shell: pwsh
+        run: |
+          Start-Process -FilePath node -ArgumentList 'node_modules/next/dist/bin/next','start','--hostname','127.0.0.1' -WindowStyle Hidden
+          Start-Process -FilePath node -ArgumentList 'node_modules/tsx/dist/cli.mjs','scripts/worker.ts' -WindowStyle Hidden
+          for ($attempt=0; $attempt -lt 30; $attempt++) {
+            try { Invoke-WebRequest 'http://127.0.0.1:3000/api/health' | Out-Null; break } catch { Start-Sleep -Seconds 1 }
+          }
+      - run: npm run test:e2e
+      - run: node scripts/verify-ui.mjs
+      - run: node scripts/verify-source-ui.mjs
+      - run: node scripts/verify-hydration.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-ui-evidence
+          path: docs/qa
+      # Private Playwright traces can contain entered credentials and PII.
+      # Do not upload them to publicly accessible artifacts.

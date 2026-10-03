@@ -1,0 +1,217 @@
+{
+  "capturedAt": "2026-10-03T14:20:46.502Z",
+  "instrumentation": "None; unmodified served browser chunks",
+  "commit": null,
+  "results": [
+    {
+      "index": 0,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 1,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 2,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 3,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 4,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 5,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 6,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 7,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 8,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 9,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 10,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 11,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 12,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 13,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 14,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 15,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 16,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 17,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 18,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 19,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 20,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 21,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 22,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 23,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 24,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 25,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 26,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 27,
+      "route": "/en",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 28,
+      "route": "/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    },
+    {
+      "index": 29,
+      "route": "/en/thu-vien-tranh",
+      "status": 200,
+      "h1": 1,
+      "errors": []
+    }
+  ]
+}

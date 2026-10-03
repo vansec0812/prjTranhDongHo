@@ -1,0 +1,23 @@
+{
+  "capturedAt": "2026-10-03",
+  "vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 5,
+    "critical": 0,
+    "total": 5
+  },
+  "advisory": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+  "status": "BLOCKED",
+  "patchedVersion": null,
+  "chain": [
+    "braces",
+    "micromatch",
+    "fast-glob",
+    "@next/eslint-plugin-next",
+    "eslint-config-next"
+  ],
+  "scope": "dev lint toolchain; do not run untrusted glob patterns",
+  "note": "No audit threshold change, no major downgrade, no override to conceal the advisory."
+}

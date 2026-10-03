@@ -1,0 +1,963 @@
+{
+  "capturedAt": "2026-10-03T15:04:04.995Z",
+  "commit": null,
+  "reason": "Repository chưa có Git; SHA-256 nhận diện chính xác bản local, không bịa commit.",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "22e3106ab7382c088b6f4321963951633bc6b591e7a22dda2cd51201697ed12a"
+    },
+    {
+      "path": ".github/workflows/checks.yml",
+      "sha256": "74fe62bbe6a09e6a49e5fd403a1bea0898ed347689b104d5724bb6d518ba57b9"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "4881414fb231b2d3b5a73c3d9f321adb2a50652ca2f6c0e76fa49bf5797853d2"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c7e7bbf82270f875695df6e17ff1f36d71b679daf265bfd4b07967eac5872dc7"
+    },
+    {
+      "path": "SRS bổ sung - Tham quan thực tế ảo làng tranh Đông Hồ.pdf",
+      "sha256": "e5219273999f9bcc23ae73142ec09a052d8c75d70e54289ea4abe6e625d0573f"
+    },
+    {
+      "path": "SRS_Website_Tranh_Dong_Ho.pdf",
+      "sha256": "13ab7f24a11dd9c2d6e8b4689bcb0ff1c75cf5f9bec6f7df9992a17ccb88ab6a"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "8b0d8f869693adf4325c1720cdf8de79802c889f03a1b897162d4a35ea7a66a7"
+    },
+    {
+      "path": "docs/decisions.md",
+      "sha256": "75b4e4b92a906916b21ca2801958e5b9bc25b6df1fafae93e61e57dbeaee69e8"
+    },
+    {
+      "path": "docs/design-system.md",
+      "sha256": "4c62d188aa812c77547e682cd5961ced494f266174ed8bfb595fd31151a4f61e"
+    },
+    {
+      "path": "docs/requirements-matrix.md",
+      "sha256": "82e58b988b3cc582a2a79671e93534d2896de2d3275199a3db5e1a2763c85c72"
+    },
+    {
+      "path": "docs/runbook.md",
+      "sha256": "97ad4adc4cb950796f5b70e9fb3e2f7115e67f55f1c12a6dd533d2469b87a47d"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "7215b50c9133a19050937102636d1dce73f2d4d637288bcf2a7e83997a90db7d"
+    },
+    {
+      "path": "next-env.d.ts",
+      "sha256": "85ae5aee75f011967cf2d25cbc342f62d69314e9d925f7f4aa3456fc2cffcca6"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "e4a3152a4372ad5f1eed7f6ea0f7ed3c731ff4ff0d9ee4d7d332afefba8fd952"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "44383cd096b8b54c16bc9c18d69c35a0a30698d702ea2ff48dc4a3a384c02752"
+    },
+    {
+      "path": "package.json",
+      "sha256": "5eb7b1234b6c23338076d7002585f529af7a113f2c3c6968bea69eea26ee1b56"
+    },
+    {
+      "path": "planTranhDongHo.md",
+      "sha256": "e128ca8a73437170d1fd731b0df0f9c57e1d545eb64381feab3109ac8179a3fb"
+    },
+    {
+      "path": "playwright.config.ts",
+      "sha256": "2852345dbf6960c965a07a5bcc0ab4f5acc8df3c8c86054b83fe81f4543c93f5"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "b783348d5618047d0f37e12acd15c5a2c5f02809d8711e0764c9cea52750346c"
+    },
+    {
+      "path": "prisma/migrations/202610020001_initial/migration.sql",
+      "sha256": "4c203844f107669da361ebdb480a3171ecd1da73100889da35a7bffa52d38da5"
+    },
+    {
+      "path": "prisma/migrations/202610020002_constraints/migration.sql",
+      "sha256": "8467824ea25353c3e73dd5ea8b374f127b92ff38208bd445bb0f1c792aff7362"
+    },
+    {
+      "path": "prisma/migrations/migration_lock.toml",
+      "sha256": "1db17a8d051aa136110736752c5e1f8b7ed92b6ea8e803112fbbe2497047c210"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "sha256": "0909d5c35e46add040c75f748d72e8a45ff21c7e55693eebb8424e9765034d28"
+    },
+    {
+      "path": "prisma/seed.ts",
+      "sha256": "e74fc955d45dfdfbf4210432a09e7b95a81712ac35010d4af482ffde4a43047f"
+    },
+    {
+      "path": "prompt_website_tranh_dong_ho.md",
+      "sha256": "b576fb2209e5e72530512a63689bf3cb108025f4b96d8443f8bf3b061055b997"
+    },
+    {
+      "path": "public/demo/fish.svg",
+      "sha256": "1ac80dce0fd270ed2a3abf768c14be7fbb04f1ad5aff35ddafc529864552ce26"
+    },
+    {
+      "path": "public/demo/flower.svg",
+      "sha256": "1fb2f716763c73961a8eead0733d06ba0efa8f9354f2725756643f6eb06a06e8"
+    },
+    {
+      "path": "public/demo/pig.svg",
+      "sha256": "3babade7115b23294f839d3eee2c74fc8389709300cf55d2bdb2dd2c5753e26b"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-LICENSE",
+      "sha256": "0bd4db1cda123af9d91794b0f98324b7d7d81aef0fcaf78c433160153f2c6f25"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-400-normal.woff",
+      "sha256": "c0190200223755a3c52bb47b9cf6c3604f19288599cfbbe5026904d5d439f7d7"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-400-normal.woff2",
+      "sha256": "03d1b589cff172e1a670b3573e731d3380bc326f80cf83b0d3504e3188e2e074"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-500-normal.woff",
+      "sha256": "0a905f6bc6f1120d20ad3dde690989db3149a98227026f2de47dca6aef71edab"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-500-normal.woff2",
+      "sha256": "b621f77d35f777023aa11ca524462d511b4b28a813adbc0e9d15a10fc61dfe4e"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-600-normal.woff",
+      "sha256": "f900efb46ec81e9ff6017c6868f3f47cebde34ac87da16cc587da0e0b1f4c1d4"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-600-normal.woff2",
+      "sha256": "9503dec2a7c532c8331e9600bcafea287a4fd208573b8668d85ab8d8de1863c7"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-400-normal.woff",
+      "sha256": "efff7513dcb30c597007e5d55f8fe5563d0023b276b120b711fad71e0845a9d5"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-400-normal.woff2",
+      "sha256": "f7a2811e471c2973a1179ce39da3ad6bb8082381aa8d1535ccfcbc3d6d78a052"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-500-normal.woff",
+      "sha256": "efa04a80e26991987639ada83ea6eeecdebedb8012f8999ae6805fff20f9456d"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-500-normal.woff2",
+      "sha256": "947d592eb7676914507ff68fc11fcf2cfdecd6ebaf0fa2af6047f66a63ea7d0f"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-600-normal.woff",
+      "sha256": "4143c6d457aca1bc2d395a5954b9c62ada458fc2b9395c2a63cc69a13c55db53"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-latin-ext-600-normal.woff2",
+      "sha256": "20cc75daeaaaa0fa8af2b616b2de2b2900f0ce14ae8e9faa47d272cedd93827f"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-400-normal.woff",
+      "sha256": "4d50c7991ca377aef28fb1fb24d4ce7ea64d69f6bd2661e7e74fb9d9fef11dc0"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-400-normal.woff2",
+      "sha256": "dc085e2fba3414e5c5bf1e6172f921a9f81c5859946a4ed3d63c1e470d96a9e2"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-500-normal.woff",
+      "sha256": "6b81283a46623b9a99bc7a1800f936549ead1f871d1dfcd803ddcd18c433a7d8"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-500-normal.woff2",
+      "sha256": "86341610cbe907eecf461c9159c168d5efb52bb1a33963813a08f520555d8e66"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-600-normal.woff",
+      "sha256": "2d68010bd89add4c477e9c9c3ef29b78a68f76439309f4633c91a8674e9ba751"
+    },
+    {
+      "path": "public/fonts/be-vietnam-pro-vietnamese-600-normal.woff2",
+      "sha256": "97658c6f9a384f29a3005c3d96e2a0d1c810192cf68979071c290f5a377a9f99"
+    },
+    {
+      "path": "public/fonts/playfair-display-LICENSE",
+      "sha256": "c052aafd2a71e90bcee6e69f475029d430a10d548c08ffcae350171f0e9668b1"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-400-italic.woff",
+      "sha256": "cc638df9f516b3cbfd87d5012d0b657c81dec4e52dd5a8c9e0b87a2b39697bd9"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-400-italic.woff2",
+      "sha256": "eabce94d4a69e439cd050755c31f9894ac8a78f93e58b063c6c01f370474e1de"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-600-normal.woff",
+      "sha256": "5798aa5a8bab09880d5e1dd9bfbc8e952fb0c80ec78e695cc339e15f006e8bb8"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-600-normal.woff2",
+      "sha256": "5d2286941a6b02a29387efa94809a064f8917598eafa67b938261cf13bb887cd"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-700-normal.woff",
+      "sha256": "648a046ddf99139a09b0ef25eb21890ea95c6323eead5285fdb4c9797a0bfc18"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-700-normal.woff2",
+      "sha256": "28453852ea165c47b5a941be00e418402e1407002ed87507f062a1e316328fe6"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-400-italic.woff",
+      "sha256": "8a2b40aad8d339ee5a19974b33f4b4ae3e340bfa0996ad65cf8060cc5462f628"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-400-italic.woff2",
+      "sha256": "b02fdf18a2d7b09f409b01a1ab4afe7b5f7d08926b3c867187398765ea0fb3f1"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-600-normal.woff",
+      "sha256": "ae65def2e5cd939e1fc964bebb85528728b36d10502d59427a58affbce64aa10"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-600-normal.woff2",
+      "sha256": "cf968562375eceed83b66f2b5445aa4ecdc4d5300de94930da06433877a975a1"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-700-normal.woff",
+      "sha256": "d784356c3a7aefa42abd0eaa8873d55585aca0fe60b55ca9012a9ce3ee564d22"
+    },
+    {
+      "path": "public/fonts/playfair-display-latin-ext-700-normal.woff2",
+      "sha256": "edb9f5d879b30c617698bcc288692c339d5a0a2464a5476f00025195e5cad166"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-400-italic.woff",
+      "sha256": "44d830fe9bae45b8a4dc798f7df77568a0d6c9e0c2b0838289a8c02d54c4278c"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-400-italic.woff2",
+      "sha256": "9a08f3c0730f6311b18adadf42797a91900c4bbc32602785ec1e329db5354685"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-600-normal.woff",
+      "sha256": "6c5a892f939fa41ae3db2ad841aa02a88c4a1e1838acc33cbb9d19ab273921bc"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-600-normal.woff2",
+      "sha256": "fdfc3667172fc08a812935ab31a4096841115da99e4334eebed65d992075aff3"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-700-normal.woff",
+      "sha256": "cdb48b72bf34eec9d9095e08486860cbba6084e92729328e91c7964efaa100c5"
+    },
+    {
+      "path": "public/fonts/playfair-display-vietnamese-700-normal.woff2",
+      "sha256": "560402596d5f067fab1884bd39cadedbc8da9b01f85e39f134c06fb4d4472f2d"
+    },
+    {
+      "path": "public/images/paintings/dam-cuoi-chuot.webp",
+      "sha256": "15b66dc6a909acb297d901b230fe14f0f23307883960631a37a1f00b1da15210"
+    },
+    {
+      "path": "public/images/paintings/dan-ga.webp",
+      "sha256": "63286c7cb71ed33a7b93772586eca5e442834533a4397c8517ef241d05fd0c8b"
+    },
+    {
+      "path": "public/images/paintings/dan-lon-am-duong.webp",
+      "sha256": "90374d2e83f98c4b3775459ed5e21d0d1ebd9e28d8c7c8f01bc7f7932b4faef9"
+    },
+    {
+      "path": "public/images/paintings/hung-dua.webp",
+      "sha256": "9527abd7ba4dcad12e6c9d129a59b2d459d3cd6412f46c0cec0aaab6fc6fc9f2"
+    },
+    {
+      "path": "public/images/paintings/lon-an-cay-ray.webp",
+      "sha256": "88cebc7789103202a7be05ae41b4439eada5006243e8f465e2b865940d5b9193"
+    },
+    {
+      "path": "public/images/paintings/ly-ngu-vong-nguyet.webp",
+      "sha256": "253ee3c504325fb14fc6369282eaea13a0615e7e66374dca1591db15f9d5b180"
+    },
+    {
+      "path": "public/images/paintings/quan-trang.webp",
+      "sha256": "fc5e673510cffa9086f759dbdc6e125ed587cb8abd3a7acd53a763e04e4dc5bf"
+    },
+    {
+      "path": "public/images/paintings/sao-dieu.webp",
+      "sha256": "494da77e4c9c75b5f246d75f3e76c58cc31f10bd7c33b67071351f2b59cd5449"
+    },
+    {
+      "path": "public/images/paintings/vinh-hoa-phu-quy.webp",
+      "sha256": "673e9350e2bb2a730f4e177847c960c191979aad7504248cfdd9b0a1992b6b2c"
+    },
+    {
+      "path": "public/images/visit/bo-suu-tap.webp",
+      "sha256": "56c747acd344ef68474e11555f146c8625bab6abb2f4b99b631e648183064e7e"
+    },
+    {
+      "path": "public/images/visit/che-mau.webp",
+      "sha256": "3ca1502e2551c41177136a5b2c9a608ade1f0a543a28f421296b00e3ea8ff541"
+    },
+    {
+      "path": "public/images/visit/chi-tiet-van-khac.webp",
+      "sha256": "594839106623640bce256696297b2d26a9f119a607c404aaf41c4736d5204fab"
+    },
+    {
+      "path": "public/images/visit/cho-tranh.webp",
+      "sha256": "0e935699e7c3d806a5dee6ffec7a11c5490204fe8f866afc08f9d7a272d36624"
+    },
+    {
+      "path": "public/images/visit/giay-diep.webp",
+      "sha256": "fe70182d74bd74d58e56fe2f8382badade6d8b23f0e196a849898698b39650b4"
+    },
+    {
+      "path": "public/images/visit/sao-dieu-trung-bay.webp",
+      "sha256": "0946e0c67e21a5bafe089149c2e8bfca9c52cb0f895b2d91cc63aab9789c58e6"
+    },
+    {
+      "path": "public/images/visit/tu-lieu-lang-tranh.webp",
+      "sha256": "6017c58abdaf34afbfe68a95e4cd0c766e956c253d2a3d744c7357fe7f0654de"
+    },
+    {
+      "path": "public/images/visit/tu-lieu-nghe.webp",
+      "sha256": "c594c1cb80c56bb947dbae4b1d549b5fa76ae6872a7f7d36e3d1fcf6e84ae3c5"
+    },
+    {
+      "path": "public/images/visit/tuong-tranh.webp",
+      "sha256": "e0d4f42093eaca9a50c6d0a61f5329e83ae06ea8f2cf3fce1095cf7027a2c983"
+    },
+    {
+      "path": "public/images/visit/van-khac.webp",
+      "sha256": "5ea2dacf9f4e80f8a457854aadd0c87ce1a078296289b336302d862bde32f26f"
+    },
+    {
+      "path": "public/textures/paper.svg",
+      "sha256": "34f0ae29b61e5e09982ee60306a21e2ab9a7cb04abd6dd4ce60857db88f3d56d"
+    },
+    {
+      "path": "public/tour/assets.json",
+      "sha256": "ba0fdfc18146ad85626b5b4b8f627c8c0ff5c1655d7060e5f531986ec44c762d"
+    },
+    {
+      "path": "public/tour/scene-1-large.jpg",
+      "sha256": "6ff6e3fdcfa14684727bf76c4780ff6ddaa54990d546e489bf18fa92ee5be346"
+    },
+    {
+      "path": "public/tour/scene-1-mobile.jpg",
+      "sha256": "d02ee7a845b1f489325cc0ef5802a9da209170a138b7005a03b77618aed8bfa1"
+    },
+    {
+      "path": "public/tour/scene-1-preview.jpg",
+      "sha256": "545fe9cedd332c499b1d82f129d49eaa1a7cda5b1cfb3132fc55ac06834e6e19"
+    },
+    {
+      "path": "public/tour/scene-1-thumb.jpg",
+      "sha256": "109a3b4b7ea05eb00be37b172443e11577079dbf3ac68c3acecae43a8f4dda15"
+    },
+    {
+      "path": "public/tour/scene-2-large.jpg",
+      "sha256": "c1f087e4d6dad01223827d34b7034a59ea76a1ea16e56782ba5b2e51e6ef2214"
+    },
+    {
+      "path": "public/tour/scene-2-mobile.jpg",
+      "sha256": "23ab0efd33128f84411516a2971edb47933d4ddb86eb590b6ea84410b01b3d74"
+    },
+    {
+      "path": "public/tour/scene-2-preview.jpg",
+      "sha256": "c772377c12b412ef03eabe63fda0d81acd41a35692a62aadac703ece46411fcf"
+    },
+    {
+      "path": "public/tour/scene-2-thumb.jpg",
+      "sha256": "c212205896959cf945816a3a3aac5d524e57c36eeffea7de4108ed40c2f8575b"
+    },
+    {
+      "path": "public/tour/scene-3-large.jpg",
+      "sha256": "f75e11de857cb56682e1bff388b70644f247df5532f48cf846c155a53e8456ac"
+    },
+    {
+      "path": "public/tour/scene-3-mobile.jpg",
+      "sha256": "db8bcf41b9d5b4396d8a7b40f243f6257a7ee7f35642b222d7bdccce29b2ee48"
+    },
+    {
+      "path": "public/tour/scene-3-preview.jpg",
+      "sha256": "13a0cefcaa13e24243fa7cd7e7d328713a3b8e68a42bc578bfcf7387d5b6ddf7"
+    },
+    {
+      "path": "public/tour/scene-3-thumb.jpg",
+      "sha256": "732d388fd4369092781c3972367f16ccddb50ef7683216f4db50dd742f92acc6"
+    },
+    {
+      "path": "public/tour/scene-4-large.jpg",
+      "sha256": "e9de3a15308c2c699dedbf1f85e646085a3cc3c91b9c025c139f3b82749aefe3"
+    },
+    {
+      "path": "public/tour/scene-4-mobile.jpg",
+      "sha256": "702c35b1f9256a7d546ffa09f051b46ef4c67229189d885973ae30c7d488522c"
+    },
+    {
+      "path": "public/tour/scene-4-preview.jpg",
+      "sha256": "7686187c950ad9692defb7da73d206fa9884cd8f8bb4ccde7b5c8c2b34986b85"
+    },
+    {
+      "path": "public/tour/scene-4-thumb.jpg",
+      "sha256": "dd1f18e1f1be212b5c9c12477d32dbffe19da65bd8469d28ac85d3b050a22327"
+    },
+    {
+      "path": "public/tour/tour.json",
+      "sha256": "f33b541401c372456c17dd329ae9d966aa8d3bc948320ce075b510afdd2b4a70"
+    },
+    {
+      "path": "scripts/captcha-review.mjs",
+      "sha256": "373c6307dddf818195a2ef3b4a6803d148effab7394515cfadeaa00443cd7de0"
+    },
+    {
+      "path": "scripts/capture-preview.mjs",
+      "sha256": "8b473508a33df51d7bd132ea3908f9a7cac4d56da2d609dce7f5302623c19318"
+    },
+    {
+      "path": "scripts/check-rules.mjs",
+      "sha256": "433be377a678e6a464e4da664ddfc554420b904b4c2eab7e7057eadd6e60180f"
+    },
+    {
+      "path": "scripts/configure-tour.mjs",
+      "sha256": "340c9291a87cc7700c087e6d23876ed1d5b553018ca9cb13d4f8264de3bcfdc3"
+    },
+    {
+      "path": "scripts/create-admin.ts",
+      "sha256": "a1f93f8345d9c5f7cb618af13d00412d7c7f5e88009de833d8a03ad27e12e026"
+    },
+    {
+      "path": "scripts/demo.mjs",
+      "sha256": "2c6207fcfccd5c521f1da745dd3d95b12c58658b072c727c8376cfa7a36a0706"
+    },
+    {
+      "path": "scripts/find-overflow.mjs",
+      "sha256": "61a3c14e988c8ef6a622deab3121368cd23420c6b47fcc97c4210dda8e1f1be3"
+    },
+    {
+      "path": "scripts/import-source-content.ts",
+      "sha256": "99b4a9618c5c006a8e6867a4ba8bbcc01b808a1117816e42aa73b7af4ff9cc56"
+    },
+    {
+      "path": "scripts/local-db.mjs",
+      "sha256": "f81821fb5e8028b48f7c1635686b2b673dd5b222b7d9948d85cee10c12f058d1"
+    },
+    {
+      "path": "scripts/performance-review.mjs",
+      "sha256": "79483562fe6bc027b56b8037d6d00cb2fd6342dffbc1cb995774c34b481ce767"
+    },
+    {
+      "path": "scripts/prepare-source-assets.mjs",
+      "sha256": "976b1f75e32ff454fd3c2a90e73d744de91169bc7572c65525adf1667a0ff884"
+    },
+    {
+      "path": "scripts/qa-manifest.mjs",
+      "sha256": "4eb642af58d7eb783effdbf7260c3302489b886ca71498fdffbc33f7c592c15a"
+    },
+    {
+      "path": "scripts/read-srs.mjs",
+      "sha256": "ca76d1818f99c60c8d2f68562f054987a44980f7e51aa787ab9116edfbf152ec"
+    },
+    {
+      "path": "scripts/requirements-matrix.mjs",
+      "sha256": "e2436d4e9304ca6aa2b693691e2ed57234c9676d63120412d3273e03906cf33d"
+    },
+    {
+      "path": "scripts/route-review.mjs",
+      "sha256": "f3d4406b92add8377bcd188d85fe07fedac458de1124530300c75dd03a255a1a"
+    },
+    {
+      "path": "scripts/setup-demo.mjs",
+      "sha256": "9b3da901c185ea03bae64dffb2bebc8dc1721d38f1f579617518b5d689ef4cda"
+    },
+    {
+      "path": "scripts/test-db.mjs",
+      "sha256": "0c1d15e1d767b4071f39ebd3dead06922037bc4557c44ed21b1321d8f69b047c"
+    },
+    {
+      "path": "scripts/vendor-fonts.mjs",
+      "sha256": "333f79e8d246b19ab1b4f68b67231fc63180a1a343019d6ec05d52afb4f76f9e"
+    },
+    {
+      "path": "scripts/verify-hydration.mjs",
+      "sha256": "28edf8aa8700f6bd509d2c48cecb5ffbee0abddc0a45acfd2bf99ac0ef2d9a1f"
+    },
+    {
+      "path": "scripts/verify-source-ui.mjs",
+      "sha256": "6636ae69314a1398f0829e94f5cccd8f506e61f9b906d83e4d758d301edaccbf"
+    },
+    {
+      "path": "scripts/verify-tour-network.mjs",
+      "sha256": "f85a68e13c9808afc3144bb8998f58064635feeb47af967cabb7fef11a1ff5e2"
+    },
+    {
+      "path": "scripts/verify-ui.mjs",
+      "sha256": "2402d4764559b311b638b4ccd3f9082f28a0285c691ae4b95745932768d8bf47"
+    },
+    {
+      "path": "scripts/worker.ts",
+      "sha256": "123c620c0dda9f6ea86881af01b0fc13efb32c8735954190a02bd9b31863e148"
+    },
+    {
+      "path": "src/app/[locale]/[...path]/page.tsx",
+      "sha256": "f493432a0c07f0af609e429a98a4c6f0de015d7e22a55c75b69d83ad81fb3288"
+    },
+    {
+      "path": "src/app/[locale]/error.tsx",
+      "sha256": "8958f04844880ca346c84bcb68b50c1df02b10a00f0d5dbd50bf746b2c64af4d"
+    },
+    {
+      "path": "src/app/[locale]/layout.tsx",
+      "sha256": "5cfad63f8475a529d3ee9d96b6d00cb9f89fddc6d63f841abc97eb4f4a5107a4"
+    },
+    {
+      "path": "src/app/[locale]/not-found.tsx",
+      "sha256": "2eade5d9d36fac37754abb6714291259eb52b2629867fd470665fd38ab0693ac"
+    },
+    {
+      "path": "src/app/[locale]/page.tsx",
+      "sha256": "b01dec55da847ad95651040a70b6cf9e5be4e6397172055bc2960ab3df05a6bd"
+    },
+    {
+      "path": "src/app/admin/(protected)/[...path]/page.tsx",
+      "sha256": "cedc31dac517be599421721a79f7291e9fbd6fca9b882901cd26e8bca6ea8c2f"
+    },
+    {
+      "path": "src/app/admin/(protected)/diem-danh/page.tsx",
+      "sha256": "21040bba56313d60d9d8dcdda73c07feea79310e0ad32267acacad9e191bc792"
+    },
+    {
+      "path": "src/app/admin/(protected)/layout.tsx",
+      "sha256": "f5bd58cb795ed7c6106cd2b157d6e3649a983e2527248a1f3b8fd4f447ea5c8c"
+    },
+    {
+      "path": "src/app/admin/(protected)/page.tsx",
+      "sha256": "a23bcb39e8c309732217c4140f7c9bf8416b4f8e18981fe3f2898d35a7e8eef4"
+    },
+    {
+      "path": "src/app/admin/(protected)/preview/[id]/page.tsx",
+      "sha256": "95495ca394a5e9fe58d23e2b8776e184cfa351b612686ab0036e5cc555b0e991"
+    },
+    {
+      "path": "src/app/admin/dat-lai-mat-khau/page.tsx",
+      "sha256": "0dc87db28ae1cad40c2e5a320ce99f27c029abe27ad6a5dae061af393cab39af"
+    },
+    {
+      "path": "src/app/admin/kich-hoat/page.tsx",
+      "sha256": "a06b8ccb7ad4d83f0020ccf4cd1c14fa3df9b6d7f32f770d78f4b59355d8bd75"
+    },
+    {
+      "path": "src/app/admin/layout.tsx",
+      "sha256": "6cb8bfe086103be804005bd172676e25572e3836ea0499e27ff9ddc46d09cbff"
+    },
+    {
+      "path": "src/app/admin/login/page.tsx",
+      "sha256": "21bdf60c25fdf66a562aec774199ce073c7073f9d5936367172f106d2eb96107"
+    },
+    {
+      "path": "src/app/admin/quen-mat-khau/page.tsx",
+      "sha256": "5cc35bcd3ad0209fb371c256f5239205b705c3af3799f5c27288ecf249f73d64"
+    },
+    {
+      "path": "src/app/api/admin-token/route.ts",
+      "sha256": "81a46f06455914b9cd9eb1eb9033a8d9bf4a714ed179d5a12b5d74621d87add5"
+    },
+    {
+      "path": "src/app/api/admin/account/route.ts",
+      "sha256": "2b3a6fe337432c795ad530226297c73566cf2602756048479d2e02b8fd7b45e7"
+    },
+    {
+      "path": "src/app/api/admin/export/route.ts",
+      "sha256": "db1e99c0d9268cd6e3396646ebed2cd8644de7d9bc06b8e8eea661e767049f5b"
+    },
+    {
+      "path": "src/app/api/admin/route.ts",
+      "sha256": "0cfbae0229b489743092303218fd7688515cae685a43f2bad72a4ea0865f2038"
+    },
+    {
+      "path": "src/app/api/admin/upload/route.ts",
+      "sha256": "03ef4ae3406f1a190af69e7e90256a0da4c2525ab540d736d22dcf4db5cf9c11"
+    },
+    {
+      "path": "src/app/api/auth/[...nextauth]/route.ts",
+      "sha256": "9c29da987ebf4fe2ea2cc237eb213fccf02bf7f5c3607746fed8401b19564dee"
+    },
+    {
+      "path": "src/app/api/consent/route.ts",
+      "sha256": "89ae014d248f10010d12118cc2e9a85a369da76d5b7e5197b861efc56af5d337"
+    },
+    {
+      "path": "src/app/api/contact/route.ts",
+      "sha256": "ba951599e6cd3d4fb892b4da14aaa81506da46b33b386e738141eb47e7c79e1c"
+    },
+    {
+      "path": "src/app/api/health/route.ts",
+      "sha256": "9f65b5a30524b21dbaac8283884bafd50c32f553eb3eeee3829252cebc29f0d9"
+    },
+    {
+      "path": "src/app/api/lookup/route.ts",
+      "sha256": "8f50c47814a989f3bbb2971cb2205331d2933bd51f8b4e717f783313b1088deb"
+    },
+    {
+      "path": "src/app/api/media/[id]/route.ts",
+      "sha256": "4cf9ce6e53d070a52cb5f1eedc89ab64542f0506d40a958dd8099804249f8b46"
+    },
+    {
+      "path": "src/app/api/newsletter/route.ts",
+      "sha256": "ad7eff53152367df214a50874e372d10adff10894d8e56ed9157dc5bbc574073"
+    },
+    {
+      "path": "src/app/api/registration/route.ts",
+      "sha256": "7a820304a16ea1144f4ce504d85e7a08e98ab7829660c0f56ce7aaa5d2aabea6"
+    },
+    {
+      "path": "src/app/api/video-view/route.ts",
+      "sha256": "3b4711ab9622f72a435912f8ba1b3fc472496d8b584a60f1070719a619be11af"
+    },
+    {
+      "path": "src/app/dev/hotspot-picker/page.tsx",
+      "sha256": "4655a42cc9a66cf5b80152c4d8f0e1bff89a170171700d015a8d17ec5075e675"
+    },
+    {
+      "path": "src/app/dev/layout.tsx",
+      "sha256": "8841c2f83e78217f929fc54bc951a171aad5d9f5b34aa3d54ebcef24d820135d"
+    },
+    {
+      "path": "src/app/dev/ui/page.tsx",
+      "sha256": "3067c7290ac96eaf5e3d3a0be11e9757670cfc61163407a3c7e1f0b2bc662ac9"
+    },
+    {
+      "path": "src/app/not-found.tsx",
+      "sha256": "3d2fe66b547358043299a658e84aaaeb06528404cc87681ebab4c5e4b821eedb"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "sha256": "a08bbc7e8e0b3043bbb08a3615c048b5b1feedc6ec50e5dff55b3e4b22b72818"
+    },
+    {
+      "path": "src/app/sitemap.ts",
+      "sha256": "c4728bfd77d5f2af2978e679594d7906b2d63dfb4f6421081c9955122ba69808"
+    },
+    {
+      "path": "src/components/account-panel.tsx",
+      "sha256": "27e112fb26718a900591618521913b245f7fd2d1e78d1698bd4ddf71d69f995d"
+    },
+    {
+      "path": "src/components/admin-actions.tsx",
+      "sha256": "efe5028fed2826e8302c1c76b68604978fc8f51985a3b43abc14e6fe964df3a3"
+    },
+    {
+      "path": "src/components/admin-login.tsx",
+      "sha256": "c19393ca2123542a8e4116a33ecc3cb01ced502dab25831959bccbcc71a5c590"
+    },
+    {
+      "path": "src/components/admin-shell.tsx",
+      "sha256": "f53f791d4ed9f65436dcfaa7cbc05d89ebdabb802bf45054630c6b9bc45bf94b"
+    },
+    {
+      "path": "src/components/booking.tsx",
+      "sha256": "5211fd02c7e556e433eb42b61289b0169781dc570174f4d706d79dd13b10aac9"
+    },
+    {
+      "path": "src/components/captcha.tsx",
+      "sha256": "eab459e9930eebfc0b0a11e128f91c225dd91d39e0d3688a76b172212b6f523f"
+    },
+    {
+      "path": "src/components/cms-form.tsx",
+      "sha256": "515bbf80a8f3c2821eb010f3781a15af6bfcb02889877631d1b599a96eba5a58"
+    },
+    {
+      "path": "src/components/contact-form.tsx",
+      "sha256": "09260577798d6734a903bd710ab8956a28d939fd3064aa498cb14a4a8a3578a6"
+    },
+    {
+      "path": "src/components/content-card.tsx",
+      "sha256": "13619f6335c8c826eb97cac42d6d9100ec7631207828477254c4e1993ead79a9"
+    },
+    {
+      "path": "src/components/cookie-preference.tsx",
+      "sha256": "36d77c4b9c737eaefa38c53609153aaf9aa215ed1b5d4119ef985b5132e8761d"
+    },
+    {
+      "path": "src/components/font-preload.tsx",
+      "sha256": "4516ca2d35e015a1bde8e0336c77176a174280f1350e0273e7de92960cbc3bde"
+    },
+    {
+      "path": "src/components/footer.tsx",
+      "sha256": "e756219267b454821769e7175a5492dd194257ae526e74f4e4a0035c899ca311"
+    },
+    {
+      "path": "src/components/header.tsx",
+      "sha256": "4188ecd9bd6023df65b14469765a8f1f271b83d1e76ab8a993b00a82be96fb45"
+    },
+    {
+      "path": "src/components/hero.tsx",
+      "sha256": "31fc3ec6fa8c7176091aa81d1e5f05b6f65a4a5239e2cd8db31408fae2fd7355"
+    },
+    {
+      "path": "src/components/history.tsx",
+      "sha256": "f10baa5a09aeea1312e9faa67d30259852443124f18bf51860d340a8008d9479"
+    },
+    {
+      "path": "src/components/home-settings.tsx",
+      "sha256": "53af5af6d59ac47889bd065cf9c59b749dd58f53375f3a9a1ae463c136341abb"
+    },
+    {
+      "path": "src/components/lightbox.tsx",
+      "sha256": "a09eb5777426b81b86ce46febf43760cf9572b34320aa3be91553339c4e71a21"
+    },
+    {
+      "path": "src/components/lookup.tsx",
+      "sha256": "5b5f7944ebb4e858dd6ade7f862b1134eda372ae6b1511abedf6d4dc44725525"
+    },
+    {
+      "path": "src/components/newsletter-confirm.tsx",
+      "sha256": "6cb1a74e2409641bdb36fbeeec432d0fd9c496963db452660607938ad57c57fb"
+    },
+    {
+      "path": "src/components/newsletter.tsx",
+      "sha256": "52ccaeb8dda511a1b82db1a3361a820bc1bf1b185c468e0c569427f721da01d9"
+    },
+    {
+      "path": "src/components/page-intro.tsx",
+      "sha256": "83d65266027ecf58a6ee63b04d628638526488ec0907ef81dc9b759ea5f20c6a"
+    },
+    {
+      "path": "src/components/print-button.tsx",
+      "sha256": "34f2f9b5f63d448e63c4e1a789a37844555f3c59e381b5b46d2cb741d7e1d8d5"
+    },
+    {
+      "path": "src/components/registration-table.tsx",
+      "sha256": "023d4f7d29ca6834c15acef160c86317ad155770b542238a4d7840b35ddc9202"
+    },
+    {
+      "path": "src/components/rich-editor.tsx",
+      "sha256": "e75085d72e831715387152b1b3cf07f4e7c293cd7e10c3a2d0abc4e651b9d9ff"
+    },
+    {
+      "path": "src/components/rich-text.tsx",
+      "sha256": "6286aa462ea8575f1d1ae9391996cac81efc295ffde89bf165a50732426e8af4"
+    },
+    {
+      "path": "src/components/session-card.tsx",
+      "sha256": "f8bae841ef65a79eb466869852a0f8303ae45596a0da0d1637c56fbc24b8995f"
+    },
+    {
+      "path": "src/components/share.tsx",
+      "sha256": "66385915f9c00a59fb7847a59ffe5513df51563d3797dc5de4cd603bf2d03372"
+    },
+    {
+      "path": "src/components/token-form.tsx",
+      "sha256": "ea85177827e072d14da6e9b5349faf62736582fbd58c60fc95f939a6d727355d"
+    },
+    {
+      "path": "src/components/tour-preview.tsx",
+      "sha256": "1dfbb3eab3d331d0bdf079be98c56b656327ce53267ff7810ca6d829a25397f3"
+    },
+    {
+      "path": "src/components/tour-viewer.tsx",
+      "sha256": "cd65ffded587e602b67486fd59bc18868a648ceb3f6ca9f4e0727549a9e76c81"
+    },
+    {
+      "path": "src/components/tour.tsx",
+      "sha256": "903c691efb4d81de8c607f583c28270e3247f4304c30c434ee3836729e9c20dc"
+    },
+    {
+      "path": "src/components/ui.tsx",
+      "sha256": "49de40bfe667ee9981bf088a1f220bec8f5f57577c93958b2f8109bef0c3f389"
+    },
+    {
+      "path": "src/components/video-player.tsx",
+      "sha256": "c936fd2723069118ebdcc3a57563e039081afdb1f477b408316c8ee14e376586"
+    },
+    {
+      "path": "src/data/paintings.json",
+      "sha256": "8184c3352a8ac8ad648f6b11b7df412b8927b1e66c874484f08dfcfc494ecf92"
+    },
+    {
+      "path": "src/i18n/messages.ts",
+      "sha256": "54d5e23b3bd431c03f117a018f39e016c80abfc48ee00fef79ad55e7b15356f6"
+    },
+    {
+      "path": "src/i18n/request.ts",
+      "sha256": "32f3d795228e337afba38acbe224a8be9289506177dfad65b468125302d2c4bf"
+    },
+    {
+      "path": "src/i18n/routing.ts",
+      "sha256": "fcecf7a587ee822c9d3395a3fca4c5eb91640bd7e325920a386747eaa6e88618"
+    },
+    {
+      "path": "src/instrumentation.ts",
+      "sha256": "ca5049f87fb9cd0f175af3683042caff5be457c8b8da8b33cb01717799b26eb9"
+    },
+    {
+      "path": "src/lib/admin.ts",
+      "sha256": "ab84ca72bed137e6eb3dcf2a317221e2787716ce6eba803eb3aa35e4af07e26d"
+    },
+    {
+      "path": "src/lib/api.ts",
+      "sha256": "12580d1171ff88613309ab92d572e0e95f6d69a3e2084bf0924364f40a44eb12"
+    },
+    {
+      "path": "src/lib/auth.ts",
+      "sha256": "7a0926d8028b26211bcb2aa449a0a418b59d789d85c71d018f6e87b5a5698ff4"
+    },
+    {
+      "path": "src/lib/client-api.ts",
+      "sha256": "4586fdbfac7ae45308cc585c2c3bb64a8e4d04a2f9ee58a6a88287022384140a"
+    },
+    {
+      "path": "src/lib/config.ts",
+      "sha256": "4d484923d1e4ad1f57fbf95871dba44450c1ed602ef04646ec6541df4e7ab3bb"
+    },
+    {
+      "path": "src/lib/content.ts",
+      "sha256": "34d0442f92a3e9b237f636fad8934952f2b423f3d95baee6150948e88c2eacb4"
+    },
+    {
+      "path": "src/lib/db.ts",
+      "sha256": "585cb92187e0ac0a8e516163fbaf710ca1b5148b64aa51551e1323dd95b48d42"
+    },
+    {
+      "path": "src/lib/domain.ts",
+      "sha256": "6aed9ed1b8b9bd3a92f49e7220f3684febea8df705f3b187324e501d29fb8909"
+    },
+    {
+      "path": "src/lib/ics.ts",
+      "sha256": "32def5775ac176357c20505c11df0b4c73d041641911c8b866b81389e4fc9390"
+    },
+    {
+      "path": "src/lib/ids.ts",
+      "sha256": "8cc0f84ad60494e9e30cfe5c4a54b9a018871054f11ce4c45a504448f5ce508b"
+    },
+    {
+      "path": "src/lib/links.ts",
+      "sha256": "52225ad9a46cf2a1458abcc6d51b19c35f8938a9bc8359f5ce81161f74745e1b"
+    },
+    {
+      "path": "src/lib/media-url.ts",
+      "sha256": "38a9f9be2b9085ebed39b5ffa975118210898c28c69a4e5a947b6e8b0483c9c2"
+    },
+    {
+      "path": "src/lib/public-route.ts",
+      "sha256": "fe7200e3db56154bd90ed54cbcb511f862ca5c2cca1a05af424b988712f2eea8"
+    },
+    {
+      "path": "src/lib/security.ts",
+      "sha256": "52df2ee53ecc0872a3ebe8dd79a7279aad12a40d1790e5889b3e40243053b294"
+    },
+    {
+      "path": "src/lib/services/cms.ts",
+      "sha256": "9985e6db0a15ea52d05e8e25473c8a07f2c785f35647c76f8a586a2c0a1493e4"
+    },
+    {
+      "path": "src/lib/services/contact.ts",
+      "sha256": "e237c77953002de15127bebdef3f44ac7da8462b102cbff6664e07cadcba8d4b"
+    },
+    {
+      "path": "src/lib/services/registration.ts",
+      "sha256": "c1270fc7facbb483963189a348f1fbbdb2340315e6e450364404dd5c1c5e43c0"
+    },
+    {
+      "path": "src/lib/services/worker.ts",
+      "sha256": "6b1a4e86c2fa5e8544ed75d8b0b3da893e38cb70e367938ff5437d45bedb0f16"
+    },
+    {
+      "path": "src/lib/sessions.ts",
+      "sha256": "80c6b57cf1f493b501f5ff7218fc7d8668a6d5ac0516d55745182144d00d4f71"
+    },
+    {
+      "path": "src/lib/storage.ts",
+      "sha256": "1bc57ed8f3ad9cfa68cd026a24a047b9ed8695369ee32f5b3291c28690ef5f6c"
+    },
+    {
+      "path": "src/lib/tour.ts",
+      "sha256": "a9ee65e178b513f78fef3a2d1f0059ab1bac32f6210c673d13beac972385d0fa"
+    },
+    {
+      "path": "src/middleware.ts",
+      "sha256": "446a257a11ead4699ec68a16ef810490d7b01d102820654927b18a862c6a7aee"
+    },
+    {
+      "path": "src/styles/fonts.css",
+      "sha256": "6c5e28f8591ff89b82d755de32d06c90f1bb57ccd5c252bff99dd50eb9b0096d"
+    },
+    {
+      "path": "src/styles/globals.css",
+      "sha256": "5f643af85b9d194830e67758542a06e7acced213cc8a360aeb230362cfc6b6ec"
+    },
+    {
+      "path": "src/styles/tokens.css",
+      "sha256": "172046414a0b7ab108a0eefc974d5a1dc6f399db706c91bbe5d18c4c58a581ba"
+    },
+    {
+      "path": "src/styles/tour.css",
+      "sha256": "4d39afa1fb422d81abb404c8db22aa4a4c28b69e84a663f5f713502074380054"
+    },
+    {
+      "path": "src/types/next-auth.d.ts",
+      "sha256": "29fce5ad17e5af7689fd51c3194faffe37e47a2fa34e24a58ef8ba62196defc7"
+    },
+    {
+      "path": "src/types/styles.d.ts",
+      "sha256": "35d26ea66c86da9701e4f4b467913481ffeae910761cea34c775c5dacb7f8eaa"
+    },
+    {
+      "path": "tests/e2e/demo.spec.ts",
+      "sha256": "3792e39d33e37b30f9d51f3d4f735ce405a7a409284eb5e904aa40851b2545d9"
+    },
+    {
+      "path": "tests/e2e/source-tour.spec.ts",
+      "sha256": "66a7bc6c708db4d6b13d388395cd550cd0e2f1aab385a1472c1356b001e17110"
+    },
+    {
+      "path": "tests/e2e/visual.spec.ts",
+      "sha256": "ada4796b081e1acd1c967f43196e46634971a42d6ea5db90172fd8232ca99544"
+    },
+    {
+      "path": "tests/e2e/visual.spec.ts-snapshots/showcase-1440-win32.png",
+      "sha256": "b8af2123e0142709c34e93842e73b1df0e9c9795c1f7c6eb8ccf0b2d77c4cf73"
+    },
+    {
+      "path": "tests/e2e/visual.spec.ts-snapshots/showcase-375-win32.png",
+      "sha256": "6853c6d42c595f9d01df88d832f778f06f60128fc0c71486186c039d3e9824a5"
+    },
+    {
+      "path": "tests/integration/workshop.test.ts",
+      "sha256": "e4ebe4de8c820e578482c5169b95e6e9bc4f0e6c02554778effd0c377042aa83"
+    },
+    {
+      "path": "tests/setup.ts",
+      "sha256": "e9a12206fb65da619c2b657815a9c3e87c2e20d9aa4fd15bfddcf703a45d278a"
+    },
+    {
+      "path": "tests/unit/domain.test.ts",
+      "sha256": "20dc86271defafbcf7bd5416d9819554cadfbbf25142acbaf584c457f2f415e3"
+    },
+    {
+      "path": "tests/unit/source-media.test.ts",
+      "sha256": "dadcd8b3d589bd60591d0d73ba8bf9388af7cc7358d38b5c0712a72e33741015"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "cc5e1045ac89ab10bd8eacde5126b62dabbae52d78799e3218de0b2a971f5dc3"
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "f701b51a14e0b03c43ad47b486888818e6be6ec75db877024967e16665903275"
+    }
+  ]
+}
