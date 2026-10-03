@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "title": {
+    "vi": "Đi một vòng, gặp Đông Hồ",
+    "en": "A journey through Dong Ho"
+  },
+  "intro": {
+    "vi": "Bước vào không gian trưng bày. Đi từ chợ tranh, màu giấy đến ván khắc — và dừng lại ở những chi tiết bạn yêu thích.",
+    "en": "Step into the exhibition. Move from the painting market and materials to woodblocks, pausing at the details that catch your eye."
+  },
+  "start": "cho-tranh",
+  "backgroundAudio": null,
+  "scenes": [
+    {
+      "id": "cho-tranh",
+      "name": {
+        "vi": "Một phiên chợ tranh",
+        "en": "A painting market"
+      },
+      "description": {
+        "vi": "Mô hình chợ đặt giữa gian trưng bày, bao quanh bởi tranh và những bảng tư liệu. Nhìn quanh để tìm các sạp hàng và đi tiếp đến khu công đoạn.",
+        "en": "A market diorama stands in the exhibition hall, surrounded by prints and information panels. Look around the stalls, then continue towards the craft displays."
+      },
+      "photo": "/images/visit/cho-tranh.webp",
+      "art": "dam-cuoi-chuot",
+      "artTitle": {
+        "vi": "Đám cưới chuột",
+        "en": "The rats’ wedding"
+      },
+      "artText": {
+        "vi": "Một đoàn rước với kèn, trống và kiệu nối thành hai hàng. Hình ảnh những con vật mang dáng vẻ con người tạo nên câu chuyện sinh động. Mở trang tranh để nhìn rõ từng chi tiết.",
+        "en": "A procession with horns, drums and a palanquin forms two rows. Animals take on human roles in a lively story. Open the print to explore the details."
+      },
+      "yaw": 99,
+      "pitch": -9,
+      "initialYaw": 0,
+      "initialPitch": -12,
+      "panorama": {
+        "large": {
+          "src": "/tour/scene-1-large.jpg",
+          "width": 8192,
+          "height": 2708,
+          "bytes": 2317430
+        },
+        "mobile": {
+          "src": "/tour/scene-1-mobile.jpg",
+          "width": 4096,
+          "height": 1354,
+          "bytes": 684959
+        },
+        "preview": {
+          "src": "/tour/scene-1-preview.jpg",
+          "width": 512,
+          "height": 169,
+          "bytes": 10266
+        },
+        "thumb": {
+          "src": "/tour/scene-1-thumb.jpg",
+          "width": 240,
+          "height": 79,
+          "bytes": 3945
+        }
+      },
+      "horizontalFov": 240,
+      "defaultYaw": 0,
+      "defaultPitch": -12,
+      "defaultZoom": 55,
+      "narration": {
+        "vi": null,
+        "en": null
+      },
+      "links": [
+        {
+          "target": "mau-va-giay",
+          "name": {
+            "vi": "Màu và nền giấy",
+            "en": "Colour and paper"
+          },
+          "yaw": 25,
+          "pitch": -30
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "art-dam-cuoi-chuot",
+          "yaw": 99,
+          "pitch": -9,
+          "title": {
+            "vi": "Đám cưới chuột",
+            "en": "The rats’ wedding"
+          },
+          "description": {
+            "vi": "Một đoàn rước với kèn, trống và kiệu nối thành hai hàng. Hình ảnh những con vật mang dáng vẻ con người tạo nên câu chuyện sinh động. Mở trang tranh để nhìn rõ từng chi tiết.",
+            "en": "A procession with horns, drums and a palanquin forms two rows. Animals take on human roles in a lively story. Open the print to explore the details."
+          },
+          "image": "/images/paintings/dam-cuoi-chuot.webp",
+          "paintingSlug": "dam-cuoi-chuot"
+        }
+      ]
+    },
+    {
+      "id": "mau-va-giay",
+      "name": {
+        "vi": "Màu và nền giấy",
+        "en": "Colour and paper"
+      },
+      "description": {
+        "vi": "Dọc gian phòng là mô hình chuẩn bị vật liệu và những giá tranh. Quan sát các bàn làm việc rồi so sánh mảng màu trên những bức tranh treo gần đó.",
+        "en": "Material-preparation dioramas and print stands line the hall. Look at the worktables and compare colour fields in the nearby prints."
+      },
+      "photo": "/images/visit/che-mau.webp",
+      "art": "vinh-hoa-phu-quy",
+      "artTitle": {
+        "vi": "Vinh hoa – Phú quý",
+        "en": "Vinh Hoa – Phu Quy"
+      },
+      "artText": {
+        "vi": "Hai vế tranh đặt em bé bên gà trống và vịt. Những mảng màu và đường nét tròn tạo sự cân đối. Phóng to ảnh để so sánh cử chỉ, hoa và hai con vật.",
+        "en": "Two panels pair children with a rooster and a duck. Rounded lines and colour fields create balance. Enlarge the photograph to compare the gestures, flowers and birds."
+      },
+      "yaw": -25,
+      "pitch": -16,
+      "initialYaw": -35,
+      "initialPitch": -8,
+      "panorama": {
+        "large": {
+          "src": "/tour/scene-2-large.jpg",
+          "width": 8192,
+          "height": 3310,
+          "bytes": 2611132
+        },
+        "mobile": {
+          "src": "/tour/scene-2-mobile.jpg",
+          "width": 4096,
+          "height": 1655,
+          "bytes": 762072
+        },
+        "preview": {
+          "src": "/tour/scene-2-preview.jpg",
+          "width": 512,
+          "height": 207,
+          "bytes": 11721
+        },
+        "thumb": {
+          "src": "/tour/scene-2-thumb.jpg",
+          "width": 240,
+          "height": 97,
+          "bytes": 4666
+        }
+      },
+      "horizontalFov": 240,
+      "defaultYaw": -35,
+      "defaultPitch": -8,
+      "defaultZoom": 55,
+      "narration": {
+        "vi": null,
+        "en": null
+      },
+      "links": [
+        {
+          "target": "cho-tranh",
+          "name": {
+            "vi": "Một phiên chợ tranh",
+            "en": "A painting market"
+          },
+          "yaw": -25,
+          "pitch": -30
+        },
+        {
+          "target": "ban-in",
+          "name": {
+            "vi": "Bên bàn in",
+            "en": "At the printing table"
+          },
+          "yaw": 25,
+          "pitch": -30
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "art-vinh-hoa-phu-quy",
+          "yaw": -25,
+          "pitch": -16,
+          "title": {
+            "vi": "Vinh hoa – Phú quý",
+            "en": "Vinh Hoa – Phu Quy"
+          },
+          "description": {
+            "vi": "Hai vế tranh đặt em bé bên gà trống và vịt. Những mảng màu và đường nét tròn tạo sự cân đối. Phóng to ảnh để so sánh cử chỉ, hoa và hai con vật.",
+            "en": "Two panels pair children with a rooster and a duck. Rounded lines and colour fields create balance. Enlarge the photograph to compare the gestures, flowers and birds."
+          },
+          "image": "/images/paintings/vinh-hoa-phu-quy.webp",
+          "paintingSlug": "vinh-hoa-phu-quy"
+        }
+      ]
+    },
+    {
+      "id": "ban-in",
+      "name": {
+        "vi": "Bên bàn in",
+        "en": "At the printing table"
+      },
+      "description": {
+        "vi": "Mô hình người làm tranh đặt bên bàn in và các dụng cụ. Từ góc nhìn này, bạn có thể theo dõi gian trưng bày tranh ở phía trước và những công đoạn ở bên cạnh.",
+        "en": "Craft mannequins stand beside a printing table and tools. From here, look towards the print displays ahead and the process exhibits beside them."
+      },
+      "photo": "/images/visit/van-khac.webp",
+      "art": "dam-cuoi-chuot",
+      "artTitle": {
+        "vi": "Đám cưới chuột",
+        "en": "The rats’ wedding"
+      },
+      "artText": {
+        "vi": "Hai bản tranh trên giá đứng cho thấy mô-típ đoàn rước của Đám cưới chuột. Nét đen phân chia từng nhân vật trong hai hàng. Xem phiên bản màu trong thư viện để đối chiếu bố cục.",
+        "en": "Two prints on the standing display show the procession motif of The rats’ wedding. Black outlines separate the figures into two rows. Compare the composition with the colour version in the collection."
+      },
+      "yaw": 15,
+      "pitch": 7,
+      "initialYaw": -55,
+      "initialPitch": -10,
+      "panorama": {
+        "large": {
+          "src": "/tour/scene-3-large.jpg",
+          "width": 8192,
+          "height": 3054,
+          "bytes": 2391931
+        },
+        "mobile": {
+          "src": "/tour/scene-3-mobile.jpg",
+          "width": 4096,
+          "height": 1527,
+          "bytes": 689093
+        },
+        "preview": {
+          "src": "/tour/scene-3-preview.jpg",
+          "width": 512,
+          "height": 191,
+          "bytes": 10763
+        },
+        "thumb": {
+          "src": "/tour/scene-3-thumb.jpg",
+          "width": 240,
+          "height": 89,
+          "bytes": 4422
+        }
+      },
+      "horizontalFov": 240,
+      "defaultYaw": -55,
+      "defaultPitch": -10,
+      "defaultZoom": 55,
+      "narration": {
+        "vi": null,
+        "en": null
+      },
+      "links": [
+        {
+          "target": "mau-va-giay",
+          "name": {
+            "vi": "Màu và nền giấy",
+            "en": "Colour and paper"
+          },
+          "yaw": -25,
+          "pitch": -30
+        },
+        {
+          "target": "phong-tranh",
+          "name": {
+            "vi": "Giữa những bức tranh",
+            "en": "Among the prints"
+          },
+          "yaw": 25,
+          "pitch": -30
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "art-dam-cuoi-chuot",
+          "yaw": 15,
+          "pitch": 7,
+          "title": {
+            "vi": "Đám cưới chuột",
+            "en": "The rats’ wedding"
+          },
+          "description": {
+            "vi": "Hai bản tranh trên giá đứng cho thấy mô-típ đoàn rước của Đám cưới chuột. Nét đen phân chia từng nhân vật trong hai hàng. Xem phiên bản màu trong thư viện để đối chiếu bố cục.",
+            "en": "Two prints on the standing display show the procession motif of The rats’ wedding. Black outlines separate the figures into two rows. Compare the composition with the colour version in the collection."
+          },
+          "image": "/images/paintings/dam-cuoi-chuot.webp",
+          "paintingSlug": "dam-cuoi-chuot"
+        }
+      ]
+    },
+    {
+      "id": "phong-tranh",
+      "name": {
+        "vi": "Giữa những bức tranh",
+        "en": "Among the prints"
+      },
+      "description": {
+        "vi": "Tranh treo, ván khắc và bảng ảnh tư liệu cùng xuất hiện trong góc phòng này. Tìm bức Hứng dừa trên tường và quan sát bố cục dọc của cây dừa.",
+        "en": "Wall prints, woodblocks and historical-photo panels share this corner. Find Catching coconuts on the wall and follow the palm’s vertical composition."
+      },
+      "photo": "/images/visit/tuong-tranh.webp",
+      "art": "hung-dua",
+      "artTitle": {
+        "vi": "Hứng dừa",
+        "en": "Catching coconuts"
+      },
+      "artText": {
+        "vi": "Cây dừa dẫn mắt từ những tán lá xuống nhóm người bên dưới. Mỗi nhân vật có một động tác khác nhau. Mở trang chi tiết để xem ảnh dọc đầy đủ và phần chữ trên tranh.",
+        "en": "The palm guides the eye from its leaves to the figures below. Each person has a different gesture. Open the detail page to see the full vertical image and its inscription."
+      },
+      "yaw": -91,
+      "pitch": 20,
+      "initialYaw": -70,
+      "initialPitch": 12,
+      "panorama": {
+        "large": {
+          "src": "/tour/scene-4-large.jpg",
+          "width": 8192,
+          "height": 2667,
+          "bytes": 2186996
+        },
+        "mobile": {
+          "src": "/tour/scene-4-mobile.jpg",
+          "width": 4096,
+          "height": 1333,
+          "bytes": 648853
+        },
+        "preview": {
+          "src": "/tour/scene-4-preview.jpg",
+          "width": 512,
+          "height": 167,
+          "bytes": 10241
+        },
+        "thumb": {
+          "src": "/tour/scene-4-thumb.jpg",
+          "width": 240,
+          "height": 78,
+          "bytes": 3858
+        }
+      },
+      "horizontalFov": 240,
+      "defaultYaw": -70,
+      "defaultPitch": 12,
+      "defaultZoom": 55,
+      "narration": {
+        "vi": null,
+        "en": null
+      },
+      "links": [
+        {
+          "target": "ban-in",
+          "name": {
+            "vi": "Bên bàn in",
+            "en": "At the printing table"
+          },
+          "yaw": -25,
+          "pitch": -30
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "art-hung-dua",
+          "yaw": -91,
+          "pitch": 20,
+          "title": {
+            "vi": "Hứng dừa",
+            "en": "Catching coconuts"
+          },
+          "description": {
+            "vi": "Cây dừa dẫn mắt từ những tán lá xuống nhóm người bên dưới. Mỗi nhân vật có một động tác khác nhau. Mở trang chi tiết để xem ảnh dọc đầy đủ và phần chữ trên tranh.",
+            "en": "The palm guides the eye from its leaves to the figures below. Each person has a different gesture. Open the detail page to see the full vertical image and its inscription."
+          },
+          "image": "/images/paintings/hung-dua.webp",
+          "paintingSlug": "hung-dua"
+        }
+      ]
+    }
+  ]
+}

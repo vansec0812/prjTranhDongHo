@@ -1,0 +1,274 @@
+[
+  {
+    "source": "sourceImage/ĐÁM CƯỚI CHUỘT.jpg",
+    "key": "/images/paintings/dam-cuoi-chuot.webp",
+    "width": 640,
+    "height": 408,
+    "size": 91810,
+    "sha256": "892815e54eae795733e61abe4c4c4613ab75d1183bf9b70256475a873b8f8c89"
+  },
+  {
+    "source": "sourceImage/Đàn lợn âm dương.jpg",
+    "key": "/images/paintings/dan-lon-am-duong.webp",
+    "width": 700,
+    "height": 470,
+    "size": 92476,
+    "sha256": "297c5cd3d95086fafe7083e220836763751e621de0cb44d75e594e211a43f791"
+  },
+  {
+    "source": "sourceImage/Vinh hoa - Phú Quý.jpg",
+    "key": "/images/paintings/vinh-hoa-phu-quy.webp",
+    "width": 600,
+    "height": 407,
+    "size": 62858,
+    "sha256": "6e48bbf8b175a7eb8272803d4745f765fde54a1424ee82cbe265afc5ef3e609b"
+  },
+  {
+    "source": "sourceImage/ĐÀN GÀ.jpg",
+    "key": "/images/paintings/dan-ga.webp",
+    "width": 1431,
+    "height": 933,
+    "size": 255590,
+    "sha256": "f893d23d0b0e9ff977646c233d2008c7867eb9f92516440f5bd6c306a8edda02"
+  },
+  {
+    "source": "sourceImage/HỨNG DỪA.jpg",
+    "key": "/images/paintings/hung-dua.webp",
+    "width": 456,
+    "height": 602,
+    "size": 64030,
+    "sha256": "bf1899508c8cb68bb4b721a0c6ad582ee568dfac704010aec85366ea958cb26c"
+  },
+  {
+    "source": "sourceImage/LÝ NGƯ VỌNG NGUYỆT.jpg",
+    "key": "/images/paintings/ly-ngu-vong-nguyet.webp",
+    "width": 1125,
+    "height": 849,
+    "size": 234878,
+    "sha256": "2679219511360b4a81e98d17c20b264c7244a0cb83e8e3664042e53892cf9f21"
+  },
+  {
+    "source": "sourceImage/LỢN ĂY CÂY RÁY.jpg",
+    "key": "/images/paintings/lon-an-cay-ray.webp",
+    "width": 655,
+    "height": 380,
+    "size": 83148,
+    "sha256": "0cd41ac12af75264d45b1584d85ecc2c968559f8b1a534a06912e63113100fbc"
+  },
+  {
+    "source": "sourceImage/QUAN TRẠNG.jpg",
+    "key": "/images/paintings/quan-trang.webp",
+    "width": 835,
+    "height": 566,
+    "size": 134358,
+    "sha256": "f347016a8739eea6b49ec23ad9cdc26c8d84d557100a5d0e2a0e2570b78690be"
+  },
+  {
+    "source": "sourceImage/SÁO DIỀU.jpg",
+    "key": "/images/paintings/sao-dieu.webp",
+    "width": 1280,
+    "height": 896,
+    "size": 250588,
+    "sha256": "e31a0fac35946aee8c40f27d10a2c8d6a7fde9d26540acc4c154e6048909c456"
+  },
+  {
+    "source": "sourceVR/1.JPEG",
+    "key": "/images/visit/cho-tranh.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 214260,
+    "sha256": "5344ab0b9aec909f56a6ea6f12885f8296e3a0998ced0223380b70c9c6e8826a"
+  },
+  {
+    "source": "sourceVR/1 2.JPEG",
+    "key": "/images/visit/tuong-tranh.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 176782,
+    "sha256": "1bcdca8d556010c76f075684d21b9e1f6cfc941e3643b45d1790b8a5f5a6694a"
+  },
+  {
+    "source": "sourceVR/1 3.JPEG",
+    "key": "/images/visit/giay-diep.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 167770,
+    "sha256": "1fecfbbfad03a2b8ee4d43e5ec7fe9285117497a918ae89b3ddeaa5fa9a1e6b9"
+  },
+  {
+    "source": "sourceVR/1 4.JPEG",
+    "key": "/images/visit/tu-lieu-lang-tranh.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 200608,
+    "sha256": "2b156a295841307697b6711866c3f2944d8d8eb8d61200b5540de91ef8a585ca"
+  },
+  {
+    "source": "sourceVR/2.JPEG",
+    "key": "/images/visit/sao-dieu-trung-bay.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 143100,
+    "sha256": "ebd97c0290d8532ec027f2b54b0e1b617a8ba1bc73195b64be4b9e5682c9919f"
+  },
+  {
+    "source": "sourceVR/2 2.JPEG",
+    "key": "/images/visit/che-mau.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 139694,
+    "sha256": "453d9f25308efcf993bf457595a3bd2cd1e1a22d748013857fa30feaedbabbb8"
+  },
+  {
+    "source": "sourceVR/2 3.JPEG",
+    "key": "/images/visit/bo-suu-tap.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 184904,
+    "sha256": "2a2c33e6e240a2a50d58542419a7a77dbb749e4e7f61286c50206cf698a95ea5"
+  },
+  {
+    "source": "sourceVR/4 2.JPEG",
+    "key": "/images/visit/van-khac.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 197234,
+    "sha256": "fb588a2cf762d10a03a7b0d3e05a74d540f42d3c5dbfb5de1a266353076fc5f0"
+  },
+  {
+    "source": "sourceVR/4 3.JPEG",
+    "key": "/images/visit/tu-lieu-nghe.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 172630,
+    "sha256": "520bae53a537963b63b8a48dc3022a7978fe0d04cad8718cf082edfe9b6835ee"
+  },
+  {
+    "source": "sourceVR/IMG_3955.JPEG",
+    "key": "/images/visit/chi-tiet-van-khac.webp",
+    "width": 1600,
+    "height": 1067,
+    "size": 95142,
+    "sha256": "a880ef2b14329e245b7731631410457271aaaded8e893eb5249944e5833e7e4c"
+  },
+  {
+    "source": "sourceVR/1 .360.HEIC",
+    "sha256": "6bb71a242f36cb22d479a7324c2400a18608d931e29fcc8812a30f6931a76bde",
+    "variants": {
+      "large": {
+        "src": "/tour/scene-1-large.jpg",
+        "width": 8192,
+        "height": 2708,
+        "bytes": 2317430
+      },
+      "mobile": {
+        "src": "/tour/scene-1-mobile.jpg",
+        "width": 4096,
+        "height": 1354,
+        "bytes": 684959
+      },
+      "preview": {
+        "src": "/tour/scene-1-preview.jpg",
+        "width": 512,
+        "height": 169,
+        "bytes": 10266
+      },
+      "thumb": {
+        "src": "/tour/scene-1-thumb.jpg",
+        "width": 240,
+        "height": 79,
+        "bytes": 3945
+      }
+    }
+  },
+  {
+    "source": "sourceVR/2.360.HEIC",
+    "sha256": "7655562fffc29950d94a12a8bbf348d0ff62df82287f37697a0d282ff603aee9",
+    "variants": {
+      "large": {
+        "src": "/tour/scene-2-large.jpg",
+        "width": 8192,
+        "height": 3310,
+        "bytes": 2611132
+      },
+      "mobile": {
+        "src": "/tour/scene-2-mobile.jpg",
+        "width": 4096,
+        "height": 1655,
+        "bytes": 762072
+      },
+      "preview": {
+        "src": "/tour/scene-2-preview.jpg",
+        "width": 512,
+        "height": 207,
+        "bytes": 11721
+      },
+      "thumb": {
+        "src": "/tour/scene-2-thumb.jpg",
+        "width": 240,
+        "height": 97,
+        "bytes": 4666
+      }
+    }
+  },
+  {
+    "source": "sourceVR/3.360.HEIC",
+    "sha256": "0b75156449dd744d127a6970a411606bcd8c2666d577f22a9e414e0a1c0051e5",
+    "variants": {
+      "large": {
+        "src": "/tour/scene-3-large.jpg",
+        "width": 8192,
+        "height": 3054,
+        "bytes": 2391931
+      },
+      "mobile": {
+        "src": "/tour/scene-3-mobile.jpg",
+        "width": 4096,
+        "height": 1527,
+        "bytes": 689093
+      },
+      "preview": {
+        "src": "/tour/scene-3-preview.jpg",
+        "width": 512,
+        "height": 191,
+        "bytes": 10763
+      },
+      "thumb": {
+        "src": "/tour/scene-3-thumb.jpg",
+        "width": 240,
+        "height": 89,
+        "bytes": 4422
+      }
+    }
+  },
+  {
+    "source": "sourceVR/4.360.HEIC",
+    "sha256": "cd8cc406c1586c1f35593eaac888de79f051ca4a7a1e2b6f33dfa40d48da99dd",
+    "variants": {
+      "large": {
+        "src": "/tour/scene-4-large.jpg",
+        "width": 8192,
+        "height": 2667,
+        "bytes": 2186996
+      },
+      "mobile": {
+        "src": "/tour/scene-4-mobile.jpg",
+        "width": 4096,
+        "height": 1333,
+        "bytes": 648853
+      },
+      "preview": {
+        "src": "/tour/scene-4-preview.jpg",
+        "width": 512,
+        "height": 167,
+        "bytes": 10241
+      },
+      "thumb": {
+        "src": "/tour/scene-4-thumb.jpg",
+        "width": 240,
+        "height": 78,
+        "bytes": 3858
+      }
+    }
+  }
+]
