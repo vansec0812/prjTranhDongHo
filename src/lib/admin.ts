@@ -1,0 +1,30 @@
+import type { ContentKind } from "@prisma/client";
+export const adminModules = [
+  { path: "noi-dung", label: "Trang & lịch sử", kind: "PAGE" },
+  { path: "tranh", label: "Thư viện tranh", kind: "PAINTING" },
+  { path: "video", label: "Video", kind: "VIDEO" },
+  { path: "tin-tuc", label: "Tin tức", kind: "POST" },
+  { path: "san-pham", label: "Sản phẩm", kind: "PRODUCT" },
+  { path: "nghe-nhan", label: "Nghệ nhân", kind: "ARTISAN" },
+  { path: "workshop", label: "Workshop", kind: "WORKSHOP" },
+  { path: "dang-ky", label: "Đăng ký" },
+  { path: "hop-thu", label: "Hộp thư" },
+  { path: "media", label: "Thư viện media" },
+  { path: "cau-hinh", label: "Cấu hình" },
+  { path: "tai-khoan", label: "Tài khoản admin" },
+  { path: "nhat-ky", label: "Nhật ký thao tác" },
+  { path: "ban-tin", label: "Bản tin" },
+  { path: "email", label: "Email & công việc nền" },
+] satisfies Array<{ path: string; label: string; kind?: ContentKind }>;
+export const contentLabels: Record<ContentKind, string> = {
+  PAGE: "Trang tĩnh",
+  MILESTONE: "Mốc lịch sử",
+  PAINTING: "Tranh",
+  VIDEO: "Video",
+  WORKSHOP: "Workshop",
+  ARTISAN: "Nghệ nhân",
+  POST: "Tin tức",
+  PRODUCT: "Sản phẩm",
+  FAQ: "Hỏi đáp",
+  HERO: "Hero",
+};
