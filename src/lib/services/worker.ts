@@ -8,25 +8,26 @@ import {
 } from "./registration";
 import { sourceIsActive } from "./cms";
 import { productionGuard } from "../config";
+import { localAdapters } from "../deployment";
+import { sendResend } from "./mail";
 export async function runScheduled(now = new Date()) {
   productionGuard();
-  const sessions = await db.workshopSession.findMany({
-    where: {
-      OR: [
-        { status: "OPEN" },
-        {
-          holds: {
-            some: {
-              releasedAt: null,
-              consumedAt: null,
-              expiresAt: { lte: now },
-            },
-          },
-        },
-      ],
-    },
-    select: { id: true },
-  });
+  // Candidate selection avoids locking every future/full session on each
+  // serverless tick. Capacity/FIFO are still checked under lock in inviteWaiting.
+  const sessions = await db.$queryRaw<Array<{ id: string }>>`
+    SELECT s.id FROM "WorkshopSession" s WHERE
+      (s.status='OPEN' AND s."registerDeadline"<=${now})
+      OR EXISTS (SELECT 1 FROM "Hold" h WHERE h."sessionId"=s.id
+        AND h."consumedAt" IS NULL AND h."releasedAt" IS NULL AND h."expiresAt"<=${now})
+      OR (s.status='OPEN' AND s."registerDeadline">${now} AND s."startsAt">${now}
+        AND EXISTS (SELECT 1 FROM "Registration" r LEFT JOIN "Hold" h ON h."registrationId"=r.id
+          WHERE r."sessionId"=s.id AND r.status='WAITLIST' AND h.id IS NULL)
+        AND s.capacity > COALESCE((SELECT SUM(r.adults+r.children) FROM "Registration" r
+          WHERE r."sessionId"=s.id AND (r.status IN ('NEW','CONFIRMED')
+            OR (r.status='WAITLIST' AND EXISTS (SELECT 1 FROM "Hold" h
+              WHERE h."registrationId"=r.id AND h."consumedAt" IS NULL
+                AND h."releasedAt" IS NULL AND h."expiresAt">${now})))),0))
+    ORDER BY s."registerDeadline",s.id`;
   for (const session of sessions)
     await db.$transaction(async (tx) => {
       await lockSession(tx, session.id);
@@ -181,8 +182,7 @@ export async function deliverOne(now = new Date()) {
   try {
     let local = false;
     if (process.env.MAIL_MODE === "local") {
-      if (process.env.APP_MODE !== "prototype")
-        throw new Error("Local email adapter forbidden");
+      if (!localAdapters()) throw new Error("Local email adapter forbidden");
       local = true;
       await fs.mkdir(".local/mail", { recursive: true });
       await fs
@@ -205,6 +205,8 @@ export async function deliverOne(now = new Date()) {
         .catch((error: NodeJS.ErrnoException) => {
           if (error.code !== "EEXIST") throw error;
         });
+    } else if (process.env.MAIL_MODE === "resend") {
+      await sendResend(job);
     } else {
       if (!process.env.SMTP_HOST) throw new Error("SMTP not configured");
       const transporter = nodemailer.createTransport({
@@ -216,6 +218,9 @@ export async function deliverOne(now = new Date()) {
           : undefined,
         disableFileAccess: true,
         disableUrlAccess: true,
+        connectionTimeout: 8000,
+        greetingTimeout: 8000,
+        socketTimeout: 15000,
       });
       await transporter.sendMail({
         from: process.env.MAIL_FROM,
@@ -262,4 +267,28 @@ export async function deliverOne(now = new Date()) {
     });
   }
   return true;
+}
+
+export async function drainOutbox(maxJobs = 10, budgetMs = 20000) {
+  const deadline = Date.now() + budgetMs;
+  let processed = 0;
+  while (processed < maxJobs && Date.now() < deadline && (await deliverOne()))
+    processed++;
+  return { processed };
+}
+
+// Await bounded delivery after the business transaction commits. Failed email
+// stays in the durable outbox and must not turn a saved form into a failed form.
+export async function dispatchCommittedMail() {
+  if (process.env.VERCEL !== "1") return;
+  try {
+    await drainOutbox(4, 18000);
+  } catch (error) {
+    console.error(
+      JSON.stringify({
+        event: "outbox-dispatch-error",
+        type: error instanceof Error ? error.name : "Unknown",
+      }),
+    );
+  }
 }

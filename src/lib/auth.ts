@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import argon2 from "argon2";
+import { verifyPassword } from "./password";
 import { authenticator } from "otplib";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
@@ -44,7 +44,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             )
               return null;
             const verified =
-              (await argon2.verify(user.passwordHash, password)) &&
+              (await verifyPassword(user.passwordHash, password)) &&
               (!user.totpSecret ||
                 Boolean(
                   totp && authenticator.check(totp, openPII(user.totpSecret)),

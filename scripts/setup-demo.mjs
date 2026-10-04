@@ -7,6 +7,7 @@ loadEnv({ quiet: true });
 const databaseKeys = [
   "DATABASE_URL",
   "DIRECT_URL",
+  "DATABASE_URL_UNPOOLED",
   "POSTGRES_PRISMA_URL",
   "POSTGRES_URL",
   "POSTGRES_URL_NON_POOLING",

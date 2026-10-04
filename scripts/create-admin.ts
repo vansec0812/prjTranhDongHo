@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { randomBytes } from "node:crypto";
 import fs from "node:fs";
-import argon2 from "argon2";
+import { hashPassword } from "../src/lib/password";
 import { db } from "../src/lib/db";
 import { z } from "zod";
 async function main() {
@@ -13,12 +13,7 @@ async function main() {
     data: {
       email,
       name: "Quản trị viên",
-      passwordHash: await argon2.hash(password, {
-        type: argon2.argon2id,
-        memoryCost: 65536,
-        timeCost: 3,
-        parallelism: 1,
-      }),
+      passwordHash: await hashPassword(password),
     },
   });
   fs.mkdirSync(".local", { recursive: true });

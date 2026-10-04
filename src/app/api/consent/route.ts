@@ -11,7 +11,8 @@ export async function POST(request: Request) {
       .parse(await request.json());
     (await cookies()).set("dh-analytics-consent", choice, {
       httpOnly: true,
-      secure: process.env.APP_MODE === "production",
+      secure:
+        process.env.VERCEL === "1" || process.env.APP_MODE === "production",
       sameSite: "lax",
       path: "/",
       maxAge: 31536000,

@@ -8,6 +8,8 @@ import {
   captchaVerify,
 } from "@/lib/security";
 import { apiError } from "@/lib/api";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 const schema = z.discriminatedUnion("action", [
   z.object({
     action: z.literal("subscribe"),
@@ -29,9 +31,9 @@ export async function POST(request: Request) {
     if (data.action === "subscribe") {
       await rateLimit("newsletter-subscribe", requestIdentity(request));
       await captchaVerify(data.captcha);
-      return NextResponse.json(
-        await subscribe(data.email.toLowerCase(), data.language),
-      );
+      const result = await subscribe(data.email.toLowerCase(), data.language);
+      await dispatchCommittedMail();
+      return NextResponse.json(result);
     }
     await rateLimit("newsletter-token", requestIdentity(request), 20);
     return NextResponse.json(await newsletterToken(data.token, data.action));

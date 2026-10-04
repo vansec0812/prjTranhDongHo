@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
-import argon2 from "argon2";
+import { hashPassword, verifyPassword } from "@/lib/password";
 import { authenticator } from "otplib";
 import { z } from "zod";
 import { requireAdmin } from "@/lib/auth";
@@ -9,6 +9,8 @@ import { hash } from "@/lib/ids";
 import { DomainError } from "@/lib/domain";
 import { db } from "@/lib/db";
 import { apiError } from "@/lib/api";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 const schema = z.discriminatedUnion("action", [
   z.object({
     action: z.literal("invite"),
@@ -80,13 +82,14 @@ export async function POST(request: Request) {
           },
         });
       });
+      await dispatchCommittedMail();
       return NextResponse.json({
         message: "Lời mời đã được tạo và đưa vào hàng đợi email.",
       });
     }
     if (data.action === "toggle") {
       await db.$transaction(async (tx) => {
-        await tx.$queryRaw`SELECT pg_advisory_xact_lock(5432901)`;
+        await tx.$executeRaw`SELECT pg_advisory_xact_lock(5432901)`;
         const target = await tx.adminUser.findUniqueOrThrow({
           where: { id: data.id },
         });
@@ -117,14 +120,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ saved: true });
     }
     if (data.action === "password") {
-      if (!(await argon2.verify(admin.passwordHash, data.currentPassword)))
+      if (!(await verifyPassword(admin.passwordHash, data.currentPassword)))
         throw new DomainError("PASSWORD_INVALID", 403);
-      const passwordHash = await argon2.hash(data.password, {
-        type: argon2.argon2id,
-        memoryCost: 65536,
-        timeCost: 3,
-        parallelism: 1,
-      });
+      const passwordHash = await hashPassword(data.password);
       await db.$transaction(async (tx) => {
         await tx.adminUser.update({
           where: { id: admin.id },
@@ -149,7 +147,7 @@ export async function POST(request: Request) {
       });
     }
     if (data.action === "totp.setup") {
-      if (!(await argon2.verify(admin.passwordHash, data.password)))
+      if (!(await verifyPassword(admin.passwordHash, data.password)))
         throw new DomainError("PASSWORD_INVALID", 403);
       const secret = authenticator.generateSecret();
       const token = randomBytes(32).toString("base64url");
@@ -211,7 +209,7 @@ export async function POST(request: Request) {
     }
     if (
       !admin.totpSecret ||
-      !(await argon2.verify(admin.passwordHash, data.password)) ||
+      !(await verifyPassword(admin.passwordHash, data.password)) ||
       !authenticator.check(data.code, openPII(admin.totpSecret))
     )
       throw new DomainError("TOTP_INVALID", 403);

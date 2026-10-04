@@ -3,6 +3,8 @@ import path from "node:path";
 import { randomUUID } from "node:crypto";
 import { spawn } from "node:child_process";
 import sharp from "sharp";
+import { put, get, del } from "@vercel/blob";
+import { localAdapters, cloudPrototype } from "./deployment";
 import {
   S3Client,
   PutObjectCommand,
@@ -33,7 +35,14 @@ function localPath(key: string) {
   return path.join(process.cwd(), ".local", "media", key);
 }
 export async function putAsset(key: string, data: Buffer) {
-  if (process.env.APP_MODE === "prototype") {
+  localPath(key); // Validate object keys for every adapter, not only filesystem.
+  if (process.env.MEDIA_STORAGE === "vercel-blob") {
+    await put(key, data, {
+      access: "private",
+      addRandomSuffix: false,
+      contentType: "image/webp",
+    });
+  } else if (localAdapters()) {
     await fs.mkdir(".local/media", { recursive: true });
     await fs.writeFile(localPath(key), data);
   } else
@@ -51,7 +60,14 @@ export async function getAsset(key: string) {
   // Keep their path grammar separate from uploaded object-storage keys.
   if (/^\/images\/(paintings|visit)\/[a-z0-9-]+\.webp$/.test(key))
     return fs.readFile(path.join(process.cwd(), "public", key.slice(1)));
-  if (process.env.APP_MODE === "prototype") return fs.readFile(localPath(key));
+  localPath(key);
+  if (process.env.MEDIA_STORAGE === "vercel-blob") {
+    const asset = await get(key, { access: "private" });
+    if (!asset || asset.statusCode !== 200)
+      throw new DomainError("MEDIA_NOT_FOUND", 404);
+    return Buffer.from(await new Response(asset.stream).arrayBuffer());
+  }
+  if (localAdapters()) return fs.readFile(localPath(key));
   const result = await s3().send(
     new GetObjectCommand({ Bucket: process.env.R2_BUCKET, Key: key }),
   );
@@ -59,15 +75,17 @@ export async function getAsset(key: string) {
   return Buffer.from(await result.Body.transformToByteArray());
 }
 export async function deleteAsset(key: string) {
-  if (process.env.APP_MODE === "prototype")
-    await fs.unlink(localPath(key)).catch(() => {});
+  localPath(key);
+  if (process.env.MEDIA_STORAGE === "vercel-blob") await del(key);
+  else if (localAdapters()) await fs.unlink(localPath(key)).catch(() => {});
   else
     await s3().send(
       new DeleteObjectCommand({ Bucket: process.env.R2_BUCKET, Key: key }),
     );
 }
 async function scan(buffer: Buffer) {
-  if (process.env.APP_MODE === "prototype") return "DECODED_LOCAL";
+  if (localAdapters()) return "DECODED_LOCAL";
+  if (cloudPrototype()) return "DECODED_PROTOTYPE";
   const command = process.env.SCANNER_COMMAND;
   if (!command) throw new DomainError("SCANNER_UNAVAILABLE", 503);
   await new Promise<void>((resolve, reject) => {

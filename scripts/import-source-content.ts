@@ -4,11 +4,12 @@ import type { ContentKind, Prisma } from "@prisma/client";
 import { db } from "../src/lib/db";
 import { settingsSchema } from "../src/lib/config";
 import paintings from "../src/data/paintings.json";
+import { resolve } from "node:path";
 
 type Asset = { key?: string; width?: number; height?: number; size?: number };
 const html = (paragraphs: string[]) =>
   paragraphs.map((p) => `<p>${p}</p>`).join("");
-async function main() {
+export async function importSourceContent() {
   const version = "source-images-tour-v1";
   if (await db.siteSetting.findUnique({ where: { key: version } })) {
     console.log(
@@ -19,15 +20,28 @@ async function main() {
   const assets: Asset[] = JSON.parse(
     await readFile("public/tour/assets.json", "utf8"),
   );
-  await mkdir(".local/content-backups", { recursive: true });
   const oldContent = await db.content.findMany({ where: { isDemo: true } });
   const oldSettings = await db.siteSetting.findUnique({
     where: { key: "site" },
   });
-  await writeFile(
-    `.local/content-backups/${version}.json`,
-    JSON.stringify({ content: oldContent, settings: oldSettings }, null, 2),
+  const backup = JSON.stringify(
+    { content: oldContent, settings: oldSettings },
+    null,
+    2,
   );
+  if (process.env.VERCEL === "1") {
+    await db.siteSetting.upsert({
+      where: { key: `content-backup:${version}` },
+      create: {
+        key: `content-backup:${version}`,
+        value: { format: "json", payload: backup },
+      },
+      update: {},
+    });
+  } else {
+    await mkdir(".local/content-backups", { recursive: true });
+    await writeFile(`.local/content-backups/${version}.json`, backup);
+  }
   await db.$transaction(
     async (tx) => {
       async function media(key: string, altVi: string, altEn: string) {
@@ -517,4 +531,13 @@ async function main() {
     "Source content imported. Original assets, registrations and custom CMS entries preserved; template cards hidden rather than deleted.",
   );
 }
-main().finally(() => db.$disconnect());
+if (
+  process.argv[1] &&
+  resolve(process.argv[1]) === resolve("scripts/import-source-content.ts")
+)
+  importSourceContent()
+    .catch(() => {
+      console.error("Content import failed; no credentials logged.");
+      process.exitCode = 1;
+    })
+    .finally(() => db.$disconnect());

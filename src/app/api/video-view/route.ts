@@ -63,7 +63,8 @@ export async function POST(request: Request) {
     jar.set("dh-video-browser", browser, {
       httpOnly: true,
       sameSite: "lax",
-      secure: process.env.APP_MODE === "production",
+      secure:
+        process.env.VERCEL === "1" || process.env.APP_MODE === "production",
       maxAge: 1800,
       path: "/",
     });

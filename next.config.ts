@@ -2,8 +2,14 @@ import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 const config: NextConfig = {
   poweredByHeader: false,
-  serverExternalPackages: ["argon2"],
   images: { remotePatterns: [] },
+  outputFileTracingExcludes: { "/*": ["./.local/**/*"] },
+  outputFileTracingIncludes: {
+    "/api/media/*": [
+      "./public/images/paintings/*.webp",
+      "./public/images/visit/*.webp",
+    ],
+  },
   async headers() {
     return [
       {
@@ -23,7 +29,8 @@ const config: NextConfig = {
               (process.env.NODE_ENV === "development" ? "'unsafe-eval' " : "") +
               "https://challenges.cloudflare.com https://www.youtube.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://i.ytimg.com; font-src 'self'; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com https://www.youtube-nocookie.com https://www.youtube.com https://player.vimeo.com https://www.google.com; media-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'",
           },
-          ...(process.env.APP_MODE === "production"
+          ...(process.env.VERCEL === "1" ||
+          process.env.APP_MODE === "production"
             ? [
                 {
                   key: "Strict-Transport-Security",

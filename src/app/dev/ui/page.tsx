@@ -11,7 +11,8 @@ import {
   Empty,
 } from "@/components/ui";
 export default function Showcase() {
-  if (process.env.APP_MODE !== "prototype") notFound();
+  if (process.env.APP_MODE !== "prototype" || process.env.VERCEL === "1")
+    notFound();
   return (
     <main className="container section">
       <p className="eyebrow">Baseline UI · Chưa phê duyệt thiết kế</p>

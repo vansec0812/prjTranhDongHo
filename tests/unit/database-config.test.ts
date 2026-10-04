@@ -24,6 +24,7 @@ describe("ENG-01 / ENG-23 / OPS-02 database environments", () => {
   it.each([
     { VERCEL: "1" },
     { DIRECT_URL: direct },
+    { DATABASE_URL_UNPOOLED: direct },
     { DATABASE_URL: "private-password-invalid-url" },
   ])("local setup refuses hosted or invalid environment %j", (override) => {
     const result = spawnSync(process.execPath, ["scripts/setup-demo.mjs"], {

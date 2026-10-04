@@ -1,6 +1,7 @@
 import "dotenv/config";
 import { ContentKind } from "@prisma/client";
 import { db } from "../src/lib/db";
+import { resolve } from "node:path";
 async function add(
   kind: ContentKind,
   slug: string,
@@ -43,7 +44,7 @@ async function add(
     },
   });
 }
-async function main() {
+export async function seedDemo() {
   if (process.env.APP_MODE !== "prototype")
     throw new Error("Demo seed is forbidden outside prototype mode");
   for (const [name, vi, en] of [
@@ -515,4 +516,10 @@ async function main() {
     "Idempotent demo seed ready. Existing content, dates and registrations were preserved.",
   );
 }
-main().finally(() => db.$disconnect());
+if (process.argv[1] && resolve(process.argv[1]) === resolve("prisma/seed.ts"))
+  seedDemo()
+    .catch(() => {
+      console.error("Demo seed failed; no credentials logged.");
+      process.exitCode = 1;
+    })
+    .finally(() => db.$disconnect());

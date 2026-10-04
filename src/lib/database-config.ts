@@ -62,7 +62,12 @@ export function runtimeDatabaseUrl(env: DatabaseEnvironment = process.env) {
 }
 
 export function migrationDatabaseUrl(env: DatabaseEnvironment = process.env) {
-  const direct = value(env, "DIRECT_URL", "POSTGRES_URL_NON_POOLING");
+  const direct = value(
+    env,
+    "DIRECT_URL",
+    "DATABASE_URL_UNPOOLED",
+    "POSTGRES_URL_NON_POOLING",
+  );
   const cloud = env.VERCEL === "1" || env.APP_MODE === "production";
   if (cloud && !direct)
     throw new Error("Missing DIRECT_URL for hosted PostgreSQL migrations");

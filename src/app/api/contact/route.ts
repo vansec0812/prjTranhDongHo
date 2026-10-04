@@ -9,6 +9,8 @@ import {
   requestIdentity,
 } from "@/lib/security";
 import { apiError } from "@/lib/api";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 export async function POST(request: Request) {
   try {
     checkOrigin(request);
@@ -36,7 +38,9 @@ export async function POST(request: Request) {
           true,
         ),
       );
-    return NextResponse.json(await createContact(data, attachments), {
+    const result = await createContact(data, attachments);
+    await dispatchCommittedMail();
+    return NextResponse.json(result, {
       status: 201,
       headers: { "Cache-Control": "no-store" },
     });

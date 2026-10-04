@@ -13,7 +13,14 @@ import {
 import { settingsSchema } from "@/lib/config";
 import { DomainError } from "@/lib/domain";
 import { apiError } from "@/lib/api";
+import {
+  dispatchCommittedMail,
+  runScheduled,
+  drainOutbox,
+} from "@/lib/services/worker";
+export const maxDuration = 60;
 const schema = z.discriminatedUnion("action", [
+  z.object({ action: z.literal("worker.run") }),
   z.object({ action: z.literal("content.save"), data: z.unknown() }),
   z.object({ action: z.literal("content.hide"), id: z.string() }),
   z.object({ action: z.literal("content.delete"), id: z.string() }),
@@ -81,6 +88,19 @@ export async function POST(request: Request) {
     checkOrigin(request);
     const data = schema.parse(await request.json());
     switch (data.action) {
+      case "worker.run":
+        await runScheduled();
+        await drainOutbox(20, 35000);
+        await db.auditLog.create({
+          data: {
+            adminId: admin.id,
+            action: "worker.run",
+            entity: "Job",
+            entityId: "scheduled",
+            diff: { triggered: true },
+          },
+        });
+        break;
       case "content.delete": {
         await db.$transaction(async (tx) => {
           await tx.$queryRaw`SELECT id FROM "Content" WHERE id=${data.id} FOR UPDATE`;
@@ -457,6 +477,7 @@ export async function POST(request: Request) {
         });
         break;
     }
+    if (data.action !== "worker.run") await dispatchCommittedMail();
     return NextResponse.json({ saved: true });
   } catch (error) {
     return apiError(error);

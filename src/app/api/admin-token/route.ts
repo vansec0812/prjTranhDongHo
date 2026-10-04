@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { randomBytes } from "node:crypto";
-import argon2 from "argon2";
+import { hashPassword } from "@/lib/password";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { hash } from "@/lib/ids";
@@ -12,6 +12,8 @@ import {
 } from "@/lib/security";
 import { DomainError } from "@/lib/domain";
 import { apiError } from "@/lib/api";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 const schema = z.discriminatedUnion("action", [
   z.object({ action: z.literal("request-reset"), email: z.email().max(200) }),
   z.object({
@@ -51,15 +53,11 @@ export async function POST(request: Request) {
           });
         });
       }
+      await dispatchCommittedMail();
       return NextResponse.json({ accepted: true });
     }
     await rateLimit("token-identity", hash(data.token), 5);
-    const passwordHash = await argon2.hash(data.password, {
-      type: argon2.argon2id,
-      memoryCost: 65536,
-      timeCost: 3,
-      parallelism: 1,
-    });
+    const passwordHash = await hashPassword(data.password);
     await db.$transaction(async (tx) => {
       await tx.$queryRaw`SELECT id FROM "Token" WHERE hash=${hash(data.token)} FOR UPDATE`;
       const token = await tx.token.findUnique({

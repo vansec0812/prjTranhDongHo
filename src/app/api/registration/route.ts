@@ -8,13 +8,17 @@ import {
   requestIdentity,
 } from "@/lib/security";
 import { apiError } from "@/lib/api";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 export async function POST(request: Request) {
   try {
     checkOrigin(request);
     await rateLimit("registration", requestIdentity(request));
     const data = registrationSchema.parse(await request.json());
     await captchaVerify(data.captcha);
-    return NextResponse.json(await createRegistration(data), {
+    const result = await createRegistration(data);
+    await dispatchCommittedMail();
+    return NextResponse.json(result, {
       status: 201,
       headers: { "Cache-Control": "no-store" },
     });

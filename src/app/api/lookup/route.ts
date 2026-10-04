@@ -10,6 +10,8 @@ import { apiError } from "@/lib/api";
 import { calendarFile } from "@/lib/ics";
 import { canCancel } from "@/lib/domain";
 import { getSettings } from "@/lib/content";
+import { dispatchCommittedMail } from "@/lib/services/worker";
+export const maxDuration = 60;
 const schema = z.object({
   code: z.string().regex(/^DH-\d{4}-[A-F0-9]{4}$/),
   phone: z.string().max(40),
@@ -22,12 +24,14 @@ export async function POST(request: Request) {
     const data = schema.parse(await request.json());
     await rateLimit("lookup-ip", requestIdentity(request), 20);
     await rateLimit("lookup-code", data.code, 10);
-    if (data.action === "cancel")
-      return NextResponse.json(await cancelRegistration(data.code, data.phone));
-    if (data.action === "accept")
-      return NextResponse.json(
-        await acceptInvitation(data.token ?? "", data.code, data.phone),
-      );
+    if (data.action === "cancel" || data.action === "accept") {
+      const result =
+        data.action === "cancel"
+          ? await cancelRegistration(data.code, data.phone)
+          : await acceptInvitation(data.token ?? "", data.code, data.phone);
+      await dispatchCommittedMail();
+      return NextResponse.json(result);
+    }
     const row = await lookupRegistration(data.code, data.phone);
     if (data.action === "ics") {
       if (!["NEW", "CONFIRMED"].includes(row.status))
