@@ -1,5 +1,17 @@
 # Quyết định và điểm cần chốt
 
+## ADR — prototype qua dashboard Vercel, 04/10/2026
+
+- RESOLVED theo yêu cầu mới: bỏ nhu cầu terminal của người deploy. Profile `vercel-prototype` explicit với `APP_MODE=prototype`, Vercel Production environment và `BOOTSTRAP_DEMO=true` áp dụng migration đã commit, seed/import một lần, tạo admin từ env khi DB trống admin. Không bootstrap Preview hoặc app production. Quyết định này thay phần build-không-migrate của ADR trước **chỉ với opt-in prototype**; giữ nguyên schema/invariant và cấm reset/drop DB người dùng.
+- RESOLVED: hỗ trợ alias Neon `DATABASE_URL_UNPOOLED`; direct client pool 1 giữ advisory lock suốt bootstrap. Marker lưu DB, backup importer lưu JSON riêng trong SiteSetting cloud, không ghi filesystem trên Vercel; lần sau không seed lại/nắn ngày/đổi mật khẩu CMS.
+- RESOLVED: thêm adapter object storage Vercel Blob private để cấu hình qua Vercel dashboard, giữ adapter R2 cũ. Không đổi framework/ORM/auth/i18n. Key object UUID được validate, file private phục vụ qua API phân quyền. SDK 2.8.0 pin trong lockfile; không tự tạo store/phát sinh chi phí.
+- RESOLVED: người dùng chọn email thật. Resend HTTP API có acknowledgement/idempotency theo ID outbox; gửi sau transaction, provider lỗi giữ PENDING/FAILED. Local capture bị cấm trong cloud profile. Key Turnstile thật vẫn kiểm server; không dùng test key hoặc bypass CAPTCHA.
+- RESOLVED: Argon2id dùng implementation Node.js 24.7+ để tránh npm native DLL bị Windows Application Control chặn. Giữ PHC `$argon2id$v=19`, memory 65536 KiB/time 3/parallelism 1, salt ngẫu nhiên 16 byte/hash 32 byte. Không đổi mật khẩu cũ; verify giới hạn tham số hợp lệ/chống DB value gây allocation quá mức. Nguồn [Node crypto](https://nodejs.org/docs/latest-v24.x/api/crypto.html#cryptoargon2algorithm-parameters-callback); cần E2E đăng nhập tài khoản cũ để chứng minh tương thích.
+- RESOLVED: cron GET Bearer secret (constant-time), admin trigger kiểm session/origin, cả hai chạy service/DB lease dùng chung. Request form đợi xử lý mail có giới hạn sau commit, không dùng timer giữ job trong web process. Chỉ chọn session cần hết hold/đóng/mời có chỗ thay vì khóa mọi session OPEN.
+- RESOLVED: ảnh nguồn mỗi ảnh ≤5 MB/3 ảnh được browser chuẩn hóa WebP ≤1.2 MB/ảnh trước request, server vẫn validate bytes thực. Giữ form khi xử lý/upload lỗi; không giảm hợp đồng giới hạn gốc để tránh giới hạn body 4.5 MB của Vercel. Video lớn vẫn cần upload trực tiếp/resumable, chưa tự nhận xong.
+- OPEN/BLOCKED: prototype decode/normalize ảnh, không chứng nhận antivirus; app production giữ scanner fail closed. Hobby cron mỗi ngày không nghiệm thu nhắc lịch đúng 24 giờ/hold release theo phút. Cloud provider/email/domain/scanner/backup/restore/smoke chưa kiểm bằng credential thật. Các gate production cũ vẫn giữ.
+- BLOCKED CI: `braces <=3.0.3`, advisory GHSA-vfj7-8cjw-p6xm chưa có phiên bản vá; eslint-config-next 16.3.8 vẫn dùng fast-glob, nên nâng major không giải quyết. Không downgrade major, patch/override báo sạch giả hay giảm audit gate. [Advisory chính thức](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm). Source chỉ được review như thay đổi chuẩn bị, chưa xác nhận release production.
+
 ## ADR — DB cloud/Vercel, 04/10/2026
 
 - RESOLVED theo yêu cầu chủ dự án: chuẩn bị PostgreSQL cloud và build Vercel, giữ Prisma 6.19.3, schema và toàn bộ invariant workshop. Không thêm nhà cung cấp hoặc dịch vụ phí.

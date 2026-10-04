@@ -1,0 +1,701 @@
+{
+  "baseCommit": "96a59d4771b39120b32164e4d3c0e3596aebd527",
+  "workingTree": true,
+  "clock": "2026-10-04T00:00:00+07:00",
+  "profile": "Local database/provider adapters; visual evidence only, not a cloud integration test",
+  "results": [
+    {
+      "phase": "before",
+      "route": "/admin/login",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/quen-mat-khau",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en",
+      "width": 360,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/lien-he",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en/lien-he",
+      "width": 360,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh/moi",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/email",
+      "width": 360,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 360,
+        "document": 360,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/login",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-login-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/quen-mat-khau",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-quen-mat-khau-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-home-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/en",
+      "width": 375,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-en-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/lien-he",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-lien-he-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/en/lien-he",
+      "width": 375,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-en-lien-he-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-tranh-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh/moi",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-tranh-moi-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/email",
+      "width": 375,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 375,
+        "document": 375,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-email-375.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/login",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/quen-mat-khau",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en",
+      "width": 768,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/lien-he",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en/lien-he",
+      "width": 768,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh/moi",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/email",
+      "width": 768,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 768,
+        "document": 768,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/login",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/quen-mat-khau",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en",
+      "width": 1200,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/lien-he",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/en/lien-he",
+      "width": 1200,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh/moi",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/email",
+      "width": 1200,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1200,
+        "document": 1200,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": []
+    },
+    {
+      "phase": "before",
+      "route": "/admin/login",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-login-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/quen-mat-khau",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-quen-mat-khau-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-home-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/en",
+      "width": 1440,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-en-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/lien-he",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-lien-he-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/en/lien-he",
+      "width": 1440,
+      "locale": "en",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-en-lien-he-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-tranh-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/tranh/moi",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-tranh-moi-1440.png"
+    },
+    {
+      "phase": "before",
+      "route": "/admin/email",
+      "width": 1440,
+      "locale": "vi",
+      "state": "default",
+      "status": 200,
+      "dimensions": {
+        "viewport": 1440,
+        "document": 1440,
+        "h1": 1
+      },
+      "errors": [],
+      "violations": [],
+      "screenshot": "before-admin-email-1440.png"
+    }
+  ]
+}

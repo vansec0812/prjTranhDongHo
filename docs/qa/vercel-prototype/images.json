@@ -1,0 +1,23 @@
+{
+  "profile": "Real Chromium canvas; local page, no cloud upload/provider test",
+  "output": [
+    {
+      "sourceBytes": 4328928,
+      "preparedBytes": 1077496,
+      "type": "image/webp"
+    },
+    {
+      "sourceBytes": 4328928,
+      "preparedBytes": 1077496,
+      "type": "image/webp"
+    },
+    {
+      "sourceBytes": 4328928,
+      "preparedBytes": 1077496,
+      "type": "image/webp"
+    }
+  ],
+  "requestBytes": 3235115,
+  "oversizedRejected": true,
+  "invalidTypeRejected": true
+}

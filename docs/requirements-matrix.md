@@ -4,6 +4,8 @@ Nguồn SRS 29 trang tại root, AGENTS.md v1.0 (đã đọc toàn bộ), plan v
 
 Cập nhật DB/Vercel 04/10/2026: ENG-01, ENG-23, OPS-01/02/03 và QA-07 được truy vết riêng tại [QA DB/Vercel](qa/vercel-database-2026-10-04.md), [hướng dẫn deploy](vercel.md), `src/lib/database-config.ts`, `prisma.config.ts` và test DB config/integration. Các trạng thái toàn điều khoản bên dưới giữ nguyên vì chưa có DB cloud/deploy/backup/worker production đã kiểm chứng.
 
+Cập nhật prototype dashboard/email thật cùng ngày: xem [hướng dẫn](vercel-prototype.md) và [QA phạm vi thay đổi](qa/vercel-prototype/review.md). ENG-23: bootstrap/import/admin có marker, advisory lock, test PostgreSQL tạo admin đồng thời và giữ mật khẩu. SEC-02: Node 24 Argon2id đọc PHC cũ, test password và E2E login. ENG-15/16, FR-ART-03/FR-WS-05/FR-GEN-07: private Blob và Resend sau commit, bounded outbox, chưa xác minh provider cloud. OPS-01/02/03: opt-in profile, migrate trong build, cron Bearer daily và runbook; lịch phút/production scanner/backup vẫn BLOCKED. UI-27/28: before/after 5 viewport, public VI/EN/admin. QA-07: giữ audit gate, advisory braces chưa vá nên nhánh review chưa được merge/release. Không đổi trạng thái nghiệm thu toàn hệ thống từ những kiểm tra phạm vi này.
+
 | Mã | Nguồn/trang | Module/route | Trạng thái | Bằng chứng / phần còn thiếu |
 |---|---|---|---|---|
 | GOV-01 | AGENTS GOV | lib/services/API/config · tests/docs | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |

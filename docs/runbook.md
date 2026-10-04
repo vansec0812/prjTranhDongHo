@@ -2,6 +2,16 @@
 
 Phần PostgreSQL cloud/Vercel, migration và worker ngoài Function: [docs/vercel.md](vercel.md). Local và cloud dùng environment riêng; không chạy setup demo để chuẩn bị DB cloud.
 
+## Prototype Vercel qua dashboard — cập nhật 04/10/2026
+
+Xem [hướng dẫn từng bước](vercel-prototype.md). Nhánh `codex/vercel-prototype` chuẩn bị cấu hình; dependency audit còn BLOCKED, chưa tự merge/release. Các lệnh developer thực tế: `npm run build:vercel` kiểm config/generate; chỉ khi `BOOTSTRAP_DEMO=true` và profile cloud prototype Production mới migrate deploy/import một lần/tạo admin. Không dùng `setup:demo` cho Neon. Không reset/drop DB.
+
+`node scripts/prepare-vercel-env.mjs` tạo file riêng `.local/vercel-copy.env` bằng `wx`, từ chối ghi đè secret cũ. Artifact đã tạo cho chủ dự án; không commit. Import Production sau khi thay email/sender/Turnstile; Neon, private Blob và Resend cấp credential riêng. Giữ encryption key khi DB có dữ liệu. Redeploy giữ CMS/admin/password; muốn rollback web chọn deployment trước, không tự rollback schema hoặc xóa marker. Backup/snapshot DB trước migration nếu có dữ liệu cần giữ; cloud restore chưa kiểm.
+
+Mail thật được xử lý sau commit bằng Resend, lỗi giữ outbox và retry. `/admin/email` có nút xử lý nền theo session/quyền; `/api/cron` GET yêu cầu Bearer `CRON_SECRET` và Vercel cron `0 0 * * *`. Hobby daily cron không bảo đảm lịch phút/nhắc đúng 24h. Xem status provider và hộp thư thật, không coi SENT là mail tới inbox. Sau deploy kiểm `/api/health` trả `ready` (kiểm bảng schema thiết yếu), ảnh nguồn/VR/admin/form/mail/ICS/private attachment. Chưa có credentials cloud nên smoke này vẫn BLOCKED.
+
+Trên máy Windows này, native cache SWC cần đường dẫn owner-only: `$env:SWC_NATIVE_BINDING_CACHE='C:\Users\Asus\.codex\swc-native-cache'` trước build/dev; không thay Windows Application Control/ACL. Linux Vercel không cần cấu hình này. Argon2id dùng Node 24 builtin, đọc PHC cũ theo tên tham số m/t/p dù thứ tự khác. `node scripts/verify-vercel-ui.mjs before|after` tạo bằng chứng UI từ tài khoản private local; không upload trace chứa credential.
+
 ## Setup và chạy
 
 `npm ci`, `npm run setup:demo`, `npm run demo`. Setup sinh secret, khởi động PostgreSQL local nếu chưa nghe 54329, `prisma generate`, `prisma migrate deploy`, seed idempotent và admin mật khẩu ngẫu nhiên. Xem `.local/database.log` nếu DB không khởi động; không xóa `.local/postgres` để chữa lỗi.

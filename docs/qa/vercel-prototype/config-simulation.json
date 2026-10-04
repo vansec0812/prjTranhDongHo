@@ -1,0 +1,4 @@
+{
+  "result": "PASS",
+  "profile": "Synthetic cloud config; BOOTSTRAP_DEMO=false; no cloud DB/storage/mail access or migration tested"
+}

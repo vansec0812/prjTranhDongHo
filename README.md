@@ -18,9 +18,9 @@ Chạy bản tối ưu: dừng cả web và worker bằng Ctrl+C trước `npm.c
 
 ## PostgreSQL cloud và Vercel
 
-Đặt `DATABASE_URL` pooled và `DIRECT_URL` direct/session từ cùng PostgreSQL cloud, có TLS. Local vẫn chạy như trước, không phải đổi `.env` demo. Repository có `vercel.json`, Build Command `npm run build:vercel` và Node.js 24.x. Migration chạy riêng bằng `npm run db:migrate`; build không seed/migrate hoặc khởi động PostgreSQL embedded.
+Để deploy prototype qua dashboard, làm theo [hướng dẫn từng bước](docs/vercel-prototype.md). Profile `vercel-prototype` dùng Neon PostgreSQL, Vercel Blob private, email Resend thật và Turnstile thật. Build tự migrate, nhập nội dung một lần và tạo admin đầu tiên khi bật `BOOTSTRAP_DEMO=true` cho môi trường Vercel Production. Redeploy giữ dữ liệu và mật khẩu; Preview không được bootstrap. Không khởi động PostgreSQL embedded trên Vercel.
 
-Xem [hướng dẫn Vercel](docs/vercel.md) cho biến môi trường, migration, nhập nội dung, tạo admin và worker. Production giữ guard SMTP/R2/scanner/CAPTCHA thật; cấu hình DB không thay các tích hợp hoặc nghiệm thu còn thiếu.
+Chế độ ứng dụng `production` vẫn giữ scanner/CAPTCHA và không nhận fixtures. [Hướng dẫn production](docs/vercel.md) không thay nghiệm thu; cloud prototype có giới hạn riêng được ghi rõ. Admin không cần file local trên Vercel. Node.js 24.7+ cung cấp Argon2id, giữ cùng định dạng PHC và tham số băm đã dùng, không đổi mật khẩu cũ.
 
 ## Nội dung và tích hợp demo
 

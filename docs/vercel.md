@@ -1,5 +1,7 @@
 # PostgreSQL và build trên Vercel
 
+**Deploy prototype qua dashboard, không chạy terminal:** dùng [hướng dẫn mới](vercel-prototype.md). Các bước bên dưới dành cho chế độ ứng dụng `production`; không dùng cấu hình đó để bỏ qua yêu cầu scanner/integration. Build chỉ bootstrap profile prototype khi có opt-in riêng, không migrate/seed production tự động.
+
 Phạm vi: Next.js web trên Vercel, PostgreSQL cloud qua Prisma 6.19.3. Không đổi schema, luật workshop hoặc tự tạo dịch vụ. Code chuẩn bị kết nối; bạn cần cung cấp DB và các tích hợp thật. Chưa có smoke test trên tài khoản Vercel/DB cloud.
 
 ## 1. Kết nối DB
@@ -21,14 +23,14 @@ Trên Vercel, runtime mặc định thêm `connection_limit=1`, `connect_timeout
 
 ## 2. Biến môi trường còn lại
 
-| Nhóm | Cấu hình |
-|---|---|
-| Ứng dụng | `APP_MODE=production`, `SITE_URL=https://TEN-MIEN-CUA-BAN`, `AUTH_TRUST_HOST=true` |
-| Secret | `AUTH_SECRET` ngẫu nhiên đủ mạnh, `PII_ENCRYPTION_KEY` 32-byte hex, `CRON_SECRET` riêng cho worker/scheduler |
-| CAPTCHA | `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` thật, đã cấp cho domain |
-| Email | `MAIL_MODE=smtp`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `MAIL_FROM`, `ADMIN_NOTIFY_EMAIL` |
-| Media | `R2_ENDPOINT`, `R2_BUCKET`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` |
-| Kiểm file | `SCANNER_COMMAND` trỏ tới scanner thật, hoạt động trong môi trường upload |
+| Nhóm      | Cấu hình                                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------------------ |
+| Ứng dụng  | `APP_MODE=production`, `SITE_URL=https://TEN-MIEN-CUA-BAN`, `AUTH_TRUST_HOST=true`                           |
+| Secret    | `AUTH_SECRET` ngẫu nhiên đủ mạnh, `PII_ENCRYPTION_KEY` 32-byte hex, `CRON_SECRET` riêng cho worker/scheduler |
+| CAPTCHA   | `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY` thật, đã cấp cho domain                             |
+| Email     | `MAIL_MODE=smtp`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `MAIL_FROM`, `ADMIN_NOTIFY_EMAIL`  |
+| Media     | `R2_ENDPOINT`, `R2_BUCKET`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`                                       |
+| Kiểm file | `SCANNER_COMMAND` trỏ tới scanner thật, hoạt động trong môi trường upload                                    |
 
 Không dùng `APP_MODE=prototype`, email/file local hoặc CAPTCHA test key để bỏ qua guard. Vercel Function không chạy PostgreSQL embedded và không giữ `.local` như storage bền vững. Scanner hiện tại gọi executable qua stdin; phải đóng gói/cấp scanner phù hợp hoặc triển khai integration scanner được duyệt. Điền tên command không tồn tại không phải đã cấu hình scan thành công.
 
