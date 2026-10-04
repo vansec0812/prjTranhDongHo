@@ -18,6 +18,7 @@ Baseline UI lấy từ commit `96a59d4`. Before giữ nguyên sáu file giao di�
 | `node scripts/verify-vercel-ui.mjs before` / `after` | PASS 45/45 mỗi lượt | 360/375/768/1200/1440; home/contact VI/EN, login/reset và admin tranh/form/email. HTTP 200, một H1, không pageerror/overflow/axe WCAG 2.1 AA violation. JSON before/after và 36 PNG cùng folder |
 | `node scripts/verify-vercel-images.mjs` | PASS | Chromium canvas thật: 3 PNG mỗi ảnh 4.328.928 bytes → WebP 1.077.496 bytes; multipart 3.235.115 bytes; >5 MB/SVG bị từ chối. Không phải Blob upload thật |
 | Config + `prepare-vercel.ts` với fixtures cloud, bootstrap false | PASS | `config-simulation.json`; không gọi provider/DB, không migrate/import. CI thêm Linux build tương ứng, chưa nhận CI remote xanh |
+| GitHub Actions `vercel-build` trên Ubuntu/Node 24 | PASS | Run [37178236385](https://github.com/vansec0812/prjTranhDongHo/actions/runs/37178236385), source SHA `e9cfd5a`; `npm ci` và `npm run build:vercel` với BOOTSTRAP_DEMO=false. Đây là compile trên Linux, không phải deployment/provider thật. Job Windows còn chạy khi ghi bằng chứng, toàn workflow chưa PASS |
 | Trace manifests | PASS | Không có đường `.local/` trong Next nft manifests; secret/private mail không được đóng gói |
 | `npm audit --json` | BLOCKED: 5 high, 0 critical | Cùng advisory braces GHSA-vfj7-8cjw-p6xm qua eslint-config-next/fast-glob/micromatch, chưa có version vá. Giữ gate audit moderate; không nâng/downgrade major hoặc override để xanh |
 

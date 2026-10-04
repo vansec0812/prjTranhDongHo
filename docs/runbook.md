@@ -10,7 +10,7 @@ Xem [hướng dẫn từng bước](vercel-prototype.md). Nhánh `codex/vercel-p
 
 Mail thật được xử lý sau commit bằng Resend, lỗi giữ outbox và retry. `/admin/email` có nút xử lý nền theo session/quyền; `/api/cron` GET yêu cầu Bearer `CRON_SECRET` và Vercel cron `0 0 * * *`. Hobby daily cron không bảo đảm lịch phút/nhắc đúng 24h. Xem status provider và hộp thư thật, không coi SENT là mail tới inbox. Sau deploy kiểm `/api/health` trả `ready` (kiểm bảng schema thiết yếu), ảnh nguồn/VR/admin/form/mail/ICS/private attachment. Chưa có credentials cloud nên smoke này vẫn BLOCKED.
 
-Trên máy Windows này, native cache SWC cần đường dẫn owner-only: `$env:SWC_NATIVE_BINDING_CACHE='C:\Users\Asus\.codex\swc-native-cache'` trước build/dev; không thay Windows Application Control/ACL. Linux Vercel không cần cấu hình này. Argon2id dùng Node 24 builtin, đọc PHC cũ theo tên tham số m/t/p dù thứ tự khác. `node scripts/verify-vercel-ui.mjs before|after` tạo bằng chứng UI từ tài khoản private local; không upload trace chứa credential.
+Trên máy Windows này, native cache SWC cần đường dẫn owner-only: `$env:SWC_NATIVE_BINDING_CACHE='C:\Users\Asus\.codex\swc-native-cache'` trước build/dev/start; không thay Windows Application Control/ACL. Linux Vercel không cần cấu hình này. Argon2id dùng Node 24 builtin, đọc PHC cũ theo tên tham số m/t/p dù thứ tự khác. `node scripts/verify-vercel-ui.mjs before|after` tạo bằng chứng UI từ tài khoản private local; không upload trace chứa credential.
 
 ## Setup và chạy
 
