@@ -1,6 +1,39 @@
 name: Prototype checks
 on: [push, pull_request]
 jobs:
+  vercel-build:
+    runs-on: ubuntu-latest
+    env:
+      # Build-only fixtures. No bootstrap, provider access or email is attempted.
+      VERCEL: "1"
+      VERCEL_ENV: production
+      APP_MODE: prototype
+      DEPLOYMENT_PROFILE: vercel-prototype
+      NEXT_PUBLIC_APP_MODE: prototype
+      NEXT_PUBLIC_DEPLOYMENT_PROFILE: vercel-prototype
+      BOOTSTRAP_DEMO: "false"
+      SITE_URL: https://build-fixture.example.invalid
+      DATABASE_URL: postgresql://fixture:fixture@pool.example.invalid/demo?sslmode=require
+      DATABASE_URL_UNPOOLED: postgresql://fixture:fixture@direct.example.invalid/demo?sslmode=require
+      AUTH_SECRET: fixture-only-not-a-real-credential-32-characters
+      CRON_SECRET: fixture-only-not-a-real-cron-credential-32
+      PII_ENCRYPTION_KEY: "1111111111111111111111111111111111111111111111111111111111111111"
+      MEDIA_STORAGE: vercel-blob
+      BLOB_READ_WRITE_TOKEN: fixture-only-not-a-provider-token
+      MAIL_MODE: resend
+      RESEND_API_KEY: fixture-only-not-a-provider-key
+      MAIL_FROM: fixture@example.invalid
+      ADMIN_NOTIFY_EMAIL: fixture@example.invalid
+      TURNSTILE_SECRET_KEY: fixture-only-not-a-working-key
+      NEXT_PUBLIC_TURNSTILE_SITE_KEY: fixture-only-not-a-working-site-key
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:vercel
   local-prototype:
     runs-on: windows-latest
     steps:
@@ -32,6 +65,8 @@ jobs:
       - run: npm run test:e2e
       - run: node scripts/verify-ui.mjs
       - run: node scripts/verify-source-ui.mjs
+      - run: node scripts/verify-vercel-ui.mjs after
+      - run: node scripts/verify-vercel-images.mjs
       - run: node scripts/verify-hydration.mjs
       - uses: actions/upload-artifact@v4
         if: always()
