@@ -57,7 +57,10 @@ export function AdminShell({
             {name} ·{" "}
             {process.env.NEXT_PUBLIC_APP_MODE === "production"
               ? "Production"
-              : "Prototype local"}
+              : process.env.NEXT_PUBLIC_DEPLOYMENT_PROFILE ===
+                  "vercel-prototype"
+                ? "Prototype Vercel"
+                : "Prototype local"}
           </span>
         </div>
         {children}

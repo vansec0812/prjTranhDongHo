@@ -840,9 +840,15 @@ export default async function AdminModule({ params, searchParams }: Props) {
       <div className="stack">
         <h1>Email & công việc nền</h1>
         <Alert>
-          Adapter local ghi email vào tệp .local/mail và trạng thái
-          LOCAL_CAPTURED. Chưa gửi qua SMTP; không coi là provider nhận email.
+          {process.env.MAIL_MODE === "local"
+            ? "Adapter local ghi email vào .local/mail; LOCAL_CAPTURED chưa gửi ra Internet."
+            : "Email gửi qua nhà cung cấp. SENT là nhà cung cấp đã nhận; kiểm tra hộp thư hoặc dashboard email để xác minh thư đến."}
         </Alert>
+        <ActionButton
+          action="worker.run"
+          preset={{}}
+          label="Xử lý công việc nền và email đang chờ"
+        />
         <DataTable label="Outbox">
           <thead>
             <tr>
@@ -870,7 +876,7 @@ export default async function AdminModule({ params, searchParams }: Props) {
                   ) : (
                     <details>
                       <summary className="text-link">
-                        Xem email kiểm thử (riêng tư)
+                        Xem nội dung email (riêng tư)
                       </summary>
                       <p className="small">{job.recipient}</p>
                       <pre

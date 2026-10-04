@@ -7,8 +7,7 @@ export default function Forgot() {
       <TokenForm />
       <Link href="/admin/login">Về đăng nhập</Link>
       <p className="meta">
-        Prototype local: email kiểm thử được lưu riêng tại .local/mail, không
-        gửi qua internet.
+        Kiểm tra hộp thư và thư mục spam để mở liên kết khôi phục.
       </p>
     </main>
   );

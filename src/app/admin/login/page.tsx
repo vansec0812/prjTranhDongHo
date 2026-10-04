@@ -9,9 +9,7 @@ export default function Login() {
         <p className="eyebrow">QUẢN TRỊ NỘI DUNG & HOẠT ĐỘNG</p>
         <h1>Chào bạn, trở lại xưởng.</h1>
         <p className="small">
-          Dùng tài khoản admin được mời. Prototype tạo tài khoản đầu tiên bằng
-          mật khẩu ngẫu nhiên; xem file riêng{" "}
-          <code>.local/demo-access.txt</code>.
+          Dùng tài khoản quản trị đã được cấp hoặc kích hoạt qua email mời.
         </p>
         <AdminLogin />
         <Link className="text-link" href="/admin/quen-mat-khau">

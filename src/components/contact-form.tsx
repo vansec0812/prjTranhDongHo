@@ -8,6 +8,7 @@ import { ClientError, focusError } from "@/lib/client-api";
 import { Alert, Button, Field } from "./ui";
 import { Captcha } from "./captcha";
 import { z } from "zod";
+import { prepareCloudImage } from "@/lib/prepare-image";
 const errorSchema = z.object({
   message: z.string().optional(),
   fields: z.record(z.string(), z.array(z.string())).optional(),
@@ -64,6 +65,21 @@ export function ContactForm({
         };
         fd.set("data", JSON.stringify(input));
         try {
+          if (
+            process.env.NEXT_PUBLIC_DEPLOYMENT_PROFILE === "vercel-prototype"
+          ) {
+            const files = fd
+              .getAll("attachments")
+              .filter(
+                (value): value is File =>
+                  value instanceof File && value.size > 0,
+              );
+            if (files.length > 3)
+              throw new Error("Tối đa 3 ảnh / Maximum 3 images");
+            fd.delete("attachments");
+            for (const file of files)
+              fd.append("attachments", await prepareCloudImage(file));
+          }
           const response = await fetch("/api/contact", {
             method: "POST",
             body: fd,

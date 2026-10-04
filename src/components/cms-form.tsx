@@ -11,6 +11,7 @@ import { postJson, ClientError } from "@/lib/client-api";
 import { Button, Field, Alert } from "./ui";
 import { RichEditor } from "./rich-editor";
 import { z } from "zod";
+import { prepareCloudImage } from "@/lib/prepare-image";
 const resultSchema = z.object({ id: z.string() });
 const mediaSchema = z.object({ id: z.string(), altVi: z.string() });
 export function CmsForm({
@@ -478,7 +479,7 @@ export function CmsForm({
                 type="file"
                 accept="image/jpeg,image/png,image/webp"
                 disabled={uploading}
-                onChange={(e) => {
+                onChange={async (e) => {
                   const file = e.target.files?.[0];
                   if (!file) return;
                   const alt = document.getElementById("new-image-alt");
@@ -488,13 +489,30 @@ export function CmsForm({
                     return;
                   }
                   const fd = new FormData();
-                  fd.set("file", file);
                   fd.set("altVi", alt.value);
                   const altEn = document.getElementById("new-image-alt-en");
                   if (altEn instanceof HTMLInputElement)
                     fd.set("altEn", altEn.value);
                   setUploading(true);
                   setProgress(0);
+                  try {
+                    fd.set(
+                      "file",
+                      process.env.NEXT_PUBLIC_DEPLOYMENT_PROFILE ===
+                        "vercel-prototype"
+                        ? await prepareCloudImage(file)
+                        : file,
+                    );
+                  } catch (error) {
+                    setUploading(false);
+                    setSuccess(false);
+                    setMessage(
+                      error instanceof Error
+                        ? error.message
+                        : "Không thể xử lý ảnh.",
+                    );
+                    return;
+                  }
                   const xhr = new XMLHttpRequest();
                   xhr.open("POST", "/api/admin/upload");
                   xhr.upload.onprogress = (event) => {
@@ -544,8 +562,8 @@ export function CmsForm({
               />
             )}
             <p className="meta">
-              Ảnh được decode, kiểm tra MIME/magic bytes và tạo WebP nhiều kích
-              thước. Adapter local dành riêng prototype.
+              Ảnh được tối ưu kích thước khi tải lên. Nhập mô tả rõ ràng để hỗ
+              trợ người dùng đọc màn hình.
             </p>
           </div>
           <div className="panel stack">
