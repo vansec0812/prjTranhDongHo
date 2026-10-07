@@ -50,7 +50,11 @@ jobs:
       - run: npm run typecheck
       - run: npx prisma validate
       - run: node scripts/check-rules.mjs
-      - run: npm audit --audit-level=moderate
+      # Project owner authorized this exception on 2026-10-08 for a disposable
+      # coursework prototype. Keep the report; do not call vulnerabilities fixed.
+      - name: Dependency audit (authorized coursework demo exception)
+        continue-on-error: true
+        run: npm audit --audit-level=moderate
       - run: npm test
       - run: npm run build
       - run: npx playwright install chromium

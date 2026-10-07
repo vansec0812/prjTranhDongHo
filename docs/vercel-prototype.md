@@ -2,7 +2,7 @@
 
 Áp dụng repository `vansec0812/prjTranhDongHo`, nhánh chuẩn bị `codex/vercel-prototype`, website `https://prj-tranh-dong-ho.vercel.app`. Không cần chạy terminal để migrate, seed hay tạo admin. Nếu tên miền khác, thay `SITE_URL` và domain Turnstile cho khớp.
 
-**Trạng thái bàn giao:** source đã chuẩn bị để review; chưa tự merge/public deployment. Gate dependency audit đang BLOCKED bởi GHSA-vfj7-8cjw-p6xm chưa có bản vá. AGENTS.md GOV-02, QA-07 và OPS-04 yêu cầu CI xanh trước release; không đổi Production Branch để né gate. Bạn có thể chuẩn bị cấu hình dưới đây ngay, nhưng bước Redeploy chỉ thực hiện sau khi gate và review được giải quyết. Sau đó merge nhánh đã review vào `main` trên GitHub, giữ Production Branch `main`.
+**Ngoại lệ demo môn học ngày 08/10/2026:** chủ dự án đã cho phép đưa bản chuẩn bị vào `main` và public prototype dù audit dependency còn lỗi. CI giữ báo cáo audit với nhãn ngoại lệ, không chặn riêng bước này; mọi kiểm tra chức năng và baseline giữ nguyên. Không gọi các lỗ hổng đã sửa hoặc nghiệm thu production. Chi tiết phạm vi/rủi ro trong [ADR](decisions.md). Giữ Production Branch `main`; push code mới lên `main` để tạo deployment Production, không Redeploy commit cũ để lấy code từ nhánh chuẩn bị.
 
 Bạn đã chọn **email thật**. Có hai việc Vercel không cấp tự động: xác minh tên miền gửi mail tại Resend và lấy cặp khóa Turnstile tại Cloudflare. Cần làm một lần trên các dashboard đó; sau đó toàn bộ build/redeploy thực hiện trên Vercel. Không thể tạo khóa thật bằng cách điền giá trị mẫu. DNS có thể nhập tại Vercel nếu domain đang dùng nameserver Vercel. Không tự mua domain hoặc nâng gói dịch vụ.
 

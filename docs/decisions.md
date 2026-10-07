@@ -1,5 +1,12 @@
 # Quyết định và điểm cần chốt
 
+## ADR — ngoại lệ phát hành demo môn học, 08/10/2026
+
+- RESOLVED theo yêu cầu trực tiếp của chủ dự án: “Không quan trọng bảo mật, cứ deploy cho tôi”, chỉ demo môn học, không sử dụng lại, cần link Vercel public. Cho phép đưa bản chuẩn bị vào `main` và deploy prototype dù audit dependency đang thất bại. Đây là ngoại lệ cụ thể theo GOV-04, thay điều kiện chặn phát hành của GOV-02/QA-07/OPS-04 cho bản demo này; không xác nhận nghiệm thu production hoặc gọi lỗ hổng đã sửa.
+- Phạm vi triển khai: giữ `npm audit --audit-level=moderate` trong CI, đặt riêng bước audit thành `continue-on-error` với nhãn ngoại lệ demo. Giữ nguyên kiểm tra format/lint/typecheck/build/unit/integration/E2E/UI, baseline và báo cáo audit. Không chạy `npm audit fix --force`, nâng major hoặc tạo phiên bản vá giả.
+- Rủi ro còn biết: 5 high trong chuỗi dependency lint có `braces <=3.0.3` (GHSA-vfj7-8cjw-p6xm), chưa có bản vá upstream. Không hạ CAPTCHA/quyền admin, đưa secret vào Git, reset/drop database hay thêm dịch vụ trả phí. Giữ profile `vercel-prototype`, migration đã commit và bootstrap idempotent; thông tin provider thật vẫn lấy từ Vercel Production.
+- Các ADR/BLOCKED audit trước ngày này được giữ làm lịch sử. Ngoại lệ không áp dụng cho việc dùng lại hệ thống làm dịch vụ production thật.
+
 ## ADR — prototype qua dashboard Vercel, 04/10/2026
 
 - RESOLVED theo yêu cầu mới: bỏ nhu cầu terminal của người deploy. Profile `vercel-prototype` explicit với `APP_MODE=prototype`, Vercel Production environment và `BOOTSTRAP_DEMO=true` áp dụng migration đã commit, seed/import một lần, tạo admin từ env khi DB trống admin. Không bootstrap Preview hoặc app production. Quyết định này thay phần build-không-migrate của ADR trước **chỉ với opt-in prototype**; giữ nguyên schema/invariant và cấm reset/drop DB người dùng.
