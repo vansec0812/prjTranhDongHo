@@ -6,6 +6,8 @@ Cập nhật DB/Vercel 04/10/2026: ENG-01, ENG-23, OPS-01/02/03 và QA-07 đư�
 
 Cập nhật prototype dashboard/email thật cùng ngày: xem [hướng dẫn](vercel-prototype.md) và [QA phạm vi thay đổi](qa/vercel-prototype/review.md). ENG-23: bootstrap/import/admin có marker, advisory lock, test PostgreSQL tạo admin đồng thời và giữ mật khẩu. SEC-02: Node 24 Argon2id đọc PHC cũ, test password và E2E login. ENG-15/16, FR-ART-03/FR-WS-05/FR-GEN-07: private Blob và Resend sau commit, bounded outbox, chưa xác minh provider cloud. OPS-01/02/03: opt-in profile, migrate trong build, cron Bearer daily và runbook; lịch phút/production scanner/backup vẫn BLOCKED. UI-27/28: before/after 5 viewport, public VI/EN/admin. QA-07: giữ audit gate, advisory braces chưa vá nên nhánh review chưa được merge/release. Không đổi trạng thái nghiệm thu toàn hệ thống từ những kiểm tra phạm vi này.
 
+Cập nhật CI/Vercel 07/10/2026: OPS-02/03/04, NFR-09 và QA-07 có [bằng chứng kiểm tra](qa/vercel-ci-2026-10-07.md). Local setup PASS sau sửa kết nối PostgreSQL IPv4; CI Windows cần chạy lại với log lỗi đã redaction. Audit và kiểm tra cloud vẫn BLOCKED; chưa merge/release hoặc đổi trạng thái nghiệm thu toàn hệ thống.
+
 | Mã | Nguồn/trang | Module/route | Trạng thái | Bằng chứng / phần còn thiếu |
 |---|---|---|---|---|
 | GOV-01 | AGENTS GOV | lib/services/API/config · tests/docs | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |

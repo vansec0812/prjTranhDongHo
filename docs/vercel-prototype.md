@@ -9,7 +9,7 @@ Bạn đã chọn **email thật**. Có hai việc Vercel không cấp tự đ�
 ## 1. Chọn đúng project và cấu hình build
 
 1. Mở [Vercel dashboard](https://vercel.com/dashboard), chọn project `prj-tranh-dong-ho` đang bị lỗi. Nếu chưa có project, **Add New → Project → Import** repository `vansec0812/prjTranhDongHo`.
-2. **Settings → Git**: Production Branch là `main`. Lần deploy tự động trước khi đủ cấu hình có thể thất bại; bổ sung cấu hình rồi Redeploy.
+2. **Settings → Git**: kiểm repository `vansec0812/prjTranhDongHo`. **Settings → Environments → Production → Branch Tracking**: Production Branch là `main`. Chỉ deploy sau khi bản sửa đã được kiểm tra và merge vào `main`; Redeploy commit cũ không lấy code từ nhánh review.
 3. **Settings → Build and Deployment**: Framework **Next.js**, Root Directory **root repository** (`./`, hoặc để trống), Node.js **24.x**. Copy:
 
 | Trường           | Giá trị                                  |
@@ -40,6 +40,10 @@ Vercel dùng [PostgreSQL qua Marketplace](https://vercel.com/docs/postgres), kh�
 Các bước này theo [Vercel Blob SDK](https://vercel.com/docs/vercel-blob/using-blob-sdk). Kiểm tra hạn mức lưu trữ/băng thông tại dashboard. Code bổ sung adapter Blob; adapter R2 cũ vẫn tồn tại.
 
 ## 4. Email Resend thật
+
+Bạn hiện chưa có tên miền riêng: tạo tài khoản trực tiếp tại Resend, tạo API key có quyền gửi mail, thêm `RESEND_API_KEY` loại **Secret** vào Vercel Production. Giữ `MAIL_MODE=resend`, đặt `MAIL_FROM=Dong Ho <onboarding@resend.dev>`, `ADMIN_NOTIFY_EMAIL` và `INITIAL_ADMIN_EMAIL` bằng email của tài khoản Resend. Dùng chính email đó khi thử form. Đây là email thật nhưng chỉ gửi thử tới email tài khoản; gửi tới khách khác cần domain Verified. Nếu luồng cài Resend native yêu cầu domain, không mua domain để vượt bước; dùng tài khoản/API key trực tiếp như trên.
+
+Các bước dưới áp dụng khi bạn đã có domain riêng:
 
 1. Vercel → **Marketplace → Resend → Add Integration** → kết nối project. Nếu yêu cầu, tạo/kết nối tài khoản Resend.
 2. Kiểm tra biến `RESEND_API_KEY` được cấp cho **Production**. Nếu integration không cấp tự động, tại Resend tạo API key có quyền gửi mail rồi thêm vào Vercel với đúng tên đó.
@@ -76,6 +80,8 @@ Trên máy chủ dự án, file riêng **`D:\prjTranhDongHo\.local\vercel-copy.e
 Giữ nguyên `AUTH_SECRET`, `PII_ENCRYPTION_KEY`, `CRON_SECRET`, `INITIAL_ADMIN_PASSWORD` đã tạo. **Không tự thay encryption key khi DB có dữ liệu**: ghi chú/TOTP đang mã hóa phụ thuộc khóa này. Lưu riêng mật khẩu để đăng nhập lần đầu.
 
 Vercel Project → **Settings → Environment Variables → Import .env**, chọn file riêng đó, chọn **Production**, Save. Nếu giao diện chỉ có ô Key/Value, paste toàn bộ nội dung `.env` vào form để tách các biến; hoặc Add từng cặp. Đừng import `.env` local vào Vercel, đừng đánh dấu các secret bằng prefix `NEXT_PUBLIC_`.
+
+Nếu đã thêm Neon/Blob/Resend/Turnstile như các ảnh dashboard: chỉ bổ sung cấu hình còn thiếu từ `.local/vercel-config.env` với loại **Config**, và bốn giá trị hiện có trong `.local/vercel-secrets.env` với loại **Secret**. Không import lại giá trị `THAY_...` đè khóa provider đã cấu hình. `NEXT_PUBLIC_TURNSTILE_SITE_KEY` là **Config**; `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `AUTH_SECRET`, `PII_ENCRYPTION_KEY`, `CRON_SECRET`, `INITIAL_ADMIN_PASSWORD` là **Secret**. Chuyển loại giữ nguyên giá trị, không tự xoay khóa mã hóa hoặc mật khẩu.
 
 Biến cốt lõi trong file:
 
