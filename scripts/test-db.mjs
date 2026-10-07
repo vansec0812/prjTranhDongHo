@@ -12,7 +12,7 @@ const pg = new EmbeddedPostgres({
   port: Number(url.port),
   persistent: true,
 });
-const client = pg.getPgClient("postgres");
+const client = pg.getPgClient("postgres", "127.0.0.1");
 await client.connect();
 const existing = await client.query(
   "SELECT 1 FROM pg_database WHERE datname=$1",

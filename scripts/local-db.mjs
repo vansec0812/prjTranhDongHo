@@ -16,13 +16,13 @@ const pg = new EmbeddedPostgres({
 });
 if (!fs.existsSync(".local/postgres/PG_VERSION")) await pg.initialise();
 await pg.start();
-const client = pg.getPgClient("postgres");
+const client = pg.getPgClient("postgres", "127.0.0.1");
 await client.connect();
 const existing = await client.query(
   "SELECT 1 FROM pg_database WHERE datname=$1",
   ["dongho"],
 );
+if (!existing.rowCount) await client.query("CREATE DATABASE dongho");
 await client.end();
-if (!existing.rowCount) await pg.createDatabase("dongho");
 console.log("PostgreSQL 16 local prototype listening on 127.0.0.1:54329");
 setInterval(() => {}, 30000);

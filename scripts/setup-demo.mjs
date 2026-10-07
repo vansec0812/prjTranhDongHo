@@ -2,7 +2,8 @@ import fs from "node:fs";
 import { randomBytes } from "node:crypto";
 import { spawn, spawnSync } from "node:child_process";
 import net from "node:net";
-import { config as loadEnv } from "dotenv";
+import { config as loadEnv, parse } from "dotenv";
+import { databaseStartupError } from "./database-startup-error.mjs";
 loadEnv({ quiet: true });
 const databaseKeys = [
   "DATABASE_URL",
@@ -54,11 +55,22 @@ if (!(await online())) {
     stdio: ["ignore", log, log],
     windowsHide: true,
   });
+  let spawnError;
+  child.on("error", (error) => {
+    spawnError = error;
+  });
+  fs.closeSync(log);
   child.unref();
-  for (let i = 0; i < 60 && !(await online()); i++)
+  for (let i = 0; i < 60 && !(await online()); i++) {
+    if (spawnError || child.exitCode !== null) break;
     await new Promise((resolve) => setTimeout(resolve, 500));
+  }
   if (!(await online()))
-    throw new Error("Local Postgres did not start. See .local/database.log");
+    throw databaseStartupError(
+      fs.readFileSync(".local/database.log", "utf8"),
+      { ...process.env, ...parse(fs.readFileSync(".env")) },
+      child.exitCode,
+    );
 }
 function run(args) {
   const result = spawnSync(process.execPath, args, {
