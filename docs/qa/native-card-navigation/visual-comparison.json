@@ -1,0 +1,38 @@
+[
+  {
+    "before": "before-_admin_login-1440.png",
+    "after": "after-_admin_login-1440.png",
+    "sameSize": true,
+    "changedPixels": 0
+  },
+  {
+    "before": "before-_admin_login-375.png",
+    "after": "after-_admin_login-375.png",
+    "sameSize": true,
+    "changedPixels": 0
+  },
+  {
+    "before": "before-_en_thu-vien-tranh-1440.png",
+    "after": "after-_en_thu-vien-tranh-1440.png",
+    "sameSize": true,
+    "changedPixels": 0
+  },
+  {
+    "before": "before-_en_thu-vien-tranh-375.png",
+    "after": "after-_en_thu-vien-tranh-375.png",
+    "sameSize": true,
+    "changedPixels": 0
+  },
+  {
+    "before": "before-_thu-vien-tranh-1440.png",
+    "after": "after-_thu-vien-tranh-1440.png",
+    "sameSize": true,
+    "changedPixels": 7
+  },
+  {
+    "before": "before-_thu-vien-tranh-375.png",
+    "after": "after-_thu-vien-tranh-375.png",
+    "sameSize": true,
+    "changedPixels": 0
+  }
+]

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Play } from "lucide-react";
 import type { ContentRecord, Locale } from "@/lib/content";
 import { text, summary, contentHref } from "@/lib/content";
@@ -83,7 +82,8 @@ export function ContentCard({
 }) {
   return (
     <article className="content-card">
-      <Link href={contentHref(item, locale)}>
+      {/* Native navigation also works while a streamed page is hydrating. */}
+      <a href={contentHref(item, locale)}>
         <MediaView
           item={item}
           locale={locale}
@@ -92,7 +92,7 @@ export function ContentCard({
           summaryLink
         />
         <h3>{text(item, locale)}</h3>
-      </Link>
+      </a>
       <p className="meta">
         {item.category
           ? text(item.category, locale)

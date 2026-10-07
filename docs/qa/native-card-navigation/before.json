@@ -1,0 +1,156 @@
+{
+  "commit": "b89990a0b81ce577f421964d217bc7e8ef50033b",
+  "state": "before",
+  "results": [
+    {
+      "route": "/thu-vien-tranh",
+      "width": 360,
+      "status": 200,
+      "viewport": 360,
+      "scrollWidth": 360,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "width": 360,
+      "status": 200,
+      "viewport": 360,
+      "scrollWidth": 360,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/admin/login",
+      "width": 360,
+      "status": 200,
+      "viewport": 360,
+      "scrollWidth": 360,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_thu-vien-tranh-375.png"
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_en_thu-vien-tranh-375.png"
+    },
+    {
+      "route": "/admin/login",
+      "width": 375,
+      "status": 200,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_admin_login-375.png"
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/admin/login",
+      "width": 768,
+      "status": 200,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 1200,
+      "status": 200,
+      "viewport": 1200,
+      "scrollWidth": 1200,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "width": 1200,
+      "status": 200,
+      "viewport": 1200,
+      "scrollWidth": 1200,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/admin/login",
+      "width": 1200,
+      "status": 200,
+      "viewport": 1200,
+      "scrollWidth": 1200,
+      "h1": 1,
+      "errors": [],
+      "screenshot": null
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_thu-vien-tranh-1440.png"
+    },
+    {
+      "route": "/en/thu-vien-tranh",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_en_thu-vien-tranh-1440.png"
+    },
+    {
+      "route": "/admin/login",
+      "width": 1440,
+      "status": 200,
+      "viewport": 1440,
+      "scrollWidth": 1440,
+      "h1": 1,
+      "errors": [],
+      "screenshot": "docs/qa/native-card-navigation/before-_admin_login-1440.png"
+    }
+  ]
+}
