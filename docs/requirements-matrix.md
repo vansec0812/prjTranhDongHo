@@ -10,7 +10,7 @@ Cập nhật CI/Vercel 07/10/2026: OPS-02/03/04, NFR-09 và QA-07 có [bằng ch
 
 Cập nhật bootstrap admin 08/10/2026: FR-ADM-01 (SRS p.10), ENG-23 và OPS-02/03 có [bằng chứng sửa lỗi](qa/vercel-admin-bootstrap-2026-10-08.md). Commit `38a745e` đã ở `main`, cả hai job CI PASS với ngoại lệ audit demo được chủ dự án cho phép. Log Vercel mới đã migrate/import nhưng thiếu hoặc sai thông tin admin đầu tiên. Bản sửa phân biệt biến sai, chuẩn hóa email và kiểm tra trước seed/import; test DB đồng thời/idempotency vẫn PASS. Cloud readiness và đăng nhập tài khoản mới còn BLOCKED tới khi sửa hai biến Production và deploy thành công; không nâng trạng thái nghiệm thu toàn FR-ADM-01.
 
-Kiểm tra Function startup sau build Ready 08/10/2026: OPS-02/04, NFR-09, QA-07 có [bằng chứng Blob OIDC](qa/vercel-oidc-startup-2026-10-08.md). Sửa guard yêu cầu token env ở startup dù Vercel cấp token theo request; kiểm binding và giữ SDK xác thực từng operation. Unit regression và startup bản đã biên dịch PASS; public cloud smoke sau sửa còn cần kiểm, không đổi trạng thái nghiệm thu toàn hệ thống.
+Kiểm tra Function startup sau build Ready 08/10/2026: OPS-02/04, NFR-09, QA-07 có [bằng chứng Blob OIDC](qa/vercel-oidc-startup-2026-10-08.md). Sửa guard yêu cầu token env ở startup dù Vercel cấp token theo request; kiểm binding và giữ SDK xác thực từng operation. Commit `96ae4d4` deploy success, cả hai job CI success; health ready, home/admin login và 19 route public 200, ảnh/tour canvas/browser smoke PASS. Chỉ xác nhận hết lỗi 500 toàn site trong phạm vi kiểm tra; email/Blob upload/account cloud và trạng thái nghiệm thu toàn hệ thống chưa được nâng PASS.
 
 | Mã | Nguồn/trang | Module/route | Trạng thái | Bằng chứng / phần còn thiếu |
 |---|---|---|---|---|

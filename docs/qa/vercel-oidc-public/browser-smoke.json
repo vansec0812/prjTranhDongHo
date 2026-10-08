@@ -1,0 +1,52 @@
+{
+  "commit": "96ae4d4",
+  "at": "2026-10-08T17:03:12.064Z",
+  "origin": "https://prj-tranh-dong-ho.vercel.app",
+  "engine": "Chromium headless / software WebGL",
+  "results": [
+    {
+      "route": "/",
+      "width": 375,
+      "status": 200,
+      "h1Count": 1,
+      "overflow": false,
+      "loadedImages": 13,
+      "canvasCount": 0,
+      "errors": [],
+      "screenshot": "_-375.png"
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "h1Count": 1,
+      "overflow": false,
+      "loadedImages": 13,
+      "canvasCount": 0,
+      "errors": [],
+      "screenshot": "_-1440.png"
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 375,
+      "status": 200,
+      "h1Count": 1,
+      "overflow": false,
+      "loadedImages": 6,
+      "canvasCount": 0,
+      "errors": [],
+      "screenshot": "_thu-vien-tranh-375.png"
+    },
+    {
+      "route": "/thu-vien-tranh",
+      "width": 1440,
+      "status": 200,
+      "h1Count": 1,
+      "overflow": false,
+      "loadedImages": 6,
+      "canvasCount": 0,
+      "errors": [],
+      "screenshot": "_thu-vien-tranh-1440.png"
+    }
+  ]
+}

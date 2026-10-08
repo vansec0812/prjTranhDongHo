@@ -1,0 +1,47 @@
+{
+  "commit": "96ae4d4",
+  "at": "2026-10-08T17:09:11.550Z",
+  "route": "/tham-quan-360",
+  "status": 200,
+  "sceneSelectionUrl": "https://prj-tranh-dong-ho.vercel.app/tham-quan-360?diem=mau-va-giay",
+  "canvasVisible": true,
+  "errors": [],
+  "images": [
+    {
+      "src": "/tour/scene-1-preview.jpg",
+      "complete": true,
+      "width": 512,
+      "visible": true
+    },
+    {
+      "src": "/tour/scene-1-thumb.jpg",
+      "complete": true,
+      "width": 240,
+      "visible": true
+    },
+    {
+      "src": "/tour/scene-2-thumb.jpg",
+      "complete": true,
+      "width": 240,
+      "visible": true
+    },
+    {
+      "src": "/tour/scene-3-thumb.jpg",
+      "complete": true,
+      "width": 240,
+      "visible": true
+    },
+    {
+      "src": "/tour/scene-4-thumb.jpg",
+      "complete": true,
+      "width": 240,
+      "visible": true
+    },
+    {
+      "src": "/_next/image?url=%2Fimages%2Fvisit%2Fcho-tranh.webp&w=3840&q=75",
+      "complete": false,
+      "width": 0,
+      "visible": false
+    }
+  ]
+}
