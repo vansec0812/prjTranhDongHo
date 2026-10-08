@@ -61,6 +61,18 @@ describe("OPS-01/02, SEC-01/05 Vercel deployment", () => {
     vi.stubEnv("SCANNER_COMMAND", "");
     expect(productionGuard).toThrow("SCANNER_COMMAND");
   });
+  it("a Vercel Blob OIDC binding can initialize before request-scoped credentials arrive", () => {
+    cloud();
+    vi.stubEnv("BLOB_READ_WRITE_TOKEN", "");
+    vi.stubEnv("BLOB_STORE_ID", "store-fixture");
+    vi.stubEnv("VERCEL_OIDC_TOKEN", "");
+    expect(productionGuard).not.toThrow();
+    // A store ID alone is not a credential outside the Vercel runtime.
+    vi.stubEnv("VERCEL", "");
+    vi.stubEnv("APP_MODE", "production");
+    vi.stubEnv("SCANNER_COMMAND", "scanner-fixture");
+    expect(productionGuard).toThrow("Missing private Vercel Blob connection");
+  });
   it("recognizes Neon's direct connection without changing explicit DIRECT_URL precedence", () => {
     const url =
       "postgresql://test:test@db.example.invalid/demo?sslmode=require";

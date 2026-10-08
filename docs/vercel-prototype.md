@@ -34,7 +34,7 @@ Vercel dùng [PostgreSQL qua Marketplace](https://vercel.com/docs/postgres), kh�
 
 1. Project → **Storage → Create Storage → Blob → Continue**.
 2. Access chọn **Private**, đặt tên `dongho-prototype-media`, Create.
-3. Connect to Project → đúng project → **Production**. Giữ tên biến mặc định. Vercel cấp `BLOB_READ_WRITE_TOKEN`, hoặc kết nối OIDC với `BLOB_STORE_ID`/`VERCEL_OIDC_TOKEN`; SDK tự chọn thông tin kết nối.
+3. Connect to Project → đúng project → **Production**. Giữ tên biến mặc định. Vercel cấp `BLOB_READ_WRITE_TOKEN`, hoặc kết nối OIDC với `BLOB_STORE_ID`; SDK tự chọn thông tin kết nối. OIDC token có trong biến môi trường khi build, nhưng ở Function runtime được cấp qua context của từng request. Kiểm tra khởi động chỉ yêu cầu binding `BLOB_STORE_ID` trên Vercel; Blob SDK xác thực token/quyền thực khi đọc/upload/xóa. Không cần thêm token OIDC thủ công vào Environment Variables.
 4. Không tạo Public store để chứa ảnh đính kèm liên hệ. App phục vụ ảnh qua API kiểm quyền; khách không được lấy ảnh private của hộp thư. Chín ảnh nguồn và panorama có sẵn trong Git, không phải upload lại bằng tay.
 
 Các bước này theo [Vercel Blob SDK](https://vercel.com/docs/vercel-blob/using-blob-sdk). Kiểm tra hạn mức lưu trữ/băng thông tại dashboard. Code bổ sung adapter Blob; adapter R2 cũ vẫn tồn tại.
@@ -149,6 +149,7 @@ Theo [quản lý biến môi trường Vercel](https://vercel.com/docs/environme
 | `First deployment requires INITIAL_ADMIN...` / `Invalid first-admin config` | Sửa email thật dạng địa chỉ và mật khẩu 20–200 ký tự, không placeholder, trong **Production**; Save rồi Redeploy commit mới nhất trên `main` |
 | `Another database bootstrap is running`          | Đợi build kia hoàn tất rồi Redeploy; không xóa marker/lock                                                                                                     |
 | `Missing private Vercel Blob connection`         | Kết nối **Private** Blob với Production                                                                                                                        |
+| Build Ready nhưng mọi route, kể cả `/api/health`/`/admin/login`, trả 500 | Xem Runtime Logs của deployment mới. Nếu instrumentation báo thiếu Blob dù có binding OIDC `BLOB_STORE_ID`, deploy bản sửa startup OIDC; build pass không thay kiểm tra Function runtime |
 | Outbox `ResendHTTP403/422`                       | Kiểm Verified domain, sender, API key/quyền gửi; Resend Logs; admin thử gửi lại                                                                                |
 | CAPTCHA invalid                                  | Domain widget phải đúng domain truy cập, hai key phải cùng widget; sửa env rồi Redeploy                                                                        |
 | Form `INVALID_ORIGIN`                            | `SITE_URL` phải là domain bạn đang mở; không dùng deployment URL ngẫu nhiên để gửi form                                                                        |

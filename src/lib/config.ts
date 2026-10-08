@@ -88,9 +88,14 @@ export function productionGuard() {
     if (
       process.env.MEDIA_STORAGE === "vercel-blob" &&
       !process.env.BLOB_READ_WRITE_TOKEN &&
-      !(process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN)
+      !(
+        process.env.BLOB_STORE_ID &&
+        (process.env.VERCEL === "1" || process.env.VERCEL_OIDC_TOKEN)
+      )
     )
       throw new Error("Missing private Vercel Blob connection");
+    // On Vercel, OIDC credentials arrive in request context, not necessarily
+    // process.env at startup. Blob SDK validates that identity for each operation.
     if (
       (process.env.AUTH_SECRET?.length ?? 0) < 32 ||
       !/^[a-f0-9]{64}$/i.test(process.env.PII_ENCRYPTION_KEY ?? "")

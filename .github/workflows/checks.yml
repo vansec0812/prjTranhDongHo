@@ -34,6 +34,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:vercel
+      - name: Check compiled Vercel startup before request-scoped OIDC
+        env:
+          NEXT_RUNTIME: nodejs
+          BLOB_READ_WRITE_TOKEN: ""
+          BLOB_STORE_ID: fixture-store-id
+          VERCEL_OIDC_TOKEN: ""
+        run: node -e "require('./.next/server/instrumentation.js').register().then(() => console.log('Compiled Vercel startup check passed'))"
   local-prototype:
     runs-on: windows-latest
     steps:
