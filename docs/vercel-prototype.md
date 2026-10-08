@@ -1,6 +1,6 @@
 # Deploy prototype qua dashboard Vercel
 
-Áp dụng repository `vansec0812/prjTranhDongHo`, nhánh chuẩn bị `codex/vercel-prototype`, website `https://prj-tranh-dong-ho.vercel.app`. Không cần chạy terminal để migrate, seed hay tạo admin. Nếu tên miền khác, thay `SITE_URL` và domain Turnstile cho khớp.
+Áp dụng repository `vansec0812/prjTranhDongHo`, nhánh deploy `main`, website `https://prj-tranh-dong-ho.vercel.app`. Không cần chạy terminal để migrate, seed hay tạo admin. Nếu tên miền khác, thay `SITE_URL` và domain Turnstile cho khớp.
 
 **Ngoại lệ demo môn học ngày 08/10/2026:** chủ dự án đã cho phép đưa bản chuẩn bị vào `main` và public prototype dù audit dependency còn lỗi. CI giữ báo cáo audit với nhãn ngoại lệ, không chặn riêng bước này; mọi kiểm tra chức năng và baseline giữ nguyên. Không gọi các lỗ hổng đã sửa hoặc nghiệm thu production. Chi tiết phạm vi/rủi ro trong [ADR](decisions.md). Giữ Production Branch `main`; push code mới lên `main` để tạo deployment Production, không Redeploy commit cũ để lấy code từ nhánh chuẩn bị.
 
@@ -79,6 +79,13 @@ Trên máy chủ dự án, file riêng **`D:\prjTranhDongHo\.local\vercel-copy.e
 
 Giữ nguyên `AUTH_SECRET`, `PII_ENCRYPTION_KEY`, `CRON_SECRET`, `INITIAL_ADMIN_PASSWORD` đã tạo. **Không tự thay encryption key khi DB có dữ liệu**: ghi chú/TOTP đang mã hóa phụ thuộc khóa này. Lưu riêng mật khẩu để đăng nhập lần đầu.
 
+Nếu build báo `First deployment requires INITIAL_ADMIN...` hoặc `Invalid first-admin config`, DB đã kết nối nhưng chưa có admin và thông tin tài khoản đầu tiên chưa hợp lệ. Trong Vercel **Settings → Environment Variables**, chọn **Production** và sửa:
+
+- `INITIAL_ADMIN_EMAIL`: địa chỉ email thật, chỉ địa chỉ như `ten@gmail.com`, không nhập tên hiển thị, `THAY_...` hoặc tên biến khác. Email được bỏ khoảng trắng ở hai đầu và chuẩn hóa chữ thường.
+- `INITIAL_ADMIN_PASSWORD`: loại **Secret**, giá trị 20–200 ký tự. File riêng `.local/vercel-secrets.env` trên máy dự án đã có mật khẩu ngẫu nhiên 32 ký tự; copy đúng phần sau `INITIAL_ADMIN_PASSWORD=`, không copy tên biến hoặc dấu ngoặc kép vào ô Value. Trong lần sửa ngày 08/10, file `.local/vercel-initial-admin-password.txt` đã được chuẩn bị trên máy này với chỉ giá trị mật khẩu đó để copy toàn bộ vào Value. Không gửi giá trị này vào log/chat/Git.
+
+Save cả hai biến, rồi redeploy commit mới nhất trên `main` với environment **Production**. Build kiểm thông tin này sau migration và trước seed/import. Khi DB đã có admin, redeploy không yêu cầu lại hai biến và không đổi tài khoản hoặc mật khẩu.
+
 Vercel Project → **Settings → Environment Variables → Import .env**, chọn file riêng đó, chọn **Production**, Save. Nếu giao diện chỉ có ô Key/Value, paste toàn bộ nội dung `.env` vào form để tách các biến; hoặc Add từng cặp. Đừng import `.env` local vào Vercel, đừng đánh dấu các secret bằng prefix `NEXT_PUBLIC_`.
 
 Nếu đã thêm Neon/Blob/Resend/Turnstile như các ảnh dashboard: chỉ bổ sung cấu hình còn thiếu từ `.local/vercel-config.env` với loại **Config**, và bốn giá trị hiện có trong `.local/vercel-secrets.env` với loại **Secret**. Không import lại giá trị `THAY_...` đè khóa provider đã cấu hình. `NEXT_PUBLIC_TURNSTILE_SITE_KEY` là **Config**; `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `AUTH_SECRET`, `PII_ENCRYPTION_KEY`, `CRON_SECRET`, `INITIAL_ADMIN_PASSWORD` là **Secret**. Chuyển loại giữ nguyên giá trị, không tự xoay khóa mã hóa hoặc mật khẩu.
@@ -128,7 +135,7 @@ Theo [quản lý biến môi trường Vercel](https://vercel.com/docs/environme
 - Cloud prototype chuẩn hóa/decode ảnh, trạng thái `DECODED_PROTOTYPE`, **chưa scan antivirus**. Chế độ ứng dụng `production` vẫn fail closed khi không có scanner thật. Không dùng profile prototype để công bố đã đạt SEC-05 production.
 - Video upload 500 MB/resume/frame/VTT và các hạng mục đang BLOCKED trong ma trận chưa được nghiệm thu. Video YouTube/Vimeo được dùng nếu nguồn hoạt động; chưa có MP3/đủ 9 panorama trong nguồn.
 - Bản demo noindex, không thu tiền; thông tin cơ sở, chính sách, bản quyền cần xác nhận trước release thực tế. Backup/restore, deliverability mail, Blob/Neon và smoke trên tài khoản cloud **chưa được xác minh** khi chưa có credential.
-- CI/audit còn advisory hiện có; không hạ gate để triển khai. Bản thay đổi chuẩn bị quy trình deploy, không xác nhận đủ điều kiện release production.
+- Audit còn advisory hiện có; ngoại lệ demo môn học đã được chủ dự án cho phép ở đầu tài liệu. Các kiểm tra chức năng giữ nguyên; ngoại lệ không xác nhận đủ điều kiện release production.
 
 ## 10. Nếu lỗi
 
@@ -139,7 +146,7 @@ Theo [quản lý biến môi trường Vercel](https://vercel.com/docs/environme
 | `Migration failed` / readiness 503               | Kiểm Neon đang hoạt động, cùng DB/schema, TLS, quyền migration; xem `_prisma_migrations` tại provider; không reset/drop                                        |
 | `Missing required production config: ...`        | Thêm đúng biến được nêu, đúng environment, Redeploy                                                                                                            |
 | `Demo adapters are forbidden`                    | Dùng khóa Turnstile thật, `MAIL_MODE=resend`; không sửa guard                                                                                                  |
-| `First deployment requires INITIAL_ADMIN...`     | Điền email thật và mật khẩu ngẫu nhiên ≥20 ký tự; Redeploy                                                                                                     |
+| `First deployment requires INITIAL_ADMIN...` / `Invalid first-admin config` | Sửa email thật dạng địa chỉ và mật khẩu 20–200 ký tự, không placeholder, trong **Production**; Save rồi Redeploy commit mới nhất trên `main` |
 | `Another database bootstrap is running`          | Đợi build kia hoàn tất rồi Redeploy; không xóa marker/lock                                                                                                     |
 | `Missing private Vercel Blob connection`         | Kết nối **Private** Blob với Production                                                                                                                        |
 | Outbox `ResendHTTP403/422`                       | Kiểm Verified domain, sender, API key/quyền gửi; Resend Logs; admin thử gửi lại                                                                                |

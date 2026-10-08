@@ -1,7 +1,10 @@
 import { afterAll, describe, expect, it } from "vitest";
 import { verifyPassword } from "../../src/lib/password";
 import { db } from "../../src/lib/db";
-import { createInitialAdmin } from "../../src/lib/services/bootstrap";
+import {
+  createInitialAdmin,
+  validateInitialAdmin,
+} from "../../src/lib/services/bootstrap";
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "node:crypto";
 
@@ -34,10 +37,43 @@ describe("ENG-23 / FR-ADM-01 deployment admin safety", () => {
       await expect(
         createInitialAdmin("invalid", "short", isolated),
       ).rejects.toThrow("INITIAL_ADMIN");
+      await expect(
+        createInitialAdmin(
+          undefined,
+          "first-test-password-over-twenty",
+          isolated,
+        ),
+      ).rejects.toThrow("INITIAL_ADMIN_EMAIL must be a valid email address");
+      for (const invalidPassword of [
+        undefined,
+        "short",
+        "THAY_PASSWORD_ADMIN_CUA_BAN",
+      ]) {
+        await expect(
+          createInitialAdmin(
+            "first@example.invalid",
+            invalidPassword,
+            isolated,
+          ),
+        ).rejects.toThrow(
+          "INITIAL_ADMIN_PASSWORD must contain 20-200 characters",
+        );
+      }
+      expect(
+        await validateInitialAdmin(
+          "  FIRST@example.invalid  ",
+          "first-test-password-over-twenty",
+          isolated,
+        ),
+      ).toEqual({
+        email: "first@example.invalid",
+        password: "first-test-password-over-twenty",
+      });
       expect(await isolated.adminUser.count()).toBe(0);
+      expect(await isolated.auditLog.count()).toBe(0);
       const result = await Promise.all([
         createInitialAdmin(
-          "first@example.invalid",
+          "  FIRST@example.invalid  ",
           "first-test-password-over-twenty",
           isolated,
         ),

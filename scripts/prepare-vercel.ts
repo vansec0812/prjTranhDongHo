@@ -5,7 +5,10 @@ import { db } from "../src/lib/db";
 import { cloudPrototype } from "../src/lib/deployment";
 import { productionGuard } from "../src/lib/config";
 import { migrationDatabaseUrl } from "../src/lib/database-config";
-import { createInitialAdmin } from "../src/lib/services/bootstrap";
+import {
+  createInitialAdmin,
+  validateInitialAdmin,
+} from "../src/lib/services/bootstrap";
 import { seedDemo } from "../prisma/seed";
 import { importSourceContent } from "./import-source-content";
 
@@ -45,6 +48,12 @@ async function main() {
         "Migration failed. Check direct DB access, TLS and migration state; no reset was performed",
       );
     console.log("Committed migrations applied without reset.");
+    // The tables now exist. Validate first-account credentials before importing
+    // content, without requiring them again once an administrator exists.
+    await validateInitialAdmin(
+      process.env.INITIAL_ADMIN_EMAIL,
+      process.env.INITIAL_ADMIN_PASSWORD,
+    );
     const marker = "vercel-demo-bootstrap-v1";
     if (!(await db.siteSetting.findUnique({ where: { key: marker } }))) {
       await seedDemo();

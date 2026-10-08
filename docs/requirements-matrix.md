@@ -8,6 +8,8 @@ Cập nhật prototype dashboard/email thật cùng ngày: xem [hướng dẫn](
 
 Cập nhật CI/Vercel 07/10/2026: OPS-02/03/04, NFR-09 và QA-07 có [bằng chứng kiểm tra](qa/vercel-ci-2026-10-07.md). Local setup PASS sau sửa kết nối PostgreSQL IPv4; CI Windows cần chạy lại với log lỗi đã redaction. Audit và kiểm tra cloud vẫn BLOCKED; chưa merge/release hoặc đổi trạng thái nghiệm thu toàn hệ thống.
 
+Cập nhật bootstrap admin 08/10/2026: FR-ADM-01 (SRS p.10), ENG-23 và OPS-02/03 có [bằng chứng sửa lỗi](qa/vercel-admin-bootstrap-2026-10-08.md). Commit `38a745e` đã ở `main`, cả hai job CI PASS với ngoại lệ audit demo được chủ dự án cho phép. Log Vercel mới đã migrate/import nhưng thiếu hoặc sai thông tin admin đầu tiên. Bản sửa phân biệt biến sai, chuẩn hóa email và kiểm tra trước seed/import; test DB đồng thời/idempotency vẫn PASS. Cloud readiness và đăng nhập tài khoản mới còn BLOCKED tới khi sửa hai biến Production và deploy thành công; không nâng trạng thái nghiệm thu toàn FR-ADM-01.
+
 | Mã | Nguồn/trang | Module/route | Trạng thái | Bằng chứng / phần còn thiếu |
 |---|---|---|---|---|
 | GOV-01 | AGENTS GOV | lib/services/API/config · tests/docs | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |
