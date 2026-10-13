@@ -13,6 +13,15 @@ const errorSchema = z.object({
   message: z.string().optional(),
   fields: z.record(z.string(), z.array(z.string())).optional(),
 });
+const resultSchema = z.object({
+  id: z.string().min(1),
+  receipt: z
+    .object({
+      email: z.email(),
+      status: z.enum(["sent", "pending", "failed", "local"]),
+    })
+    .optional(),
+});
 export function ContactForm({
   locale,
   topic = "faq",
@@ -31,6 +40,8 @@ export function ContactForm({
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState("");
   const [sent, setSent] = useState(false);
+  const [receipt, setReceipt] =
+    useState<z.infer<typeof resultSchema>["receipt"]>();
   const [errors, setErrors] = useState<Record<string, string[]>>({});
   const form = useRef<HTMLFormElement>(null);
   if (sent)
@@ -38,6 +49,26 @@ export function ContactForm({
       <div className="panel stack">
         <h2>{t.sent}</h2>
         <p role="status">{t.sentText}</p>
+        {receipt && (
+          <p className="contact-receipt" role="status">
+            {receipt.status === "sent"
+              ? locale === "en"
+                ? "Confirmation email sent to: "
+                : "Email xác nhận đã gửi đến: "
+              : receipt.status === "failed"
+                ? locale === "en"
+                  ? "Your message is saved. The confirmation email could not yet be sent to: "
+                  : "Lời nhắn đã được lưu. Email xác nhận chưa gửi được đến: "
+                : receipt.status === "local"
+                  ? locale === "en"
+                    ? "Your contact email: "
+                    : "Email liên hệ của bạn: "
+                  : locale === "en"
+                    ? "Confirmation email is awaiting delivery to: "
+                    : "Email xác nhận đang chờ gửi đến: "}
+            <strong className="email-address">{receipt.email}</strong>
+          </p>
+        )}
       </div>
     );
   return (
@@ -94,6 +125,8 @@ export function ContactForm({
               parsed.success ? (parsed.data.fields ?? {}) : {},
             );
           }
+          const saved = resultSchema.parse(result);
+          setReceipt(saved.receipt);
           setSent(true);
         } catch (error) {
           setToken("");

@@ -140,10 +140,9 @@ test("FR-WS-03/05/06 · đăng ký mobile → mã DB → tra cứu → ICS → h
 });
 test("FR-ART-02/03 · liên hệ lưu hộp thư thật", async ({ page }) => {
   await page.goto("/lien-he");
+  const contactEmail = `contact-${Date.now()}@example.invalid`;
   await page.getByLabel("Họ và tên *").fill("Khách kiểm thử liên hệ");
-  await page
-    .getByLabel("Email *", { exact: true })
-    .fill(`contact-${Date.now()}@example.invalid`);
+  await page.getByLabel("Email *", { exact: true }).fill(contactEmail);
   await page.getByLabel("Số điện thoại *").fill("+12025550177");
   await page
     .getByLabel("Lời nhắn *")
@@ -156,6 +155,9 @@ test("FR-ART-02/03 · liên hệ lưu hộp thư thật", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: "Đã nhận lời nhắn" }),
   ).toBeVisible();
+  await expect(page.locator(".contact-receipt .email-address")).toHaveText(
+    contactEmail,
+  );
   const access = fs.readFileSync(".local/demo-access.txt", "utf8");
   await page.goto("/admin/login");
   await page

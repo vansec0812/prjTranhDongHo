@@ -864,7 +864,16 @@ export default async function AdminModule({ params, searchParams }: Props) {
               <tr key={job.id}>
                 <td>{dateLabel(job.createdAt)}</td>
                 <td>{job.subject}</td>
-                <td>{job.status}</td>
+                <td>
+                  {job.status}
+                  {job.lastError && (
+                    <p className="small">
+                      {job.lastError === "ResendSenderNotVerified"
+                        ? "Sender thử của Resend chưa gửi được tới khách khác. Đặt MAIL_FROM bằng địa chỉ thuộc tên miền đã Verified, rồi thử gửi lại."
+                        : "Thư chưa gửi được. Kiểm tra cấu hình và nhật ký nhà cung cấp trước khi thử lại."}
+                    </p>
+                  )}
+                </td>
                 <td>{job.attempts}</td>
                 <td>
                   {job.status === "FAILED" ? (

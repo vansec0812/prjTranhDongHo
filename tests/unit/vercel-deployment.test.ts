@@ -131,11 +131,39 @@ describe("OPS-01/02, SEC-01/05 Vercel deployment", () => {
     await sendResend(job);
     const [, init] = mock.mock.calls[0];
     expect(init.headers["Idempotency-Key"]).toBe("dongho/outbox-fixture");
+    expect(JSON.parse(init.body).to).toEqual([job.recipient]);
     expect(JSON.parse(init.body).attachments[0].content).toBe(
       Buffer.from(job.ics).toString("base64"),
     );
     await expect(sendResend(job)).rejects.toMatchObject({
       name: "ResendHTTP403",
+    });
+  });
+  it("identifies an unverified testing sender without persisting the private address", async () => {
+    cloud();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue(
+        Response.json(
+          {
+            message:
+              "You can only send testing emails to your own email address (private@example.invalid). Please verify a domain.",
+          },
+          { status: 403 },
+        ),
+      ),
+    );
+    await expect(
+      sendResend({
+        id: "contact-guest-job",
+        recipient: "customer@example.invalid",
+        subject: "Receipt",
+        body: "Stored message",
+        ics: null,
+      }),
+    ).rejects.toMatchObject({
+      name: "ResendSenderNotVerified",
+      message: "Mail provider rejected delivery",
     });
   });
 });

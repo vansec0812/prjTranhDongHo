@@ -48,6 +48,7 @@ export async function createContact(
       data: [
         {
           dedupeKey: `contact:${contact.id}:guest`,
+          contactId: contact.id,
           recipient: contact.email,
           subject:
             data.language === "en" ? "Message received" : "Đã nhận lời nhắn",
@@ -58,13 +59,25 @@ export async function createContact(
         },
         {
           dedupeKey: `contact:${contact.id}:admin`,
+          contactId: contact.id,
           recipient: process.env.ADMIN_NOTIFY_EMAIL ?? "admin@example.invalid",
           subject: "Liên hệ mới",
           body: `Có liên hệ mới trong hộp thư quản trị.\n${process.env.SITE_URL}/admin/hop-thu`,
         },
       ],
     });
-    return { id: contact.id };
+    const emailJobs = await tx.outbox.findMany({
+      where: { contactId: contact.id },
+      select: { id: true, dedupeKey: true },
+    });
+    const guestJob = emailJobs.find((job) => job.dedupeKey.endsWith(":guest"));
+    if (!guestJob) throw new Error("Contact acknowledgement was not queued");
+    return {
+      id: contact.id,
+      email: contact.email,
+      guestJobId: guestJob.id,
+      emailJobIds: emailJobs.map((job) => job.id),
+    };
   });
 }
 export async function subscribe(email: string, language: string) {

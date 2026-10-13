@@ -104,7 +104,7 @@ export const vi = {
     topic: "Bạn muốn liên hệ về",
     message: "Lời nhắn",
     sent: "Đã nhận lời nhắn",
-    sentText: "Nội dung đã lưu vào hộp thư. Email thông báo đang được xử lý.",
+    sentText: "Nội dung đã lưu vào hộp thư. Xưởng sẽ phản hồi sau khi đọc.",
     consent:
       "Tôi đồng ý xử lý thông tin để xưởng trả lời liên hệ, theo chính sách bảo mật.",
     reference: "Tranh quan tâm",
@@ -226,7 +226,7 @@ export const en = {
     message: "Your message",
     sent: "Message received",
     sentText:
-      "Your message has been saved in the inbox. Email notifications are being processed.",
+      "Your message has been saved in the inbox. The studio will respond after reading it.",
     consent:
       "I agree to the processing of my information to answer this enquiry, under the privacy policy.",
     reference: "Painting of interest",

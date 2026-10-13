@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import nodemailer from "nodemailer";
 import { db } from "../db";
+import { Prisma } from "@prisma/client";
 import {
   lockSession,
   inviteWaiting,
@@ -149,11 +150,14 @@ export async function runScheduled(now = new Date()) {
   });
   return { anonymized: old.length };
 }
-export async function deliverOne(now = new Date()) {
+export async function deliverOne(now = new Date(), jobIds?: readonly string[]) {
+  if (jobIds?.length === 0) return false;
   const job = await db.$transaction(async (tx) => {
     const rows = await tx.$queryRaw<
       Array<{ id: string }>
-    >`SELECT id FROM "Outbox" WHERE (status='PENDING' AND "availableAt"<=${now}) OR (status='SENDING' AND "claimedAt"<${new Date(now.getTime() - 300000)}) ORDER BY "createdAt",id LIMIT 1 FOR UPDATE SKIP LOCKED`;
+    >`SELECT id FROM "Outbox" WHERE ((status='PENDING' AND "availableAt"<=${now}) OR (status='SENDING' AND "claimedAt"<${new Date(now.getTime() - 300000)}))
+      ${jobIds ? Prisma.sql`AND id IN (${Prisma.join(jobIds)})` : Prisma.empty}
+      ORDER BY "createdAt",id LIMIT 1 FOR UPDATE SKIP LOCKED`;
     if (!rows[0]) return null;
     return tx.outbox.update({
       where: { id: rows[0].id },
@@ -269,20 +273,28 @@ export async function deliverOne(now = new Date()) {
   return true;
 }
 
-export async function drainOutbox(maxJobs = 10, budgetMs = 20000) {
+export async function drainOutbox(
+  maxJobs = 10,
+  budgetMs = 20000,
+  jobIds?: readonly string[],
+) {
   const deadline = Date.now() + budgetMs;
   let processed = 0;
-  while (processed < maxJobs && Date.now() < deadline && (await deliverOne()))
+  while (
+    processed < maxJobs &&
+    Date.now() < deadline &&
+    (await deliverOne(new Date(), jobIds))
+  )
     processed++;
   return { processed };
 }
 
 // Await bounded delivery after the business transaction commits. Failed email
 // stays in the durable outbox and must not turn a saved form into a failed form.
-export async function dispatchCommittedMail() {
+export async function dispatchCommittedMail(jobIds?: readonly string[]) {
   if (process.env.VERCEL !== "1") return;
   try {
-    await drainOutbox(4, 18000);
+    await drainOutbox(4, 18000, jobIds);
   } catch (error) {
     console.error(
       JSON.stringify({

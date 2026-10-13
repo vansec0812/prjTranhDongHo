@@ -1,4 +1,4 @@
-import { describe, it, expect, afterAll } from "vitest";
+import { describe, it, expect, afterAll, vi } from "vitest";
 import { randomUUID } from "node:crypto";
 import { db } from "../../src/lib/db";
 import {
@@ -283,5 +283,61 @@ describe("QA-03 real PostgreSQL transaction invariants", () => {
       (await db.outbox.findUniqueOrThrow({ where: { id: pending.id } })).status,
     ).toBe("PENDING");
     process.env.MAIL_MODE = previous;
+  });
+  it("FR-ART-03 acknowledgements target each guest and bypass unrelated pending mail", async () => {
+    vi.stubEnv("MAIL_MODE", "local");
+    vi.stubEnv("ADMIN_NOTIFY_EMAIL", "studio-admin@example.invalid");
+    try {
+      const older = await db.outbox.create({
+        data: {
+          dedupeKey: randomUUID(),
+          recipient: "unrelated@example.invalid",
+          subject: "Older mail",
+          body: "Unrelated queue entry",
+          createdAt: new Date("2000-01-01"),
+          availableAt: new Date("2000-01-01"),
+        },
+      });
+      const contacts = [];
+      for (const name of ["Alpha", "Beta"]) {
+        const contact = await createContact({
+          fullName: "Test guest",
+          phone: "+12025550199",
+          email: `${name}-${randomUUID()}@example.invalid`,
+          message: "Lời nhắn kiểm tra địa chỉ nhận riêng của khách.",
+          topic: "faq",
+          language: "vi",
+          consent: true,
+          captcha: "test",
+          website: "",
+        });
+        contacts.push(contact);
+        const guest = await db.outbox.findUniqueOrThrow({
+          where: { id: contact.guestJobId },
+        });
+        expect(guest.recipient).toBe(contact.email);
+        expect(guest.recipient).not.toBe(process.env.ADMIN_NOTIFY_EMAIL);
+        expect(guest.contactId).toBe(contact.id);
+        await deliverOne(new Date(), contact.emailJobIds);
+        await deliverOne(new Date(), contact.emailJobIds);
+        expect(
+          await db.outbox.findMany({
+            where: { id: { in: contact.emailJobIds } },
+            select: { status: true },
+          }),
+        ).toEqual([{ status: "LOCAL_CAPTURED" }, { status: "LOCAL_CAPTURED" }]);
+        expect(
+          await db.outbox.findFirst({
+            where: { contactId: contact.id, dedupeKey: { endsWith: ":admin" } },
+          }),
+        ).toMatchObject({ recipient: "studio-admin@example.invalid" });
+      }
+      expect(contacts[0].email).not.toBe(contacts[1].email);
+      expect(
+        await db.outbox.findUniqueOrThrow({ where: { id: older.id } }),
+      ).toMatchObject({ status: "PENDING", attempts: 0 });
+    } finally {
+      vi.unstubAllEnvs();
+    }
   });
 });

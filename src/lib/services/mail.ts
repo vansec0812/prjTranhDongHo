@@ -37,8 +37,18 @@ export async function sendResend(job: {
   });
   if (!response.ok) {
     // Never persist provider response bodies: they may contain addresses or tokens.
+    const details = z
+      .object({ message: z.string().max(2000) })
+      .safeParse(await response.json().catch(() => null));
     const error = new Error("Mail provider rejected delivery");
-    error.name = `ResendHTTP${response.status}`;
+    error.name =
+      response.status === 403 &&
+      details.success &&
+      details.data.message.startsWith(
+        "You can only send testing emails to your own email address",
+      )
+        ? "ResendSenderNotVerified"
+        : `ResendHTTP${response.status}`;
     throw error;
   }
   const accepted = z
