@@ -56,6 +56,14 @@ Resend có [integration Marketplace](https://vercel.com/changelog/resend-vercel-
 
 Mail được gửi sau transaction. Nhà cung cấp từ chối/timeout không mất đăng ký; job có retry và xem lỗi tại `/admin/email`. Idempotency key dùng ID outbox theo [API Resend](https://resend.com/docs/api-reference/emails/send-email); nhà cung cấp giữ key 24 giờ, không coi đó là đảm bảo exactly-once vô hạn.
 
+### Email liên hệ gửi đúng khách — 14/10/2026
+
+`MAIL_FROM` là địa chỉ **gửi** thuộc tên miền bạn quản lý và đã Verified trên Resend; Gmail khách nhập là địa chỉ **nhận**. Không đặt `MAIL_FROM` bằng địa chỉ `@gmail.com`: tài khoản Gmail không cấp quyền quản lý DNS của `gmail.com`. `ADMIN_NOTIFY_EMAIL` chỉ nhận thông báo riêng cho quản trị, không thay email xác nhận của khách.
+
+Sau khi domain Verified, tại Vercel → Environment Variables → Production: giữ `MAIL_MODE=resend` và API key hiện có quyền gửi trên domain đó; sửa `MAIL_FROM` bằng sender thật, ví dụ định dạng `Tranh Dong Ho <no-reply@DOMAIN_DA_VERIFIED>`. Đây là định dạng minh họa, không import nguyên placeholder. Redeploy, gửi form bằng Gmail khác email tài khoản Resend, rồi kiểm tra email xác nhận đến đúng Gmail đó và thông báo riêng ở admin. Không gửi API key/mật khẩu trong chat hoặc commit vào Git.
+
+API liên hệ lưu message và hai job trong transaction, gửi riêng các job của liên hệ vừa tạo sau commit để tránh chờ backlog. Màn hình kết quả hiển thị địa chỉ khách và trạng thái: đã gửi khi provider nhận, đang chờ hoặc chưa gửi được. Khi sender thử bị Resend từ chối, `/admin/email` giải thích cần sửa `MAIL_FROM`; thư được giữ để retry, không chuyển sang gửi cho email admin và không biến thư lỗi thành SENT. Local capture vẫn chỉ là kiểm tra local.
+
 ## 5. CAPTCHA thật — cấu hình một lần ở Cloudflare
 
 1. Mở [Cloudflare Turnstile](https://dash.cloudflare.com/), **Turnstile → Add widget**.

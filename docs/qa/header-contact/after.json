@@ -1,0 +1,457 @@
+{
+  "origin": "http://127.0.0.1:30912",
+  "results": [
+    {
+      "route": "/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lich-su",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [
+        {
+          "text": "quốc gia",
+          "split": false
+        }
+      ],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/lien-he",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/lien-he",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/tin-tuc",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/en/tin-tuc",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 1,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 1024,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    },
+    {
+      "route": "/admin/login",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "news": 0,
+      "compounds": [],
+      "headerOverflow": false
+    }
+  ],
+  "sourceCommit": "c5cf47eed8a91ed54c469af3c55189b9459c9568",
+  "clock": "2026-10-14T03:00:00Z"
+}
