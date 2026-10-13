@@ -33,11 +33,15 @@ Tour: **http://127.0.0.1:3000/tham-quan-360**, EN **http://127.0.0.1:3000/en/vir
 npm.cmd run assets:prepare
 # Nhập một lần; lần sau giữ chỉnh sửa CMS:
 npm.cmd run content:import
+# Bổ sung nội dung văn hóa có nguồn; một lần, giữ chỉnh sửa CMS:
+npm.cmd run content:enrich
 # Công cụ tọa độ chỉ hoạt động với next dev:
 # http://127.0.0.1:3000/dev/hotspot-picker?diem=phong-tranh
 ```
 
 Thông tin cơ sở, chính sách, bản quyền và hình học của tour cần xác nhận trước phát hành công khai. UI public đã bỏ ghi chú SRS/prototype; trạng thái tích hợp local vẫn thể hiện tại admin và tài liệu.
+
+Trang lịch sử có bảy mốc với chi tiết và nguồn tham khảo, nội dung về giấy điệp/nghề in và FAQ VI/EN. Nguồn biên tập: [Bảo tàng Lịch sử Quốc gia, Cục Di sản văn hóa, IRCI và UNESCO](docs/content-sources.md). `setup:demo` tự bổ sung nội dung này; Vercel Production áp dụng trong bước bootstrap đã bật. Redeploy không ghi đè chỉnh sửa CMS; bản văn bản cũ được sao lưu cùng transaction trước cập nhật.
 
 Email local được worker ghi vào `.local/mail` và hiển thị tại `/admin/email`; **không gửi ra Internet**. Turnstile dùng test key chính thức, vẫn kiểm tra server qua Cloudflare. Ảnh tải lên được decode, kiểm MIME/magic bytes, nén WebP và lưu bền vững ở `.local/media`; chế độ local chưa phải chứng nhận quét antivirus. Production chặn test key, fixtures và cấu hình thiếu tích hợp thật.
 

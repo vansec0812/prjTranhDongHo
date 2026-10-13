@@ -63,9 +63,9 @@ Kiểm tra Function startup sau build Ready 08/10/2026: OPS-02/04, NFR-09, QA-07
 | FR-HOME-06 | SRS p.7 | / · src/app/[locale]/page.tsx | BLOCKED | 6 mẫu tranh/3 bài; thiếu chân dung/câu nói đã xác minh. |
 | FR-HOME-07 | SRS p.7 | / · src/app/[locale]/page.tsx | IN_PROGRESS | Footer/bản tin/chính sách/map link từ cấu hình; thông tin cơ sở thật chưa xác nhận. |
 | FR-HIS-01 | SRS p.7 | /lich-su · components/history.tsx | BLOCKED | Rich text CMS; ảnh xưởng và tư liệu cơ sở chưa cung cấp. |
-| FR-HIS-02 | SRS p.7 | /lich-su · components/history.tsx | IN_PROGRESS | Timeline ngang/dọc và sửa sortOrder; kéo thả CMS chưa làm. |
+| FR-HIS-02 | SRS p.7 | /lich-su · components/history.tsx | IN_PROGRESS | Timeline ngang/dọc, số I–VII không bị cắt, nút trước/sau có trạng thái biên, chi tiết rich text/nguồn VI–EN; E2E history.spec.ts và [review 14/10](qa/history-update/review.md). Kéo thả CMS chưa làm. |
 | FR-HIS-03 | SRS p.7 | /lich-su · components/history.tsx | IN_PROGRESS | Năm bước đúng thứ tự SRS; ảnh/clip thực tế chưa có. |
-| FR-HIS-04 | SRS p.7 | /lich-su · components/history.tsx | BLOCKED | Không tạo chứng cứ nguồn màu; chờ tư liệu cơ sở. |
+| FR-HIS-04 | SRS p.7 | /lich-su · components/history.tsx | IN_PROGRESS | FAQ màu và kiến thức giấy điệp dẫn [tư liệu bảo tàng/Cục Di sản](content-sources.md); không gán thông tin chung là chứng cứ riêng của cơ sở. Vẫn cần đối chiếu vật liệu tại cơ sở. |
 | FR-HIS-05 | SRS p.7 | /lich-su · components/history.tsx | IN_PROGRESS | 5 danh mục có liên kết lọc; nội dung thật chưa duyệt. |
 | FR-GAL-01 | SRS p.7 | /thu-vien-tranh · catchall public | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |
 | FR-GAL-02 | SRS p.8 | /thu-vien-tranh · catchall public | IN_PROGRESS | Đã có triển khai cơ bản liên quan; chưa đủ coverage/bằng chứng nghiệm thu toàn điều khoản. Xem code và docs/qa; không coi build pass là acceptance. |

@@ -24,6 +24,14 @@ PowerShell có thể chặn `npm.ps1`; dùng `npm.cmd`/`npx.cmd` cho các lệnh
 
 ## Cập nhật ảnh và tour
 
+### Nội dung văn hóa có nguồn — 14/10/2026
+
+`npm.cmd run content:enrich` bổ sung bảy mốc lịch sử, trang giới thiệu/kiến thức nghề và ba FAQ VI/EN. Chỉ chạy cho local prototype hoặc cloud prototype với `VERCEL_ENV=production` và `BOOTSTRAP_DEMO=true`. `setup:demo` gọi sau importer ảnh; `build:vercel` gọi trong bootstrap Production đã được chủ dự án cho phép. Preview và profile production nghiệp vụ không tự nhập dữ liệu này.
+
+Marker `cultural-content-v2-2026-10-13` bảo đảm một lần. Advisory lock và transaction gộp nội dung, backup, marker; fingerprint gồm văn bản/sort/era/year giúp giữ chỉnh sửa của admin. Chỉ thay bản văn bản cũ khớp importer; giữ trạng thái xuất bản, media và ngày xuất bản. Các slug mới đã tồn tại cũng được giữ nguyên. Backup `SiteSetting` key `content-backup:cultural-content-v2-2026-10-13` lưu JSON của bản ghi thực sự thay đổi và ID được thêm. Marker lưu số tạo/sửa/giữ, nguồn, thời điểm và commit Vercel, không giả danh một admin trong audit.
+
+Kiểm tra `/lich-su`, `/en/lich-su`, `/gioi-thieu`, `/hoi-dap` sau deploy; các số I–VII không bị cắt, mở được chi tiết và nguồn. Nếu CMS có nội dung tùy chỉnh được giữ lại, biên tập trực tiếp trong CMS. Khi cần hoàn tác văn bản, lấy bản backup và sửa qua CMS/forward-fix sau khi kiểm tra chỉnh sửa phát sinh; không phục hồi trạng thái/ảnh một cách mù quáng, không xóa marker hay reset DB. Backup này chỉ dành cho đợt nội dung, không thay backup toàn DB theo NFR-07. [Nguồn và phạm vi](content-sources.md), [kiểm tra UI](qa/history-update/review.md).
+
 `npm.cmd run assets:prepare` chuyển các nguồn gốc sang ảnh public, bỏ metadata và kiểm tra ngân sách 8K/4K/preview/thumb. HEIC dùng `heic-convert`, ảnh dùng `sharp`; không ghi đè các file trong `sourceImage`/`sourceVR`. Manifest `public/tour/assets.json` lưu kích thước, dung lượng và SHA-256 nguồn. Lệnh này tạo lại `public/tour/tour.json` từ `scripts/configure-tour.mjs`: nếu đã chỉnh thủ công tọa độ, sao lưu JSON trước khi chạy hoặc sửa script cấu hình tương ứng.
 
 `npm.cmd run content:import` nhập ảnh và bài mô tả VI/EN vào CMS một lần. Marker `source-images-tour-v1` khiến lần chạy sau không ghi đè chỉnh sửa CMS. Backup nội dung cũ tại `.local/content-backups/`, không xuất bảng đăng ký, hộp thư hoặc tài khoản admin; nội dung CMS/cấu hình vẫn phải bảo quản riêng. Không xóa marker để ép nhập lại vào DB đang dùng; thay nội dung qua CMS hoặc viết bản import tiếp theo có kiểm tra và backup riêng.

@@ -1,0 +1,396 @@
+{
+  "commit": "0d58cf6",
+  "origin": "https://prj-tranh-dong-ho.vercel.app",
+  "results": [
+    {
+      "route": "/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 534.84375,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "II",
+          "top": 819.671875,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "III",
+          "top": 1104.5,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "IV",
+          "top": 1389.328125,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "V",
+          "top": 1674.15625,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        }
+      ]
+    },
+    {
+      "route": "/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 486.84375,
+          "regionTop": 486.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "II",
+          "top": 771.671875,
+          "regionTop": 486.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "III",
+          "top": 1056.5,
+          "regionTop": 486.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "IV",
+          "top": 1341.328125,
+          "regionTop": 486.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "V",
+          "top": 1626.15625,
+          "regionTop": 486.84375,
+          "clippedTop": false
+        }
+      ]
+    },
+    {
+      "route": "/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "II",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "III",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "IV",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "V",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        }
+      ]
+    },
+    {
+      "route": "/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "II",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "III",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "IV",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "V",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        }
+      ]
+    },
+    {
+      "route": "/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "II",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "III",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "IV",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "V",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        }
+      ]
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 534.84375,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "II",
+          "top": 819.671875,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "III",
+          "top": 1104.5,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "IV",
+          "top": 1415.71875,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "V",
+          "top": 1700.546875,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        }
+      ]
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 534.84375,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "II",
+          "top": 819.671875,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "III",
+          "top": 1104.5,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "IV",
+          "top": 1389.328125,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        },
+        {
+          "text": "V",
+          "top": 1674.15625,
+          "regionTop": 534.84375,
+          "clippedTop": false
+        }
+      ]
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "II",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "III",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "IV",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "V",
+          "top": 519.15625,
+          "regionTop": 542.15625,
+          "clippedTop": true
+        }
+      ]
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 0,
+          "regionTop": 0,
+          "clippedTop": false
+        },
+        {
+          "text": "II",
+          "top": 0,
+          "regionTop": 0,
+          "clippedTop": false
+        },
+        {
+          "text": "III",
+          "top": 0,
+          "regionTop": 0,
+          "clippedTop": false
+        },
+        {
+          "text": "IV",
+          "top": 0,
+          "regionTop": 0,
+          "clippedTop": false
+        },
+        {
+          "text": "V",
+          "top": 0,
+          "regionTop": 0,
+          "clippedTop": false
+        }
+      ]
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "II",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "III",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "IV",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        },
+        {
+          "text": "V",
+          "top": 551.15625,
+          "regionTop": 574.15625,
+          "clippedTop": true
+        }
+      ]
+    }
+  ]
+}

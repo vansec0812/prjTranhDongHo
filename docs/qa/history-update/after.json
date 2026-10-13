@@ -1,0 +1,1132 @@
+{
+  "origin": "http://127.0.0.1:30912",
+  "sourceCommit": "c1066099a940a6729b613b24d3a979a2933223e7",
+  "clock": "2026-10-13T03:00:00Z",
+  "results": [
+    {
+      "route": "/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 480.015625,
+          "left": 17,
+          "bottom": 528.015625,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "II",
+          "top": 791.234375,
+          "left": 17,
+          "bottom": 839.234375,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "III",
+          "top": 1076.0625,
+          "left": 17,
+          "bottom": 1124.0625,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "IV",
+          "top": 1387.28125,
+          "left": 17,
+          "bottom": 1435.28125,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "V",
+          "top": 1672.109375,
+          "left": 17,
+          "bottom": 1720.109375,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "VI",
+          "top": 1983.328125,
+          "left": 17,
+          "bottom": 2031.328125,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "VII",
+          "top": 2294.546875,
+          "left": 17,
+          "bottom": 2342.546875,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 432.015625,
+          "left": 17,
+          "bottom": 480.015625,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "II",
+          "top": 743.234375,
+          "left": 17,
+          "bottom": 791.234375,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "III",
+          "top": 1028.0625,
+          "left": 17,
+          "bottom": 1076.0625,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "IV",
+          "top": 1339.28125,
+          "left": 17,
+          "bottom": 1387.28125,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "V",
+          "top": 1624.109375,
+          "left": 17,
+          "bottom": 1672.109375,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "VI",
+          "top": 1935.328125,
+          "left": 17,
+          "bottom": 1983.328125,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        },
+        {
+          "text": "VII",
+          "top": 2246.546875,
+          "left": 17,
+          "bottom": 2294.546875,
+          "regionTop": 432.015625,
+          "regionBottom": 2533.765625
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 579.203125,
+          "left": 32,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "II",
+          "top": 579.203125,
+          "left": 214,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "III",
+          "top": 579.203125,
+          "left": 396,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "IV",
+          "top": 579.203125,
+          "left": 578,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "V",
+          "top": 579.203125,
+          "left": 760,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "VI",
+          "top": 579.203125,
+          "left": 942,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        },
+        {
+          "text": "VII",
+          "top": 579.203125,
+          "left": 1124,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 892.8125
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 611.203125,
+          "left": 88,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "II",
+          "top": 611.203125,
+          "left": 350,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "III",
+          "top": 611.203125,
+          "left": 612,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "IV",
+          "top": 611.203125,
+          "left": 874,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "V",
+          "top": 611.203125,
+          "left": 1136,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VI",
+          "top": 611.203125,
+          "left": 1398,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VII",
+          "top": 611.203125,
+          "left": 1660,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 611.203125,
+          "left": 120,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "II",
+          "top": 611.203125,
+          "left": 426,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "III",
+          "top": 611.203125,
+          "left": 732,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "IV",
+          "top": 611.203125,
+          "left": 1038,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "V",
+          "top": 611.203125,
+          "left": 1344,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VI",
+          "top": 611.203125,
+          "left": 1650,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VII",
+          "top": 611.203125,
+          "left": 1956,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 480.015625,
+          "left": 17,
+          "bottom": 528.015625,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "II",
+          "top": 764.84375,
+          "left": 17,
+          "bottom": 812.84375,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "III",
+          "top": 1076.0625,
+          "left": 17,
+          "bottom": 1124.0625,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "IV",
+          "top": 1387.28125,
+          "left": 17,
+          "bottom": 1435.28125,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "V",
+          "top": 1698.5,
+          "left": 17,
+          "bottom": 1746.5,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "VI",
+          "top": 2009.71875,
+          "left": 17,
+          "bottom": 2057.71875,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        },
+        {
+          "text": "VII",
+          "top": 2320.9375,
+          "left": 17,
+          "bottom": 2368.9375,
+          "regionTop": 480.015625,
+          "regionBottom": 2608.15625
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 480.015625,
+          "left": 17,
+          "bottom": 528.015625,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "II",
+          "top": 764.84375,
+          "left": 17,
+          "bottom": 812.84375,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "III",
+          "top": 1076.0625,
+          "left": 17,
+          "bottom": 1124.0625,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "IV",
+          "top": 1387.28125,
+          "left": 17,
+          "bottom": 1435.28125,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "V",
+          "top": 1672.109375,
+          "left": 17,
+          "bottom": 1720.109375,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "VI",
+          "top": 1983.328125,
+          "left": 17,
+          "bottom": 2031.328125,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        },
+        {
+          "text": "VII",
+          "top": 2294.546875,
+          "left": 17,
+          "bottom": 2342.546875,
+          "regionTop": 480.015625,
+          "regionBottom": 2581.765625
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 579.203125,
+          "left": 32,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "II",
+          "top": 579.203125,
+          "left": 214,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "III",
+          "top": 579.203125,
+          "left": 396,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "IV",
+          "top": 579.203125,
+          "left": 578,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "V",
+          "top": 579.203125,
+          "left": 760,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "VI",
+          "top": 579.203125,
+          "left": 942,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        },
+        {
+          "text": "VII",
+          "top": 579.203125,
+          "left": 1124,
+          "bottom": 627.203125,
+          "regionTop": 570.203125,
+          "regionBottom": 926.34375
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 611.203125,
+          "left": 88,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "II",
+          "top": 611.203125,
+          "left": 350,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "III",
+          "top": 611.203125,
+          "left": 612,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "IV",
+          "top": 611.203125,
+          "left": 874,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "V",
+          "top": 611.203125,
+          "left": 1136,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "VI",
+          "top": 611.203125,
+          "left": 1398,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        },
+        {
+          "text": "VII",
+          "top": 611.203125,
+          "left": 1660,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 924.8125
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/lich-su",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [
+        {
+          "text": "I",
+          "top": 611.203125,
+          "left": 120,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "II",
+          "top": 611.203125,
+          "left": 426,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "III",
+          "top": 611.203125,
+          "left": 732,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "IV",
+          "top": 611.203125,
+          "left": 1038,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "V",
+          "top": 611.203125,
+          "left": 1344,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VI",
+          "top": 611.203125,
+          "left": 1650,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        },
+        {
+          "text": "VII",
+          "top": 611.203125,
+          "left": 1956,
+          "bottom": 659.203125,
+          "regionTop": 602.203125,
+          "regionBottom": 898.421875
+        }
+      ],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/2006/67154/tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://dsvh.gov.vn/danh-muc-di-san-van-hoa-phi-vat-the-quoc-gia-1789",
+        "https://www.irci.jp/research/endangeredich/vietnam2013-2015/",
+        "https://www.irci.jp/news/2015-0325/",
+        "https://www.irci.jp/news/201911115-2/?catid=4",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1",
+        "https://dsvh.gov.vn/tranh-dan-gian-dong-ho-3151",
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/gioi-thieu",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/gioi-thieu",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/gioi-thieu",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/gioi-thieu",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/gioi-thieu",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/gioi-thieu",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/hoi-dap",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/hoi-dap",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/hoi-dap",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/hoi-dap",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/hoi-dap",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/hoi-dap",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/hoi-dap",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/hoi-dap",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/hoi-dap",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/en/hoi-dap",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://baotanglichsu.vn/vi/Articles/3096/19432/tim-hieu-ve-dong-tranh-dan-gian-djong-ho.html",
+        "https://ich.unesco.org/en/decisions/20.COM/7.A.1"
+      ],
+      "errors": []
+    },
+    {
+      "route": "/admin/login",
+      "width": 360,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [],
+      "errors": []
+    },
+    {
+      "route": "/admin/login",
+      "width": 375,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [],
+      "errors": []
+    },
+    {
+      "route": "/admin/login",
+      "width": 768,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [],
+      "errors": []
+    },
+    {
+      "route": "/admin/login",
+      "width": 1200,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [],
+      "errors": []
+    },
+    {
+      "route": "/admin/login",
+      "width": 1440,
+      "status": 200,
+      "h1": 1,
+      "overflow": false,
+      "removedNote": false,
+      "seals": [],
+      "sourceLinks": [],
+      "errors": []
+    }
+  ]
+}
