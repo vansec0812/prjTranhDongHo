@@ -116,6 +116,7 @@ export async function generateMetadata({
       ? await findContent(kind, path[1])
       : [
             "gioi-thieu",
+            "lich-su",
             "tham-quan",
             "dieu-khoan",
             "chinh-sach-bao-mat",
@@ -260,7 +261,10 @@ export default async function PublicPage({ params, searchParams }: Props) {
     );
   }
   if (section === "lich-su" && !slug) {
-    const milestones = await contents("MILESTONE");
+    const [milestones, guide] = await Promise.all([
+      contents("MILESTONE"),
+      findContent("PAGE", "lich-su"),
+    ]);
     const categories = await db.category.findMany({
       where: { kind: "PAINTING" },
       orderBy: { sortOrder: "asc" },
@@ -302,15 +306,26 @@ export default async function PublicPage({ params, searchParams }: Props) {
         <Intro
           locale={locale}
           title={
-            locale === "en" ? "The history of the craft" : "Lịch sử hình thành"
+            guide
+              ? text(guide, locale)
+              : locale === "en"
+                ? "The history of the craft"
+                : "Lịch sử hình thành"
           }
           description={
-            locale === "en"
-              ? "From the year-end painting market to the studio of today."
-              : "Từ những phiên chợ tranh tháng Chạp đến xưởng in hôm nay."
+            guide
+              ? summary(guide, locale)
+              : locale === "en"
+                ? "From the year-end painting market to the studio of today."
+                : "Từ những phiên chợ tranh tháng Chạp đến xưởng in hôm nay."
           }
           section={locale === "en" ? "BY THE DUONG RIVER" : "BÊN BỜ SÔNG ĐUỐNG"}
         />
+        <h2 className="sr-only">
+          {locale === "en"
+            ? "Key historical milestones"
+            : "Các mốc lịch sử chính"}
+        </h2>
         <Timeline
           locale={locale}
           items={milestones.map((m) => ({
@@ -320,10 +335,28 @@ export default async function PublicPage({ params, searchParams }: Props) {
               locale === "en"
                 ? (m.milestone?.eraEn ?? "")
                 : (m.milestone?.eraVi ?? ""),
-            description: summary(m, locale),
+            description: (
+              <div lang={locale === "en" && !m.bodyEn ? "vi" : locale}>
+                <Fallback item={m} locale={locale} />
+                {body(m, locale) ? (
+                  <Rich html={body(m, locale)} />
+                ) : (
+                  <p>{summary(m, locale)}</p>
+                )}
+              </div>
+            ),
           }))}
         />
         <Wave />
+        {guide && (
+          <section
+            className="section prose-width"
+            lang={locale === "en" && !guide.bodyEn ? "vi" : locale}
+          >
+            <Fallback item={guide} locale={locale} />
+            <Rich html={body(guide, locale)} />
+          </section>
+        )}
         <section className="section">
           <div className="section-head">
             <div>
