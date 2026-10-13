@@ -1,6 +1,7 @@
 import { Prisma, ContentKind } from "@prisma/client";
 import { db } from "./db";
 import { settingsSchema } from "./config";
+import { keepCompoundWords } from "./typography";
 export const contentInclude = {
   category: true,
   media: true,
@@ -61,10 +62,14 @@ export function text(
   item: { titleVi: string; titleEn: string },
   locale: Locale,
 ) {
-  return locale === "en" && item.titleEn ? item.titleEn : item.titleVi;
+  return keepCompoundWords(
+    locale === "en" && item.titleEn ? item.titleEn : item.titleVi,
+  );
 }
 export function summary(item: ContentRecord, locale: Locale) {
-  return locale === "en" && item.summaryEn ? item.summaryEn : item.summaryVi;
+  return keepCompoundWords(
+    locale === "en" && item.summaryEn ? item.summaryEn : item.summaryVi,
+  );
 }
 export function body(item: ContentRecord, locale: Locale) {
   return locale === "en" && item.bodyEn ? item.bodyEn : item.bodyVi;

@@ -24,6 +24,9 @@ body::before {
   pointer-events: none;
   z-index: -1;
 }
+.email-address {
+  overflow-wrap: anywhere;
+}
 h1,
 h2,
 h3,
@@ -32,6 +35,8 @@ h4 {
   font-weight: 600;
   line-height: var(--leading-heading);
   margin: 0 0 var(--space-6);
+  overflow-wrap: normal;
+  hyphens: none;
 }
 h1 {
   font-size: var(--font-h1);

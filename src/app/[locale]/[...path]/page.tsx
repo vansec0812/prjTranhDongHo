@@ -41,7 +41,7 @@ import {
   Alert,
   Badge,
 } from "@/components/ui";
-import sanitizeHtml from "sanitize-html";
+import { RichText as Rich } from "@/components/rich-text";
 type Props = {
   params: Promise<{ locale: string; path: string[] }>;
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -71,32 +71,6 @@ const listKey: Record<string, string> = {
 };
 const get = (value: string | string[] | undefined) =>
   typeof value === "string" ? value : "";
-function Rich({ html }: { html: string }) {
-  return (
-    <div
-      className="rich-text"
-      dangerouslySetInnerHTML={{
-        __html: sanitizeHtml(html, {
-          allowedTags: [
-            "p",
-            "h2",
-            "h3",
-            "strong",
-            "em",
-            "ul",
-            "ol",
-            "li",
-            "blockquote",
-            "a",
-            "br",
-          ],
-          allowedAttributes: { a: ["href", "rel"] },
-          allowedSchemes: ["https", "http", "mailto", "tel"],
-        }),
-      }}
-    />
-  );
-}
 function Fallback({ item, locale }: { item: ContentRecord; locale: Locale }) {
   return locale === "en" && (!item.titleEn || !item.bodyEn) ? (
     <Alert>{en.site.fallback}</Alert>

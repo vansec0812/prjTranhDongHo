@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { localHref, type Locale } from "@/lib/links";
 import { en, vi } from "@/i18n/messages";
+import { keepCompoundWords } from "@/lib/typography";
 
 // A component fiber owns this subtree before resolving its children. This avoids
 // replaying a claimed host div against its own child during Flight hydration.
@@ -22,11 +23,11 @@ export function Intro({
       <nav className="breadcrumb" aria-label={t.bread}>
         <Link href={localHref(locale, "/")}>{t.home}</Link>
         <span aria-hidden="true">/</span>
-        <span>{title}</span>
+        <span>{keepCompoundWords(title)}</span>
       </nav>
-      <p className="eyebrow">{section}</p>
-      <h1>{title}</h1>
-      {description && <p>{description}</p>}
+      <p className="eyebrow">{keepCompoundWords(section)}</p>
+      <h1>{keepCompoundWords(title)}</h1>
+      {description && <p>{keepCompoundWords(description)}</p>}
     </div>
   );
 }

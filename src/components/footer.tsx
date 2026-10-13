@@ -5,6 +5,7 @@ import { localHref } from "@/lib/content";
 import type { SiteSettings } from "@/lib/config";
 import { Brand } from "./header";
 import { Newsletter } from "./newsletter";
+import { keepCompoundWords } from "@/lib/typography";
 export async function Footer({
   locale,
   settings,
@@ -20,9 +21,11 @@ export async function Footer({
           <div>
             <p className="eyebrow">{t("newsletter")}</p>
             <h2>
-              {locale === "en"
-                ? "Keep in touch with the craft."
-                : "Một lời hẹn với làng tranh."}
+              {keepCompoundWords(
+                locale === "en"
+                  ? "Keep in touch with the craft."
+                  : "Một lời hẹn với làng tranh.",
+              )}
             </h2>
             <p>{t("newsletterText")}</p>
             <Newsletter locale={locale} />

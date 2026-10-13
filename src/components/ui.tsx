@@ -1,6 +1,7 @@
 import type { ComponentProps, ReactNode } from "react";
 import Link from "next/link";
 import { ArrowRight, AlertCircle } from "lucide-react";
+import { keepCompoundWords } from "@/lib/typography";
 export function Button({
   variant = "primary",
   children,
@@ -89,7 +90,7 @@ export function Field({
 }) {
   return (
     <div className="field">
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>{keepCompoundWords(label)}</label>
       {children}
       {error && (
         <span id={`${id}-error`} className="field-error">
