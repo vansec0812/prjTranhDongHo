@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Menu, X, Search } from "lucide-react";
 import { Seal } from "./ui";
 import { localHref, type Locale } from "@/lib/links";
+import { keepCompoundWords } from "@/lib/typography";
 export const nav = [
   ["home", "/"],
   ["history", "/lich-su"],
@@ -14,6 +15,7 @@ export const nav = [
   ["tour", "/tham-quan-360"],
   ["workshop", "/workshop"],
   ["artisan", "/nghe-nhan"],
+  ["posts", "/tin-tuc"],
   ["contact", "/lien-he"],
 ] as const;
 export function Brand({
@@ -28,11 +30,13 @@ export function Brand({
       <Seal />
       <span>
         <span className="brand-title">
-          {admin ? "Quản trị" : "Tranh Đông Hồ"}
+          {keepCompoundWords(admin ? "Quản trị" : "Tranh Đông Hồ")}
         </span>
         <br />
         <span className="brand-sub">
-          {admin ? "Văn hóa tranh Đông Hồ" : "XƯỞNG TRANH DÂN GIAN"}
+          {keepCompoundWords(
+            admin ? "Văn hóa tranh Đông Hồ" : "XƯỞNG TRANH DÂN GIAN",
+          )}
         </span>
       </span>
     </Link>
@@ -107,23 +111,23 @@ export function Header({
             }
           >
             {nav.map(([key, href]) => (
-              <Link
+              <a
                 key={key}
                 href={localHref(locale, href)}
                 className={`nav-link${active(href) ? " active" : ""}`}
                 aria-current={active(href) ? "page" : undefined}
               >
                 {t(key)}
-              </Link>
+              </a>
             ))}
           </nav>
-          <Link
+          <a
             href={localHref(locale, "/tim-kiem")}
             className="icon-button"
             aria-label={t("search")}
           >
             <Search size={20} />
-          </Link>
+          </a>
           <LanguageLinks locale={locale} />
           <button
             ref={opener}
@@ -152,21 +156,19 @@ export function Header({
           </button>
         </div>
         <nav>
-          {[
-            ...nav,
-            ["posts", "/tin-tuc"],
-            ["visit", "/tham-quan"],
-            ["faq", "/hoi-dap"],
-          ].map(([key, href]) => (
-            <Link
-              key={key}
-              href={localHref(locale, href)}
-              className={active(href) ? "active" : ""}
-              onClick={() => dialog.current?.close()}
-            >
-              {t(key)}
-            </Link>
-          ))}
+          {[...nav, ["visit", "/tham-quan"], ["faq", "/hoi-dap"]].map(
+            ([key, href]) => (
+              <a
+                key={key}
+                href={localHref(locale, href)}
+                className={active(href) ? "active" : ""}
+                aria-current={active(href) ? "page" : undefined}
+                onClick={() => dialog.current?.close()}
+              >
+                {t(key)}
+              </a>
+            ),
+          )}
         </nav>
         <div className="flex spread">
           <LanguageLinks locale={locale} />
