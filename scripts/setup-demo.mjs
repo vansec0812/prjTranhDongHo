@@ -87,6 +87,7 @@ if (!fs.existsSync("public/tour/assets.json"))
 if (!fs.existsSync("public/tour/tour.json"))
   run(["scripts/configure-tour.mjs"]);
 run(["node_modules/tsx/dist/cli.mjs", "scripts/import-source-content.ts"]);
+run(["node_modules/tsx/dist/cli.mjs", "scripts/enrich-cultural-content.ts"]);
 if (!fs.existsSync(".local/demo-access.txt"))
   run([
     "node_modules/tsx/dist/cli.mjs",

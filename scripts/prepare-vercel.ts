@@ -11,6 +11,7 @@ import {
 } from "../src/lib/services/bootstrap";
 import { seedDemo } from "../prisma/seed";
 import { importSourceContent } from "./import-source-content";
+import { enrichCulturalContent } from "../src/lib/services/cultural-content";
 
 async function main() {
   productionGuard();
@@ -59,6 +60,7 @@ async function main() {
       await seedDemo();
       await importSourceContent();
     }
+    console.log("Cultural content update:", await enrichCulturalContent());
     await createInitialAdmin(
       process.env.INITIAL_ADMIN_EMAIL,
       process.env.INITIAL_ADMIN_PASSWORD,

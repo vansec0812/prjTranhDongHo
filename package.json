@@ -26,7 +26,8 @@
     "worker": "tsx scripts/worker.ts",
     "setup:demo": "node scripts/setup-demo.mjs",
     "assets:prepare": "node scripts/prepare-source-assets.mjs && node scripts/configure-tour.mjs",
-    "content:import": "tsx scripts/import-source-content.ts"
+    "content:import": "tsx scripts/import-source-content.ts",
+    "content:enrich": "tsx scripts/enrich-cultural-content.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "3.1145.0",
